@@ -1,0 +1,62 @@
+{% set name = "cppyy-cling" %}
+# The first three items of version define the version of ROOT that we're building from.
+{% set version = "6.18.2.7" %}
+{% set clang_version = "5.0.0" %}
+{% set clang_patches_version = "6.16.00" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
+  sha256: 3a45c21986ad5b7de65aad8ae29c56339d3a110a302e39dcb276b046b44450f0
+  patches:
+    - use-dumb-setup.py.patch
+
+build:
+  number: 0
+  skip: true  # [win]
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - sed
+    - cmake
+  host:
+    - python
+    - pip
+    - zlib
+    - clangdev ={{ clang_version }}
+    - clang_variant * cling_{{ clang_patches_version }}
+    - llvmdev ==5
+  run:
+    - {{ compiler('cxx') }}
+    - python
+
+test:
+  commands:
+    - which rootcling
+    # calling rootcling directly without argument fails but it should find all
+    # its libraries (it exits with 134 on macOS otherwise.)
+    - bash -c "${SP_DIR}"'/cppyy_backend/bin/rootcling; [[ $? == 1 ]]'
+    - which cppyy-generator
+    - cling-config --incdir
+    - which genreflex
+
+about:
+  home: https://pypi.org/project/cppyy-cling
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: A repackaging of Cling for Automatic Python-C++ Bindings
+  description: |
+    A repackaging of Cling, the interactive C++ interpreter, including C/C++
+    wrappers that expose no further external headers or types.
+  doc_url: http://cppyy.readthedocs.io/
+  dev_url: https://bitbucket.org/wlav/cppyy-backend/src/master/cling/
+
+extra:
+  recipe-maintainers:
+    - saraedum
+    - isuruf
