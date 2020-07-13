@@ -5,7 +5,7 @@ Home: https://pypi.org/project/cppyy-cling
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A repackaging of Cling for Automatic Python-C++ Bindings
 
