@@ -39,7 +39,6 @@ requirements:
     - llvmdev 9
   run:
     - {{ compiler('cxx') }}
-    - libclang-cpp =9.0.1 root_62400*
     - python
 
 test:
