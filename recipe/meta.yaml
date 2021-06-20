@@ -16,6 +16,7 @@ source:
     - cross.patch  # [build_platform != target_platform]
     # Link against .so instead of .a.
     - clang-cpp.patch
+    - pri.patch
 
 build:
   number: 0
