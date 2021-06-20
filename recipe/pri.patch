@@ -1,37 +1,39 @@
-From 360868aadfd3e6b69688f5584470e37d1bd1229c Mon Sep 17 00:00:00 2001
+From 846383e169a7a9b384bd9b5861278e4f8764f623 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 00:37:13 +0200
 Subject: [PATCH] add missing headers in cross comilation
 
 ---
- .../llvm/src/include/llvm/Bitstream/BitstreamReader.h            | 1 +
- src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h      | 1 +
- 2 files changed, 2 insertions(+)
+ .../llvm/src/include/llvm/Bitstream/BitstreamReader.h           | 2 ++
+ src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h     | 2 ++
+ 2 files changed, 4 insertions(+)
 
 diff --git a/src/interpreter/llvm/src/include/llvm/Bitstream/BitstreamReader.h b/src/interpreter/llvm/src/include/llvm/Bitstream/BitstreamReader.h
-index ee82e7e..f6a3268 100644
+index ee82e7e..ca56f06 100644
 --- a/src/interpreter/llvm/src/include/llvm/Bitstream/BitstreamReader.h
 +++ b/src/interpreter/llvm/src/include/llvm/Bitstream/BitstreamReader.h
-@@ -30,6 +30,7 @@
- #include <string>
- #include <utility>
- #include <vector>
+@@ -14,6 +14,8 @@
+ #ifndef LLVM_BITSTREAM_BITSTREAMREADER_H
+ #define LLVM_BITSTREAM_BITSTREAMREADER_H
+ 
++#define __STDC_FORMAT_MACROS
 +#include <inttypes.h>
- 
- namespace llvm {
- 
+ #include "llvm/ADT/ArrayRef.h"
+ #include "llvm/ADT/SmallVector.h"
+ #include "llvm/Bitstream/BitCodes.h"
 diff --git a/src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h b/src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h
-index 1398fa1..15d1b9c 100644
+index 1398fa1..aa93130 100644
 --- a/src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h
 +++ b/src/interpreter/llvm/src/include/llvm/Object/SymbolicFile.h
-@@ -27,6 +27,7 @@
- #include <iterator>
- #include <memory>
- #include <system_error>
-+#include <inttypes.h>
+@@ -13,6 +13,8 @@
+ #ifndef LLVM_OBJECT_SYMBOLICFILE_H
+ #define LLVM_OBJECT_SYMBOLICFILE_H
  
- namespace llvm {
- namespace object {
++#define __STDC_FORMAT_MACROS
++#include <inttypes.h>
+ #include "llvm/ADT/StringRef.h"
+ #include "llvm/ADT/iterator_range.h"
+ #include "llvm/BinaryFormat/Magic.h"
 -- 
 2.32.0
 

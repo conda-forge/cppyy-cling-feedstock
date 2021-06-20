@@ -1,5 +1,4 @@
 {% set name = "cppyy-cling" %}
-# The first three items of version define the version of ROOT that we're building from.
 {% set version = "6.25.0" %}
 
 package:
