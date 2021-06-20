@@ -1,12 +1,13 @@
-From 678020ed3a3462b1cf6f2e29407ac4f6bf003f4f Mon Sep 17 00:00:00 2001
+From 5c44b702fcc857ac7d7c2a7d00c4d9e467d32a28 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Sun, 20 Jun 2021 18:05:30 +0200
 Subject: [PATCH] link against -lclang-cpp
 
 instead of linking against static libraries
 ---
- src/core/rootcling_stage1/CMakeLists.txt | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ src/core/rootcling_stage1/CMakeLists.txt       |  2 +-
+ src/interpreter/cling/lib/Utils/CMakeLists.txt | 16 +---------------
+ 2 files changed, 2 insertions(+), 16 deletions(-)
 
 diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
 index 5cc5c9c..74ddc0e 100644
@@ -21,6 +22,33 @@ index 5cc5c9c..74ddc0e 100644
                                NOINSTALL)
  set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
  add_dependencies(rootcling_stage1 ClingUtils)
+diff --git a/src/interpreter/cling/lib/Utils/CMakeLists.txt b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+index 327c9ff..2ef20b0 100644
+--- a/src/interpreter/cling/lib/Utils/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+@@ -26,21 +26,7 @@ set(LLVM_LINK_COMPONENTS
+   ${LLVM_TARGETS_TO_BUILD}
+ )
+ 
+-set(LIBS
+-  clangCodeGen
+-  clangDriver
+-  clangFrontend
+-  clangParse
+-  clangSema
+-  clangAnalysis
+-  clangEdit
+-  clangRewrite
+-  clangRewriteFrontend
+-  clangSerialization
+-  clangAST
+-  clangBasic
+-  clangLex
+-)
++set(LIBS)
+ 
+ find_library(DL_LIBRARY_PATH dl)
+ if (DL_LIBRARY_PATH)
 -- 
 2.32.0
 
