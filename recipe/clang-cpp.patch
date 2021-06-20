@@ -1,54 +1,24 @@
-From 5c44b702fcc857ac7d7c2a7d00c4d9e467d32a28 Mon Sep 17 00:00:00 2001
+From d150efe4875657aba78a8369b31426749b5cd7da Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Sun, 20 Jun 2021 18:05:30 +0200
-Subject: [PATCH] link against -lclang-cpp
+Subject: [PATCH] link against libclangASTMatchers
 
-instead of linking against static libraries
 ---
- src/core/rootcling_stage1/CMakeLists.txt       |  2 +-
- src/interpreter/cling/lib/Utils/CMakeLists.txt | 16 +---------------
- 2 files changed, 2 insertions(+), 16 deletions(-)
+ src/interpreter/cling/lib/Utils/CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
-index 5cc5c9c..74ddc0e 100644
---- a/src/core/rootcling_stage1/CMakeLists.txt
-+++ b/src/core/rootcling_stage1/CMakeLists.txt
-@@ -35,7 +35,7 @@ ROOT_EXECUTABLE(rootcling_stage1 src/rootcling_stage1.cxx
-                               $<TARGET_OBJECTS:ClingUtils>
-                               $<TARGET_OBJECTS:Dictgen>
-                               $<TARGET_OBJECTS:Foundation_Stage1>
--                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT}
-+                              LIBRARIES ${CLING_LIBRARIES} -lclang-cpp ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT}
-                               NOINSTALL)
- set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
- add_dependencies(rootcling_stage1 ClingUtils)
 diff --git a/src/interpreter/cling/lib/Utils/CMakeLists.txt b/src/interpreter/cling/lib/Utils/CMakeLists.txt
-index 327c9ff..2ef20b0 100644
+index 327c9ff..bdf8ee8 100644
 --- a/src/interpreter/cling/lib/Utils/CMakeLists.txt
 +++ b/src/interpreter/cling/lib/Utils/CMakeLists.txt
-@@ -26,21 +26,7 @@ set(LLVM_LINK_COMPONENTS
-   ${LLVM_TARGETS_TO_BUILD}
+@@ -38,6 +38,7 @@ set(LIBS
+   clangRewriteFrontend
+   clangSerialization
+   clangAST
++  clangASTMatchers
+   clangBasic
+   clangLex
  )
- 
--set(LIBS
--  clangCodeGen
--  clangDriver
--  clangFrontend
--  clangParse
--  clangSema
--  clangAnalysis
--  clangEdit
--  clangRewrite
--  clangRewriteFrontend
--  clangSerialization
--  clangAST
--  clangBasic
--  clangLex
--)
-+set(LIBS)
- 
- find_library(DL_LIBRARY_PATH dl)
- if (DL_LIBRARY_PATH)
 -- 
 2.32.0
 
