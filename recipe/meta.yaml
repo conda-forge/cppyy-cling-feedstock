@@ -16,6 +16,8 @@ source:
     # Link against .so instead of .a.
     - clang-cpp.patch
     - pri.patch
+    # Do not run rootcling binary during build
+    - rootcling.patch  # [build_platform != target_platform]
 
 build:
   number: 0
