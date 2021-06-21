@@ -85,7 +85,7 @@ cmake --build . --target install --config Release
 echo "Check that generated files do not need to be updated in cross-compiled builds."
 for item in `ls ${RECIPE_DIR}/rootcling`; do
   echo "Checking $item..."
-  diff "${RECIPE_DIR}/rootcling/${item}" `find -name ${item}`
+  diff -w "${RECIPE_DIR}/rootcling/${item}" `find -name ${item}`
 done
 
 rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch"

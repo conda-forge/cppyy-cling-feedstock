@@ -1,4 +1,4 @@
-From 2b821f8720b60b6675507c8b6e2860c2c22cbf35 Mon Sep 17 00:00:00 2001
+From 8718637892d1b5da59e6cdb0b5fbe175a4a14e41 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
@@ -8,7 +8,7 @@ Subject: [PATCH] use pre-built dictionary and rootmap
  1 file changed, 11 insertions(+), 23 deletions(-)
 
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..84a1e6e 100644
+index 3f7d9ee..73204a0 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -479,16 +479,14 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -27,11 +27,11 @@ index 3f7d9ee..84a1e6e 100644
 -                     COMMAND_EXPAND_LISTS)
 +  add_custom_command(OUTPUT ${dictionary}.cxx
 +                     COMMAND ${CMAKE_COMMAND} -E copy
-+                     $ENV{RECIPE_ROOT}/rootcling/${dictionary}.cxx
++                     $ENV{RECIPE_DIR}/rootcling/${dictionary}.cxx
 +                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx)
 +  add_custom_command(OUTPUT ${rootmap_name}
 +                     COMMAND ${CMAKE_COMMAND} -E copy
-+                     $ENV{RECIPE_ROOT}/rootcling/${rootmap_name}
++                     $ENV{RECIPE_DIR}/rootcling/${rootmap_name}
 +                     ${CMAKE_CURRENT_BINARY_DIR}/${rootmap_name})
  
    # If we are adding to an existing target and it's not the dictionary itself,
