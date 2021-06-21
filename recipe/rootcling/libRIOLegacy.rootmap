@@ -1,0 +1,44 @@
+{ decls }
+namespace CppyyLegacy {  }
+namespace CppyyLegacy { namespace TStreamerInfoActions {  } }
+
+[ libRIOLegacy.so ]
+# List of selected classes
+class CppyyLegacy::TBufferFile
+class CppyyLegacy::TBufferIO
+class CppyyLegacy::TCollectionClassStreamer
+class CppyyLegacy::TCollectionMemberStreamer
+class CppyyLegacy::TCollectionProxyFactory
+class CppyyLegacy::TCollectionStreamer
+class CppyyLegacy::TDirectoryFile
+class CppyyLegacy::TEmulatedCollectionProxy
+class CppyyLegacy::TEmulatedMapProxy
+class CppyyLegacy::TFile
+class CppyyLegacy::TFree
+class CppyyLegacy::TGenCollectionProxy
+class CppyyLegacy::TGenCollectionProxy::Method
+class CppyyLegacy::TGenCollectionProxy::Value
+class CppyyLegacy::TKey
+class CppyyLegacy::TMemFile
+class CppyyLegacy::TStreamerInfo
+class CppyyLegacy::TStreamerInfoActions::TActionSequence
+class CppyyLegacy::TStreamerInfoActions::TConfiguration
+class CppyyLegacy::TStreamerInfoActions::TConfiguredAction
+class CppyyLegacy::TVirtualArray
+header TBufferFile.h
+header TBufferIO.h
+header TCollectionProxyFactory.h
+header TDirectoryFile.h
+header TEmulatedCollectionProxy.h
+header TEmulatedMapProxy.h
+header TFile.h
+header TFree.h
+header TGenCollectionProxy.h
+header TKey.h
+header TMemFile.h
+header TStreamerInfo.h
+header TStreamerInfoActions.h
+header TVirtualArray.h
+# List of selected namespaces
+namespace CppyyLegacy
+namespace CppyyLegacy::TStreamerInfoActions

@@ -1,0 +1,338 @@
+{ decls }
+namespace CppyyLegacy {  }
+namespace std {  }
+namespace std { inline namespace __cxx11 {  } }
+
+[ libCoreLegacy.so ]
+# List of selected classes
+class CppyyLegacy::FileStat_t
+class CppyyLegacy::RedirectHandle_t
+class CppyyLegacy::TApplication
+class CppyyLegacy::TArray
+class CppyyLegacy::TArrayC
+class CppyyLegacy::TBaseClass
+class CppyyLegacy::TBits
+class CppyyLegacy::TBits::TReference
+class CppyyLegacy::TBuffer
+class CppyyLegacy::TClass
+class CppyyLegacy::TClassGenerator
+class CppyyLegacy::TClassRef
+class CppyyLegacy::TClassStreamer
+class CppyyLegacy::TClassTable
+class CppyyLegacy::TCollection
+class CppyyLegacy::TDataMember
+class CppyyLegacy::TDataType
+class CppyyLegacy::TDatime
+class CppyyLegacy::TDictAttributeMap
+class CppyyLegacy::TDictionary
+class CppyyLegacy::TDirectory
+class CppyyLegacy::TEnum
+class CppyyLegacy::TEnumConstant
+class CppyyLegacy::TEnv
+class CppyyLegacy::TEnvRec
+class CppyyLegacy::TExMap
+class CppyyLegacy::TExMapIter
+class CppyyLegacy::TFunction
+class CppyyLegacy::TFunctionTemplate
+class CppyyLegacy::TGlobal
+class CppyyLegacy::THashList
+class CppyyLegacy::THashTable
+class CppyyLegacy::THashTableIter
+class CppyyLegacy::TInetAddress
+class CppyyLegacy::TInterpreter
+class CppyyLegacy::TIsAProxy
+class CppyyLegacy::TIter
+class CppyyLegacy::TIterator
+class CppyyLegacy::TList
+class CppyyLegacy::TListIter
+class CppyyLegacy::TListOfDataMembers
+class CppyyLegacy::TListOfEnums
+class CppyyLegacy::TListOfEnumsWithLock
+class CppyyLegacy::TListOfEnumsWithLockIter
+class CppyyLegacy::TListOfFunctionTemplates
+class CppyyLegacy::TListOfFunctions
+class CppyyLegacy::TListOfFunctionsIter
+class CppyyLegacy::TLockGuard
+class CppyyLegacy::TMD5
+class CppyyLegacy::TMap
+class CppyyLegacy::TMapIter
+class CppyyLegacy::TMemberInspector
+class CppyyLegacy::TMemberStreamer
+class CppyyLegacy::TMethod
+class CppyyLegacy::TMethodArg
+class CppyyLegacy::TNamed
+class CppyyLegacy::TObjArray
+class CppyyLegacy::TObjArrayIter
+class CppyyLegacy::TObjString
+class CppyyLegacy::TObject
+class CppyyLegacy::TObjectTable
+class CppyyLegacy::TOptionListItem
+class CppyyLegacy::TOrdCollection
+class CppyyLegacy::TOrdCollectionIter
+class CppyyLegacy::TPair
+class CppyyLegacy::TProcessID
+class CppyyLegacy::TProcessUUID
+class CppyyLegacy::TProtoClass
+class CppyyLegacy::TProtoClass::TProtoRealData
+class CppyyLegacy::TROOT
+class CppyyLegacy::TReadLockGuard
+class CppyyLegacy::TRealData
+class CppyyLegacy::TRegexp
+class CppyyLegacy::TSeqCollection
+class CppyyLegacy::TSignalHandler
+class CppyyLegacy::TStdExceptionHandler
+class CppyyLegacy::TStorage
+class CppyyLegacy::TStreamerBase
+class CppyyLegacy::TStreamerBasicPointer
+class CppyyLegacy::TStreamerBasicType
+class CppyyLegacy::TStreamerElement
+class CppyyLegacy::TStreamerLoop
+class CppyyLegacy::TStreamerObject
+class CppyyLegacy::TStreamerObjectAny
+class CppyyLegacy::TStreamerObjectAnyPointer
+class CppyyLegacy::TStreamerObjectPointer
+class CppyyLegacy::TStreamerSTL
+class CppyyLegacy::TStreamerSTLstring
+class CppyyLegacy::TStreamerString
+class CppyyLegacy::TString
+class CppyyLegacy::TSubString
+class CppyyLegacy::TSystem
+class CppyyLegacy::TTime
+class CppyyLegacy::TTimeStamp
+class CppyyLegacy::TUUID
+class CppyyLegacy::TUnixSystem
+class CppyyLegacy::TUrl
+class CppyyLegacy::TVirtualCollectionProxy
+class CppyyLegacy::TVirtualIsAProxy
+class CppyyLegacy::TVirtualMutex
+class CppyyLegacy::TVirtualRWMutex
+class CppyyLegacy::TVirtualStreamerInfo
+class CppyyLegacy::TWriteLockGuard
+class CppyyLegacy::UserGroup_t
+class std::pair<char const*,char*>
+class std::pair<char const*,double>
+class std::pair<char const*,float>
+class std::pair<char const*,int>
+class std::pair<char const*,long>
+class std::pair<char const*,void*>
+class std::pair<char*,char*>
+class std::pair<char*,double>
+class std::pair<char*,float>
+class std::pair<char*,int>
+class std::pair<char*,long>
+class std::pair<char*,void*>
+class std::pair<const char*,char*>
+class std::pair<const char*,double>
+class std::pair<const char*,float>
+class std::pair<const char*,int>
+class std::pair<const char*,long>
+class std::pair<const char*,void*>
+class std::pair<const double,char*>
+class std::pair<const double,double>
+class std::pair<const double,float>
+class std::pair<const double,int>
+class std::pair<const double,long>
+class std::pair<const double,void*>
+class std::pair<const float,char*>
+class std::pair<const float,double>
+class std::pair<const float,float>
+class std::pair<const float,int>
+class std::pair<const float,long>
+class std::pair<const float,void*>
+class std::pair<const int,char*>
+class std::pair<const int,double>
+class std::pair<const int,float>
+class std::pair<const int,int>
+class std::pair<const int,long>
+class std::pair<const int,void*>
+class std::pair<const long,char*>
+class std::pair<const long,double>
+class std::pair<const long,float>
+class std::pair<const long,int>
+class std::pair<const long,long>
+class std::pair<const long,void*>
+class std::pair<const std::string,double>
+class std::pair<const std::string,float>
+class std::pair<const std::string,int>
+class std::pair<const std::string,long>
+class std::pair<const std::string,void*>
+class std::pair<double const,char*>
+class std::pair<double const,double>
+class std::pair<double const,float>
+class std::pair<double const,int>
+class std::pair<double const,long>
+class std::pair<double const,void*>
+class std::pair<double,char*>
+class std::pair<double,double>
+class std::pair<double,float>
+class std::pair<double,int>
+class std::pair<double,long>
+class std::pair<double,void*>
+class std::pair<float const,char*>
+class std::pair<float const,double>
+class std::pair<float const,float>
+class std::pair<float const,int>
+class std::pair<float const,long>
+class std::pair<float const,void*>
+class std::pair<float,char*>
+class std::pair<float,double>
+class std::pair<float,float>
+class std::pair<float,int>
+class std::pair<float,long>
+class std::pair<float,void*>
+class std::pair<int const,char*>
+class std::pair<int const,double>
+class std::pair<int const,float>
+class std::pair<int const,int>
+class std::pair<int const,long>
+class std::pair<int const,void*>
+class std::pair<int,char*>
+class std::pair<int,double>
+class std::pair<int,float>
+class std::pair<int,int>
+class std::pair<int,long>
+class std::pair<int,void*>
+class std::pair<long const,char*>
+class std::pair<long const,double>
+class std::pair<long const,float>
+class std::pair<long const,int>
+class std::pair<long const,long>
+class std::pair<long const,void*>
+class std::pair<long,char*>
+class std::pair<long,double>
+class std::pair<long,float>
+class std::pair<long,int>
+class std::pair<long,long>
+class std::pair<long,void*>
+class std::pair<std::string,double>
+class std::pair<std::string,float>
+class std::pair<std::string,int>
+class std::pair<std::string,long>
+class std::pair<std::string,void*>
+class std::string
+class timespec
+header TSystem.h
+header TApplication.h
+header TArray.h
+header TArrayC.h
+header TBaseClass.h
+header TBits.h
+header TBuffer.h
+header TClass.h
+header TClassGenerator.h
+header TClassRef.h
+header TClassStreamer.h
+header TClassTable.h
+header TCollection.h
+header TDataMember.h
+header TDataType.h
+header TDatime.h
+header TDictAttributeMap.h
+header TDictionary.h
+header TDirectory.h
+header TEnum.h
+header TEnumConstant.h
+header TEnv.h
+header TExMap.h
+header TFunction.h
+header TFunctionTemplate.h
+header TGlobal.h
+header THashList.h
+header THashTable.h
+header TInetAddress.h
+header TInterpreter.h
+header TIsAProxy.h
+header TIterator.h
+header TList.h
+header TListOfDataMembers.h
+header TListOfEnums.h
+header TListOfEnumsWithLock.h
+header TListOfFunctionTemplates.h
+header TListOfFunctions.h
+header TVirtualMutex.h
+header TMD5.h
+header TMap.h
+header TMemberInspector.h
+header TMemberStreamer.h
+header TMethod.h
+header TMethodArg.h
+header TNamed.h
+header TObjArray.h
+header TObjString.h
+header TObject.h
+header TObjectTable.h
+header TOrdCollection.h
+header TProcessID.h
+header TProcessUUID.h
+header TProtoClass.h
+header TROOT.h
+header TVirtualRWMutex.h
+header TRealData.h
+header TRegexp.h
+header TSeqCollection.h
+header TSysEvtHandler.h
+header TStorage.h
+header TStreamerElement.h
+header TString.h
+header TTime.h
+header TTimeStamp.h
+header TUUID.h
+header TUnixSystem.h
+header TUrl.h
+header TVirtualCollectionProxy.h
+header TVirtualIsAProxy.h
+header TVirtualStreamerInfo.h
+header time.h
+# List of selected namespaces
+namespace CppyyLegacy
+namespace CppyyLegacy::TMath
+# List of selected typedefs and outer classes
+typedef timespec_t
+typedef CppyyLegacy::TAssoc
+# List of selected enums and outer classes
+enum CppyyLegacy::ESysConstants
+enum CppyyLegacy::EObjBits
+enum CppyyLegacy::EProperty
+enum CppyyLegacy::EDataType
+enum CppyyLegacy::EEnvLevel
+enum CppyyLegacy::ESignals
+enum CppyyLegacy::EAccessMode
+# List of selected vars
+var CppyyLegacy::kTRUE
+var CppyyLegacy::kFALSE
+var CppyyLegacy::kMaxUChar
+var CppyyLegacy::kMaxChar
+var CppyyLegacy::kMinChar
+var CppyyLegacy::kMaxUShort
+var CppyyLegacy::kMaxShort
+var CppyyLegacy::kMinShort
+var CppyyLegacy::kMaxUInt
+var CppyyLegacy::kMaxInt
+var CppyyLegacy::kMinInt
+var CppyyLegacy::kMaxULong
+var CppyyLegacy::kMaxLong
+var CppyyLegacy::kMinLong
+var CppyyLegacy::kMaxULong64
+var CppyyLegacy::kMaxLong64
+var CppyyLegacy::kMinLong64
+var CppyyLegacy::kBitsPerByte
+var CppyyLegacy::kNPOS
+var CppyyLegacy::gDebug
+var CppyyLegacy::gApplication
+var CppyyLegacy::kIterForward
+var CppyyLegacy::kIterBackward
+var CppyyLegacy::gEnv
+var CppyyLegacy::kInfo
+var CppyyLegacy::kWarning
+var CppyyLegacy::kError
+var CppyyLegacy::kSysError
+var CppyyLegacy::kFatal
+var CppyyLegacy::gErrorIgnoreLevel
+var CppyyLegacy::gErrorAbortLevel
+var CppyyLegacy::gPrintViaErrorHandler
+var CppyyLegacy::gRootDir
+var CppyyLegacy::gProgName
+var CppyyLegacy::gProgPath
+var gSystem
+var CppyyLegacy::gClassTable
+var CppyyLegacy::gObjectTable

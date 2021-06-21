@@ -1,111 +1,72 @@
-From a8d8f84420fd1a7d403fca29362ca7297c9ad0e1 Mon Sep 17 00:00:00 2001
+From 2b821f8720b60b6675507c8b6e2860c2c22cbf35 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Mon, 21 Jun 2021 01:32:38 +0200
-Subject: [PATCH] do not run rootcling during build
+Date: Mon, 21 Jun 2021 15:25:53 +0200
+Subject: [PATCH] use pre-built dictionary and rootmap
 
-this step seems to create a .cxx file (that is not used?) and a .rootmap
-file. If that file is needed, we could create it during activation or
-just add it to the recipe.
 ---
- src/cmake/modules/RootMacros.cmake | 11 -----------
- src/core/CMakeLists.txt            | 19 ------------------
- src/io/io/CMakeLists.txt           | 31 ------------------------------
- 3 files changed, 61 deletions(-)
+ src/cmake/modules/RootMacros.cmake | 34 ++++++++++--------------------
+ 1 file changed, 11 insertions(+), 23 deletions(-)
 
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..bdb9a80 100644
+index 3f7d9ee..84a1e6e 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
-@@ -1108,17 +1108,6 @@ function(ROOT_STANDARD_LIBRARY_PACKAGE libname)
-       "dictionary will be empty. Consider using ROOT_LINKER_LIBRARY instead.")
+@@ -479,16 +479,14 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
    endif()
  
--  ROOT_GENERATE_DICTIONARY(G__${libname} ${ARG_HEADERS}
--                          ${NO_CXXMODULE_FLAG}
--                          ${STAGE1_FLAG}
--                          MODULE ${libname}
--                          LINKDEF ${ARG_LINKDEF}
--                          NODEPHEADERS ${ARG_NODEPHEADERS}
--                          OPTIONS ${ARG_DICTIONARY_OPTIONS}
--                          DEPENDENCIES ${ARG_DEPENDENCIES}
--                          BUILTINS ${ARG_BUILTINS}
--                          )
--
-   # Dictionary might include things from the current src dir, e.g. tests. Alas
-   # there is no way to set the include directory for a source file (except for
-   # the generic COMPILE_FLAGS), so this needs to be glued to the target.
-diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index 42eefab..3d485aa 100644
---- a/src/core/CMakeLists.txt
-+++ b/src/core/CMakeLists.txt
-@@ -82,25 +82,6 @@ add_subdirectory(rootcling_stage1)
- #-------------------------------------------------------------------------------
- ROOT_LINKER_LIBRARY(CoreLegacy $<TARGET_OBJECTS:BaseTROOT> ${objectlibs} BUILTINS)
+   #---call rootcint------------------------------------------
+-  add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
+-                     COMMAND ${command} -v2 -f  ${dictionary}.cxx ${newargs} ${excludepathsargs} ${rootmapargs}
+-                                        ${definitions} "$<$<BOOL:${module_defs}>:-D$<JOIN:${module_defs},;-D>>"
+-                                        ${includedirs} "$<$<BOOL:${module_incs}>:-I$<JOIN:${module_incs},;-I>>"
+-                                        ${ARG_OPTIONS} ${headerfiles} ${_linkdef}
+-                     IMPLICIT_DEPENDS ${_implicitdeps}
+-                     DEPENDS ${_list_of_header_dependencies} ${_linkdef} ${ROOTCINTDEP}
+-                             ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
+-                             ${runtime_cxxmodule_dependencies}
+-                     COMMAND_EXPAND_LISTS)
++  add_custom_command(OUTPUT ${dictionary}.cxx
++                     COMMAND ${CMAKE_COMMAND} -E copy
++                     $ENV{RECIPE_ROOT}/rootcling/${dictionary}.cxx
++                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx)
++  add_custom_command(OUTPUT ${rootmap_name}
++                     COMMAND ${CMAKE_COMMAND} -E copy
++                     $ENV{RECIPE_ROOT}/rootcling/${rootmap_name}
++                     ${CMAKE_CURRENT_BINARY_DIR}/${rootmap_name})
  
--ROOT_GENERATE_DICTIONARY(G__CoreLegacy
--  ${CoreLegacy_dict_headers}
--  ${Clib_dict_headers}
--  ${Cont_dict_headers}
--  ${Foundation_dict_headers}
--  ${Macosx_dict_headers}
--  ${Unix_dict_headers}
--  ${Winnt_dict_headers}
--  ${ClingUtils_dict_headers}
--  ${Meta_dict_headers}
--  ${TextInput_dict_headers}
--  STAGE1
--  MODULE
--    CoreLegacy
--  OPTIONS
--  LINKDEF
--    base/inc/LinkDef.h
--)
--
- # This is needed because LinkDef.h includes other LinkDef starting from ${CMAKE_SOURCE_DIR}
- target_include_directories(CoreLegacy PRIVATE ${CMAKE_SOURCE_DIR})
+   # If we are adding to an existing target and it's not the dictionary itself,
+   # we make an object library and add its output object file as source to the target.
+@@ -509,7 +507,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+     target_include_directories(${dictionary} PRIVATE
+       ${includedirs} $<TARGET_PROPERTY:${ARG_MODULE},INCLUDE_DIRECTORIES>)
+   else()
+-    add_custom_target(${dictionary} DEPENDS ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file})
++    add_custom_target(${dictionary} DEPENDS ${dictionary}.cxx ${rootmap_name})
+   endif()
  
-diff --git a/src/io/io/CMakeLists.txt b/src/io/io/CMakeLists.txt
-index 6c607b8..632994c 100644
---- a/src/io/io/CMakeLists.txt
-+++ b/src/io/io/CMakeLists.txt
-@@ -37,37 +37,6 @@ ROOT_LINKER_LIBRARY(RIOLegacy
+   if(PROJECT_NAME STREQUAL "ROOT")
+@@ -528,19 +526,9 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
  
- target_include_directories(RIOLegacy PRIVATE ${CMAKE_SOURCE_DIR}/core/clib/res)
+   if(NOT ARG_NOINSTALL AND NOT CMAKE_ROOTTEST_DICT AND DEFINED CMAKE_LIBRARY_OUTPUT_DIRECTORY)
+     ROOT_GET_INSTALL_DIR(shared_lib_install_dir)
+-    # Install the C++ module if we generated one.
+-    if (cpp_module_file)
+-      install(FILES ${cpp_module_file}
+-                    DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
+-    endif()
  
--ROOT_GENERATE_DICTIONARY(G__RIOLegacy
--  TBufferFile.h
--  TBufferIO.h
--  TCollectionProxyFactory.h
--  TContainerConverters.h
--  TEmulatedMapProxy.h
--  TEmulatedCollectionProxy.h
--  TDirectoryFile.h
--  TFree.h
--  TFile.h
--  TGenCollectionStreamer.h
--  TGenCollectionProxy.h
--  TKey.h
--  TMemFile.h
--  TStreamerInfoActions.h
--  TVirtualCollectionIterators.h
--  TStreamerInfo.h
--  TVirtualArray.h
--  ${RIOLegacy_EXTRA_HEADERS}
--  STAGE1
--  MODULE
--    RIOLegacy
--  LINKDEF
--    LinkDef.h
--  OPTIONS
--    -writeEmptyRootPCM
--  DEPENDENCIES
--    CoreLegacy
--    ThreadLegacy
--)
--
- # TStreamerInfoReadBuffer in O0 needs 6k on the stack. It is called
- # recursively, quickly exhausting the stack. Prevent that by forcing
- # the many scope-local vars to share their stack space / become
+-    if(ARG_STAGE1)
+-      install(FILES ${rootmap_name}
+-                    DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
+-    else()
+-      install(FILES ${pcm_name} ${rootmap_name}
+-                    DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
+-    endif()
++    install(FILES ${rootmap_name}
++                  DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
+   endif()
+ 
+   if(ARG_BUILTINS)
 -- 
-2.32.0
+2.30.2
 
