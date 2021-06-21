@@ -82,4 +82,26 @@ fi
 cmake $CMAKE_CLING_ARGS ../src
 cmake --build . --target install --config Release
 
+set +e
+
+file `find -executable`
+
+echo "Contents of G__ThreadLegacy.cxx"
+cat `find -name 'G__ThreadLegacy.cxx'`
+
+echo "Contents of G__CoreLegacy.cxx"
+cat `find -name 'G__CoreLegacy.cxx'`
+
+echo "Contents of G__RIOLegacy.cxx"
+cat `find -name 'G__RIOLegacy.cxx'`
+
+echo "Contents of libThreadLegacy.rootmap"
+cat `find -name 'libThreadLegacy.rootmap'`
+
+echo "Contents of libCoreLegacy.rootmap"
+cat `find -name 'libCoreLegacy.rootmap'`
+
+echo "Contents of libRIOLegacy.rootmap"
+cat `find -name 'libRIOLegacy.rootmap'`
+
 rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch"
