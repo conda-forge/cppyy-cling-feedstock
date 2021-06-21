@@ -1,7 +1,7 @@
-From 6e4b2c80be67342bfefc4894add2cb750245e0c3 Mon Sep 17 00:00:00 2001
+From 7374cfc8fbfb60282e1bf2e44508980f2459f63b Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
-Subject: [PATCH] use pre-built dictionary and rootmap
+Subject: [PATCH 1/2] use pre-built dictionary and rootmap
 
 ---
  src/CMakeLists.txt                 | 15 +++---------
@@ -43,7 +43,7 @@ index afca457..b7e2cb6 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..21ad65b 100644
+index 3f7d9ee..85dc4b2 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -391,13 +391,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -112,7 +112,7 @@ index 3f7d9ee..21ad65b 100644
 -      install(FILES ${pcm_name} ${rootmap_name}
 -                    DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
 -    endif()
-+    install(FILES ${rootmap_name}
++    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${rootmap_name}
 +                  DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
    endif()
  
