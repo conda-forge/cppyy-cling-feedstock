@@ -1,0 +1,32 @@
+From b8bba3ebf2c0f728a8bb0d33b73140f8cf81d283 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 21 Jun 2021 02:30:29 +0200
+Subject: [PATCH] debug rootcling output
+
+---
+ src/cmake/modules/RootMacros.cmake | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
+index bdb9a80..17a88fe 100644
+--- a/src/cmake/modules/RootMacros.cmake
++++ b/src/cmake/modules/RootMacros.cmake
+@@ -490,6 +490,15 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+                              ${runtime_cxxmodule_dependencies}
+                      COMMAND_EXPAND_LISTS)
+ 
++  message("Contents of the generated .cxx file")
++  execute_process(COMMAND /usr/bin/cat ${dictionary}.cxx)
++  message("Contents of the generated PCM file")
++  execute_process(COMMAND /usr/bin/cat ${pcm_name})
++  message("Contents of the generated .rootmap file")
++  execute_process(COMMAND /usr/bin/cat ${rootmap_name})
++  message("Contents of the cpp module file")
++  execute_process(COMMAND /usr/bin/cat ${cpp_module_file})
++
+   # If we are adding to an existing target and it's not the dictionary itself,
+   # we make an object library and add its output object file as source to the target.
+   # This works around bug https://cmake.org/Bug/view.php?id=14633 in CMake by keeping
+-- 
+2.32.0
+
