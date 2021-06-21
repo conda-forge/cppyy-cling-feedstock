@@ -1,12 +1,12 @@
-From f38adfd7f14c68b8c7ff92ad1a8cc26034bd3b48 Mon Sep 17 00:00:00 2001
+From 0133f38e4d4880a3df6f7f84287347c87c1e3523 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
 
 ---
- src/CMakeLists.txt                 | 15 +++-----------
- src/cmake/modules/RootMacros.cmake | 33 +++++++++---------------------
- 2 files changed, 13 insertions(+), 35 deletions(-)
+ src/CMakeLists.txt                 | 15 +++---------
+ src/cmake/modules/RootMacros.cmake | 37 ++++++++++--------------------
+ 2 files changed, 15 insertions(+), 37 deletions(-)
 
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
 index afca457..b7e2cb6 100644
@@ -43,9 +43,25 @@ index afca457..b7e2cb6 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..2e0e287 100644
+index 3f7d9ee..169d2b9 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
+@@ -391,13 +391,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+   set(cpp_module)
+   set(library_name ${libprefix}${library_target_name}${libsuffix})
+   set(newargs -s ${library_output_dir}/${library_name})
+-  set(rootmap_name ${library_output_dir}/${libprefix}${library_target_name}.rootmap)
++  set(rootmap_name ${libprefix}${library_target_name}.rootmap)
+   set(pcm_name ${library_output_dir}/${libprefix}${library_target_name}_rdict.pcm)
+   if(ARG_MODULE)
+     if(ARG_MULTIDICT)
+       set(newargs ${newargs} -multiDict)
+       set(pcm_name ${library_output_dir}/${libprefix}${library_target_name}_${dictionary}_rdict.pcm)
+-      set(rootmap_name ${library_output_dir}/${libprefix}${library_target_name}32.rootmap)
++      set(rootmap_name ${libprefix}${library_target_name}32.rootmap)
+     else()
+       set(cpp_module ${library_target_name})
+     endif(ARG_MULTIDICT)
 @@ -479,16 +479,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
    endif()
  
