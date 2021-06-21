@@ -16,13 +16,13 @@ index bdb9a80..17a88fe 100644
                       COMMAND_EXPAND_LISTS)
  
 +  message("Contents of the generated .cxx file")
-+  execute_process(COMMAND /usr/bin/cat ${dictionary}.cxx)
++  execute_process(COMMAND /usr/bin/cat ${dictionary}.cxx COMMAND_ECHO STDOUT)
 +  message("Contents of the generated PCM file")
-+  execute_process(COMMAND /usr/bin/cat ${pcm_name})
++  execute_process(COMMAND /usr/bin/cat ${pcm_name} COMMAND_ECHO STDOUT)
 +  message("Contents of the generated .rootmap file")
-+  execute_process(COMMAND /usr/bin/cat ${rootmap_name})
++  execute_process(COMMAND /usr/bin/cat ${rootmap_name} COMMAND_ECHO STDOUT)
 +  message("Contents of the cpp module file")
-+  execute_process(COMMAND /usr/bin/cat ${cpp_module_file})
++  execute_process(COMMAND /usr/bin/cat ${cpp_module_file} COMMAND_ECHO STDOUT)
 +
    # If we are adding to an existing target and it's not the dictionary itself,
    # we make an object library and add its output object file as source to the target.
