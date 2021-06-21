@@ -1,18 +1,18 @@
-From b3ae2eeb6e7f35734eca3e9581d53aa93e44f4f9 Mon Sep 17 00:00:00 2001
+From fbd0f6641d4cf8ac685139a9ac55efa66776d18f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
 
 ---
- src/CMakeLists.txt                 | 14 ++----------
+ src/CMakeLists.txt                 | 15 +++----------
  src/cmake/modules/RootMacros.cmake | 34 ++++++++++--------------------
- 2 files changed, 13 insertions(+), 35 deletions(-)
+ 2 files changed, 14 insertions(+), 35 deletions(-)
 
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index afca457..456735f 100644
+index afca457..b0ffe69 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -367,26 +367,16 @@ else()
+@@ -367,26 +367,17 @@ else()
    get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
    get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
  
@@ -37,6 +37,7 @@ index afca457..456735f 100644
 -  add_custom_target(onepcm ALL DEPENDS etc/allDict.cxx.pch)
 -  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 -  install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
++  add_custom_target(onepcm ALL DEPENDS etc/dictpch/allCppflags.txt)
 +  install(FILES "${CMAKE_BINARY_DIR}/etc/dictpch/allCppflags.txt" "${CMAKE_BINARY_DIR}/etc/dictpch/allHeaders.h" "${CMAKE_BINARY_DIR}/etc/dictpch/allLinkDefs.h" DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/etc/dictpch)
  endif()
  
