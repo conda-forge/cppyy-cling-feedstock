@@ -1,17 +1,17 @@
-From 6510119aefcf2355d4100999f921a3df72c3a465 Mon Sep 17 00:00:00 2001
+From d64ea46a34971d5df9629658cfb569103dc2c66d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Fri, 30 Apr 2021 18:54:06 +0200
-Subject: [PATCH] setup
+Date: Thu, 27 May 2021 02:01:31 +0200
+Subject: [PATCH] minimal setup.py for conda-forge
 
 ---
- setup.py | 329 -------------------------------------------------------
- 1 file changed, 329 deletions(-)
+ setup.py | 326 -------------------------------------------------------
+ 1 file changed, 326 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 580d7a9..5618d19 100755
+index bafb49b..4839d9f 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -1,23 +1,5 @@
+@@ -1,22 +1,5 @@
  import codecs, multiprocessing, os, sys, subprocess, stat, re
  from setuptools import setup, find_packages
 -from distutils import log
@@ -31,11 +31,10 @@ index 580d7a9..5618d19 100755
 -
 -requirements = []
 -setup_requirements = ['wheel']+requirements
--
+ 
  here = os.path.abspath(os.path.dirname(__file__))
  with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
-     long_description = f.read()
-@@ -35,314 +17,6 @@ def find_version(*file_paths):
+@@ -35,312 +18,6 @@ def find_version(*file_paths):
          return version_match.group(1)
      raise RuntimeError("Unable to find version string.")
  
@@ -123,13 +122,11 @@ index 580d7a9..5618d19 100755
 -        except KeyError:
 -            if is_manylinux():
 -                stdcxx = '11'
--            elif 'win32' in sys.platform:
--                stdcxx = '14'     # current cmake claims MSVC'17 does not support C++17 yet
 -            else:
 -                stdcxx = '17'
 -
--        if not stdcxx in ['11', '14', '17']:
--            log.fatal('FATAL: envar STDCXX should be one of 11, 14, or 17')
+-        if not stdcxx in ['11', '14', '17', '20']:
+-            log.fatal('FATAL: envar STDCXX should be one of 11, 14, 17, or 20')
 -            sys.exit(1)
 -
 -        stdcxx='-DCMAKE_CXX_STANDARD='+stdcxx
@@ -155,7 +152,7 @@ index 580d7a9..5618d19 100755
 -
 -        CMAKE_COMMAND = ['cmake', srcdir, '-Wno-dev',
 -                stdcxx, '-DLLVM_ENABLE_TERMINFO=0', '-DLLVM_ENABLE_ASSERTIONS=0',
--                '-Dminimal=ON', '-Druntime_cxxmodules=OFF', '-Dbuiltin_zlib=ON']
+-                '-Dminimal=ON', '-Dbuiltin_cling=ON', '-Druntime_cxxmodules=OFF', '-Dbuiltin_zlib=ON']
 -        if 'darwin' in sys.platform:
 -            CMAKE_COMMAND.append('-Dlibcxx=ON')
 -        CMAKE_COMMAND.append('-DCMAKE_BUILD_TYPE='+get_build_type())
@@ -350,7 +347,7 @@ index 580d7a9..5618d19 100755
  setup(
      name='cppyy-cling',
      description='Re-packaged Cling, as backend for cppyy',
-@@ -390,9 +64,6 @@ setup(
+@@ -388,9 +65,6 @@ setup(
      package_dir={'': 'python'},
      packages=find_packages('python', include=['cppyy_backend']),
  
@@ -361,5 +358,5 @@ index 580d7a9..5618d19 100755
          "console_scripts": [
              "cling-config = cppyy_backend._cling_config:main",
 -- 
-2.31.1
+2.30.1
 

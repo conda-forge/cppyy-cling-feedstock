@@ -1,0 +1,41 @@
+From 6133cd25d6c9e0e70340817cbeb35fddfabb598f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 21 Jun 2021 00:37:13 +0200
+Subject: [PATCH 1/2] make sure C formatting symbols are available in C++
+
+---
+ src/core/metacling/src/TCling.cxx                         | 3 +++
+ src/core/metacling/src/TClingRdictModuleFileExtension.cxx | 3 +++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/src/core/metacling/src/TCling.cxx b/src/core/metacling/src/TCling.cxx
+index 38b9e4a..89f8c5e 100644
+--- a/src/core/metacling/src/TCling.cxx
++++ b/src/core/metacling/src/TCling.cxx
+@@ -17,6 +17,9 @@ Cling is a full ANSI compliant C++-11 interpreter based on
+ clang/LLVM technology.
+ */
+ 
++#define __STDC_FORMAT_MACROS
++#include <inttypes.h>
++
+ #include "TCling.h"
+ 
+ #include "ROOT/FoundationUtils.hxx"
+diff --git a/src/core/metacling/src/TClingRdictModuleFileExtension.cxx b/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
+index 65f20f0..e06116d 100644
+--- a/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
++++ b/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
+@@ -15,6 +15,9 @@
+  * For the list of contributors see $ROOTSYS/README/CREDITS.             *
+  *************************************************************************/
+ 
++#define __STDC_FORMAT_MACROS
++#include <inttypes.h>
++
+ #include "TClingRdictModuleFileExtension.h"
+ 
+ #include "TClingUtils.h"
+-- 
+2.32.0
+

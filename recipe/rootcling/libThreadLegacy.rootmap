@@ -1,0 +1,28 @@
+{ decls }
+namespace CppyyLegacy {  }
+
+[ libThreadLegacy.so ]
+# List of selected classes
+class CppyyLegacy::TCondition
+class CppyyLegacy::TConditionImp
+class CppyyLegacy::TMutex
+class CppyyLegacy::TMutexImp
+class CppyyLegacy::TPosixCondition
+class CppyyLegacy::TPosixMutex
+class CppyyLegacy::TPosixThread
+class CppyyLegacy::TPosixThreadFactory
+class CppyyLegacy::TSpinMutex
+class CppyyLegacy::TThread
+class CppyyLegacy::TThreadFactory
+class CppyyLegacy::TThreadImp
+header TCondition.h
+header TConditionImp.h
+header TMutex.h
+header TMutexImp.h
+header TPosixCondition.h
+header TPosixMutex.h
+header TPosixThread.h
+header TPosixThreadFactory.h
+header TThread.h
+header TThreadFactory.h
+header TThreadImp.h

@@ -1,0 +1,152 @@
+From 04f41800021984b116c1d15bf60e8eee3d2b0fe9 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Sun, 20 Jun 2021 17:53:24 +0200
+Subject: [PATCH 1/2] do not use llvm-config when cross-compiling
+
+---
+ src/interpreter/CMakeLists.txt       | 60 ++++------------------------
+ src/interpreter/cling/CMakeLists.txt | 55 +++----------------------
+ 2 files changed, 13 insertions(+), 102 deletions(-)
+
+diff --git a/src/interpreter/CMakeLists.txt b/src/interpreter/CMakeLists.txt
+index c7f98b8..544bb58 100644
+--- a/src/interpreter/CMakeLists.txt
++++ b/src/interpreter/CMakeLists.txt
+@@ -230,61 +230,15 @@ if(builtin_llvm)
+   endforeach()
+   set(LLVM_VERSION "${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH}" PARENT_SCOPE)
+ else()
+-  # Rely on llvm-config.
+-  set(CONFIG_OUTPUT)
+-  find_program(LLVM_CONFIG NAMES "llvm-config" "llvm-config-9.0")
+-  if(LLVM_CONFIG)
+-    message(STATUS "Found LLVM_CONFIG as ${LLVM_CONFIG}")
+-    set(CONFIG_COMMAND ${LLVM_CONFIG}
+-      "--assertion-mode"
+-      "--bindir"
+-      "--libdir"
+-      "--includedir"
+-      "--prefix"
+-      "--src-root"
+-      "--cmakedir"
+-      "--build-mode")
+-    execute_process(
+-      COMMAND ${CONFIG_COMMAND}
+-      RESULT_VARIABLE HAD_ERROR
+-      OUTPUT_VARIABLE CONFIG_OUTPUT
+-    )
+-    if(NOT HAD_ERROR)
+-      string(REGEX REPLACE
+-        "[ \t]*[\r\n]+[ \t]*" ";"
+-        CONFIG_OUTPUT ${CONFIG_OUTPUT})
+-    else()
+-      string(REPLACE ";" " " CONFIG_COMMAND_STR "${CONFIG_COMMAND}")
+-      message(STATUS "${CONFIG_COMMAND_STR}")
+-      message(FATAL_ERROR "llvm-config failed with status ${HAD_ERROR}")
+-    endif()
+-  else()
+-    message(FATAL_ERROR "llvm-config not found -- ${LLVM_CONFIG}")
+-  endif()
+ 
+-  list(GET CONFIG_OUTPUT 0 ENABLE_ASSERTIONS)
+-  list(GET CONFIG_OUTPUT 1 TOOLS_BINARY_DIR)
+-  list(GET CONFIG_OUTPUT 2 LIBRARY_DIR)
+-  list(GET CONFIG_OUTPUT 3 INCLUDE_DIR)
+-  list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
+-  list(GET CONFIG_OUTPUT 5 MAIN_SRC_DIR)
+-  list(GET CONFIG_OUTPUT 6 LLVM_CONFIG_CMAKE_PATH)
+-  list(GET CONFIG_OUTPUT 7 LLVM_BUILD_MODE)
+-
+-  message(STATUS "External llvm built in ${LLVM_BUILD_MODE} mode.")
+-
+-  if(NOT MSVC_IDE)
+-    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
+-      CACHE BOOL "Enable assertions")
+-    # Assertions should follow llvm-config's.
+-    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
+-  endif()
++  set(LLVM_ENABLE_ASSERTIONS OFF CACHE BOOL "Enable assertions")
++  set(LLVM_TOOLS_BINARY_DIR $ENV{PREFIX}/bin CACHE PATH "Path to llvm/bin")
++  set(LLVM_LIBRARY_DIR $ENV{PREFIX}/lib CACHE PATH "Path to llvm/lib")
++  set(LLVM_MAIN_INCLUDE_DIR $ENV{PREFIX}/include CACHE PATH "Path to llvm/include")
++  set(LLVM_BINARY_DIR $ENV{PREFIX} CACHE PATH "Path to LLVM build tree")
++  set(LLVM_CONFIG_CMAKE_PATH $ENV{PREFIX}/lib/cmake/llvm CACHE PATH "Path to llvm cmake rules")
+ 
+-  set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
+-  set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
+-  set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
+-  set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
+-  set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
++  set(LLVM_MAIN_SRC_DIR /no-such-directory CACHE PATH "Path to LLVM source tree")
+ 
+   set(LLVM_DIR "${LLVM_BINARY_DIR}")
+ 
+diff --git a/src/interpreter/cling/CMakeLists.txt b/src/interpreter/cling/CMakeLists.txt
+index 3638ed2..aec6818 100644
+--- a/src/interpreter/cling/CMakeLists.txt
++++ b/src/interpreter/cling/CMakeLists.txt
+@@ -12,55 +12,12 @@ if( CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR )
+     cmake_minimum_required(VERSION 3.6.2)
+   endif(WIN32)
+ 
+-  # Rely on llvm-config.
+-  set(CONFIG_OUTPUT)
+-  find_program(LLVM_CONFIG "llvm-config")
+-  if(LLVM_CONFIG)
+-    message(STATUS "Found LLVM_CONFIG as ${LLVM_CONFIG}")
+-    set(CONFIG_COMMAND ${LLVM_CONFIG}
+-      "--assertion-mode"
+-      "--bindir"
+-      "--libdir"
+-      "--includedir"
+-      "--prefix"
+-      "--src-root")
+-    execute_process(
+-      COMMAND ${CONFIG_COMMAND}
+-      RESULT_VARIABLE HAD_ERROR
+-      OUTPUT_VARIABLE CONFIG_OUTPUT
+-    )
+-    if(NOT HAD_ERROR)
+-      string(REGEX REPLACE
+-        "[ \t]*[\r\n]+[ \t]*" ";"
+-        CONFIG_OUTPUT ${CONFIG_OUTPUT})
+-    else()
+-      string(REPLACE ";" " " CONFIG_COMMAND_STR "${CONFIG_COMMAND}")
+-      message(STATUS "${CONFIG_COMMAND_STR}")
+-      message(FATAL_ERROR "llvm-config failed with status ${HAD_ERROR}")
+-    endif()
+-  else()
+-    message(FATAL_ERROR "llvm-config not found -- ${LLVM_CONFIG}")
+-  endif()
+-
+-  list(GET CONFIG_OUTPUT 0 ENABLE_ASSERTIONS)
+-  list(GET CONFIG_OUTPUT 1 TOOLS_BINARY_DIR)
+-  list(GET CONFIG_OUTPUT 2 LIBRARY_DIR)
+-  list(GET CONFIG_OUTPUT 3 INCLUDE_DIR)
+-  list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
+-  list(GET CONFIG_OUTPUT 5 MAIN_SRC_DIR)
+-
+-  if(NOT MSVC_IDE)
+-    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
+-      CACHE BOOL "Enable assertions")
+-    # Assertions should follow llvm-config's.
+-    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
+-  endif()
+-
+-  set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
+-  set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
+-  set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
+-  set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
+-  set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
++  set(LLVM_ENABLE_ASSERTIONS OFF CACHE BOOL "Enable assertions")
++  set(LLVM_TOOLS_BINARY_DIR $ENV{PREFIX}/bin CACHE PATH "Path to llvm/bin")
++  set(LLVM_LIBRARY_DIR $ENV{PREFIX}/lib CACHE PATH "Path to llvm/lib")
++  set(LLVM_MAIN_INCLUDE_DIR $ENV{PREFIX}/include CACHE PATH "Path to llvm/include")
++  set(LLVM_BINARY_DIR $ENV{PREFIX} CACHE PATH "Path to LLVM build tree")
++  set(LLVM_MAIN_SRC_DIR /no-such-directory CACHE PATH "Path to LLVM source tree")
+ 
+   find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
+     NO_DEFAULT_PATH)
+-- 
+2.32.0
+
