@@ -1,4 +1,4 @@
-From 09adf53a42284eeba463d67d8306d96f70fc8075 Mon Sep 17 00:00:00 2001
+From 843147ee2c0ebcb3ac5de2bea33485453c035948 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
@@ -43,7 +43,7 @@ index afca457..b7e2cb6 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..df3d616 100644
+index 3f7d9ee..40c369f 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -391,13 +391,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -82,7 +82,7 @@ index 3f7d9ee..df3d616 100644
 +                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx
 +                     COMMAND ${CMAKE_COMMAND} -E copy
 +                     $ENV{RECIPE_DIR}/rootcling/${rootmap_name}
-+                     ${CMAKE_BINARY_DIR}/lib/${rootmap_name})
++                     ${CMAKE_CURRENT_BINARY_DIR}/${rootmap_name})
  
    # If we are adding to an existing target and it's not the dictionary itself,
    # we make an object library and add its output object file as source to the target.
@@ -112,7 +112,7 @@ index 3f7d9ee..df3d616 100644
 -      install(FILES ${pcm_name} ${rootmap_name}
 -                    DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
 -    endif()
-+    install(FILES lib/${rootmap_name}
++    install(FILES ${rootmap_name}
 +                  DESTINATION ${shared_lib_install_dir} COMPONENT libraries)
    endif()
  
