@@ -1,4 +1,4 @@
-From 8718637892d1b5da59e6cdb0b5fbe175a4a14e41 Mon Sep 17 00:00:00 2001
+From c84e108727928cfee76ebc5f9931b7b02a6e8d2c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
@@ -8,7 +8,7 @@ Subject: [PATCH] use pre-built dictionary and rootmap
  1 file changed, 11 insertions(+), 23 deletions(-)
 
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..73204a0 100644
+index 3f7d9ee..7f586e2 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -479,16 +479,14 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -32,7 +32,7 @@ index 3f7d9ee..73204a0 100644
 +  add_custom_command(OUTPUT ${rootmap_name}
 +                     COMMAND ${CMAKE_COMMAND} -E copy
 +                     $ENV{RECIPE_DIR}/rootcling/${rootmap_name}
-+                     ${CMAKE_CURRENT_BINARY_DIR}/${rootmap_name})
++                     ${CMAKE_BINARY_DIR}/lib/${rootmap_name})
  
    # If we are adding to an existing target and it's not the dictionary itself,
    # we make an object library and add its output object file as source to the target.
@@ -68,5 +68,5 @@ index 3f7d9ee..73204a0 100644
  
    if(ARG_BUILTINS)
 -- 
-2.30.2
+2.32.0
 
