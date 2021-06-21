@@ -17,6 +17,7 @@ source:
     - rootcling.patch  # [build_platform != target_platform]
     - clang-cpp.patch
     - pri.patch
+    - thread.patch
 
 build:
   number: 0
