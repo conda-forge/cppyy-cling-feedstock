@@ -1,15 +1,15 @@
-From fbd0f6641d4cf8ac685139a9ac55efa66776d18f Mon Sep 17 00:00:00 2001
+From f38adfd7f14c68b8c7ff92ad1a8cc26034bd3b48 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
 
 ---
- src/CMakeLists.txt                 | 15 +++----------
- src/cmake/modules/RootMacros.cmake | 34 ++++++++++--------------------
- 2 files changed, 14 insertions(+), 35 deletions(-)
+ src/CMakeLists.txt                 | 15 +++-----------
+ src/cmake/modules/RootMacros.cmake | 33 +++++++++---------------------
+ 2 files changed, 13 insertions(+), 35 deletions(-)
 
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index afca457..b0ffe69 100644
+index afca457..b7e2cb6 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -367,26 +367,17 @@ else()
@@ -38,15 +38,15 @@ index afca457..b0ffe69 100644
 -  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 -  install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 +  add_custom_target(onepcm ALL DEPENDS etc/dictpch/allCppflags.txt)
-+  install(FILES "${CMAKE_BINARY_DIR}/etc/dictpch/allCppflags.txt" "${CMAKE_BINARY_DIR}/etc/dictpch/allHeaders.h" "${CMAKE_BINARY_DIR}/etc/dictpch/allLinkDefs.h" DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/etc/dictpch)
++  install(FILES "${CMAKE_BINARY_DIR}/etc/dictpch/allCppflags.txt" "${CMAKE_BINARY_DIR}/etc/dictpch/allHeaders.h" "${CMAKE_BINARY_DIR}/etc/dictpch/allLinkDefs.h" DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/dictpch)
  endif()
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..7f586e2 100644
+index 3f7d9ee..2e0e287 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
-@@ -479,16 +479,14 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -479,16 +479,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
    endif()
  
    #---call rootcint------------------------------------------
@@ -60,18 +60,17 @@ index 3f7d9ee..7f586e2 100644
 -                             ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
 -                             ${runtime_cxxmodule_dependencies}
 -                     COMMAND_EXPAND_LISTS)
-+  add_custom_command(OUTPUT ${dictionary}.cxx
++  add_custom_command(OUTPUT ${dictionary}.cxx ${rootmap_name}
 +                     COMMAND ${CMAKE_COMMAND} -E copy
 +                     $ENV{RECIPE_DIR}/rootcling/${dictionary}.cxx
-+                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx)
-+  add_custom_command(OUTPUT ${rootmap_name}
++                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx
 +                     COMMAND ${CMAKE_COMMAND} -E copy
 +                     $ENV{RECIPE_DIR}/rootcling/${rootmap_name}
 +                     ${CMAKE_BINARY_DIR}/lib/${rootmap_name})
  
    # If we are adding to an existing target and it's not the dictionary itself,
    # we make an object library and add its output object file as source to the target.
-@@ -509,7 +507,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -509,7 +506,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
      target_include_directories(${dictionary} PRIVATE
        ${includedirs} $<TARGET_PROPERTY:${ARG_MODULE},INCLUDE_DIRECTORIES>)
    else()
@@ -80,7 +79,7 @@ index 3f7d9ee..7f586e2 100644
    endif()
  
    if(PROJECT_NAME STREQUAL "ROOT")
-@@ -528,19 +526,9 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -528,19 +525,9 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
  
    if(NOT ARG_NOINSTALL AND NOT CMAKE_ROOTTEST_DICT AND DEFINED CMAKE_LIBRARY_OUTPUT_DIRECTORY)
      ROOT_GET_INSTALL_DIR(shared_lib_install_dir)
