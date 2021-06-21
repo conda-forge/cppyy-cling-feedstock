@@ -1,12 +1,44 @@
-From c84e108727928cfee76ebc5f9931b7b02a6e8d2c Mon Sep 17 00:00:00 2001
+From e854102a9debc23bb98cd5f74ef44c80a76ad394 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
 
 ---
+ src/CMakeLists.txt                 |  9 +-------
  src/cmake/modules/RootMacros.cmake | 34 ++++++++++--------------------
- 1 file changed, 11 insertions(+), 23 deletions(-)
+ 2 files changed, 12 insertions(+), 31 deletions(-)
 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index afca457..0489c32 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -367,25 +367,18 @@ else()
+   get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
+   get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
+ 
+-  add_custom_command(OUTPUT etc/allDict.cxx.pch
++  add_custom_command(OUTPUT etc/dictpch/allCppflags.txt
+     BYPRODUCTS
+-      etc/dictpch/allCppflags.txt
+       etc/dictpch/allHeaders.h
+       etc/dictpch/allLinkDefs.h
+     COMMAND
+       ${PYTHON_EXECUTABLE} ${CMAKE_SOURCE_DIR}/build/unix/makepchinput.py
+       ${CMAKE_SOURCE_DIR} . ${pyroot_experimental} ${__cling_pch} -- ${CMAKE_CXX_FLAGS_SEPARATE}
+-    COMMAND
+-      ${CMAKE_COMMAND} -E env ROOTIGNOREPREFIX=1 ${PYTHON_EXECUTABLE}
+-      ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py etc/allDict.cxx.pch
+-      ${__allIncludes} -I${CMAKE_BINARY_DIR}/include
+     DEPENDS
+       rootcling ${__pch_dependencies} ${__pch_dictionaries}
+       ${CMAKE_SOURCE_DIR}/build/unix/makepchinput.py
+       ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py
+   )
+-  add_custom_target(onepcm ALL DEPENDS etc/allDict.cxx.pch)
+-  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
+   install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
+ endif()
+ 
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
 index 3f7d9ee..7f586e2 100644
 --- a/src/cmake/modules/RootMacros.cmake
@@ -68,5 +100,5 @@ index 3f7d9ee..7f586e2 100644
  
    if(ARG_BUILTINS)
 -- 
-2.32.0
+2.30.2
 

@@ -88,4 +88,4 @@ for item in `ls ${RECIPE_DIR}/rootcling`; do
   diff "${RECIPE_DIR}/rootcling/${item}" `find -name ${item}` || true
 done
 
-rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch"
+rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch" || true
