@@ -1,4 +1,4 @@
-From 843147ee2c0ebcb3ac5de2bea33485453c035948 Mon Sep 17 00:00:00 2001
+From 6e4b2c80be67342bfefc4894add2cb750245e0c3 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
@@ -43,7 +43,7 @@ index afca457..b7e2cb6 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..40c369f 100644
+index 3f7d9ee..21ad65b 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -391,13 +391,13 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -76,7 +76,7 @@ index 3f7d9ee..40c369f 100644
 -                             ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
 -                             ${runtime_cxxmodule_dependencies}
 -                     COMMAND_EXPAND_LISTS)
-+  add_custom_command(OUTPUT ${dictionary}.cxx lib/${rootmap_name}
++  add_custom_command(OUTPUT ${dictionary}.cxx ${rootmap_name}
 +                     COMMAND ${CMAKE_COMMAND} -E copy
 +                     $ENV{RECIPE_DIR}/rootcling/${dictionary}.cxx
 +                     ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx
