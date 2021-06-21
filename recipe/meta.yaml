@@ -39,6 +39,7 @@ requirements:
     - zlib
     - clangdev =9.0.1 root_62400*
     - llvmdev 9
+    - llvm 9
   run:
     - {{ compiler('cxx') }}
     - python
