@@ -13,6 +13,7 @@ cd -
 # root-feedstock.
 
 export VERBOSE=1
+
 # Do not perform auto-detection of CPU features
 export EXTRA_CLING_ARGS=-O2
 
@@ -22,11 +23,11 @@ OLDVERSIONMACOS='${MACOSX_VERSION}'
 sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
 
 declare -a CMAKE_PLATFORM_FLAGS
-if [ "$(uname)" == "Linux" ]; then
+if [[ "${target_platform}" == linux* ]]; then
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_AR=${GCC_AR}")
     CMAKE_PLATFORM_FLAGS+=("-DCLANG_DEFAULT_LINKER=${LD_GOLD}")
-    CMAKE_PLATFORM_FLAGS+=("-DDEFAULT_SYSROOT=${PREFIX}/${HOST}/sysroot")
-    CMAKE_PLATFORM_FLAGS+=("-DRT_LIBRARY=${PREFIX}/${HOST}/sysroot/usr/lib/librt.so")
+    CMAKE_PLATFORM_FLAGS+=("-DDEFAULT_SYSROOT=${INSTALL_SYSROOT}")
+    CMAKE_PLATFORM_FLAGS+=("-DRT_LIBRARY=${INSTALL_SYSROOT}/usr/lib/librt.so")
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
 
     # Hide symbols from LLVM/clang to avoid conflicts with other libraries
@@ -78,7 +79,7 @@ if [[ "${python_impl}" == "pypy" ]]; then
     CMAKE_CLING_ARGS="$CMAKE_CLING_ARGS -DPYTHON_LIBRARY=$PREFIX/lib/libpypy3-c.so"
 fi
 
-cmake $CMAKE_CLING_ARGS \
-  ../src
+cmake $CMAKE_CLING_ARGS ../src
 cmake --build . --target install --config Release
+
 rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch"
