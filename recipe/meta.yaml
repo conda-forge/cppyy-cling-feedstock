@@ -17,7 +17,7 @@ source:
     - clang-cpp.patch
     - pri.patch
     # Do not run rootcling binary during build
-    - rootcling.patch  # [build_platform != target_platform]
+    # - rootcling.patch  # [build_platform != target_platform]
     - rootcling-debug.patch  # [build_platform == target_platform]
 
 build:
