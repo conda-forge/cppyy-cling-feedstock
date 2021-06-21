@@ -1,4 +1,4 @@
-From f099f70a3a2ca91a5b17001deb4102bff7dea8ee Mon Sep 17 00:00:00 2001
+From b3ae2eeb6e7f35734eca3e9581d53aa93e44f4f9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH] use pre-built dictionary and rootmap
@@ -9,7 +9,7 @@ Subject: [PATCH] use pre-built dictionary and rootmap
  2 files changed, 13 insertions(+), 35 deletions(-)
 
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index afca457..d4b3b0f 100644
+index afca457..456735f 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -367,26 +367,16 @@ else()
@@ -37,7 +37,7 @@ index afca457..d4b3b0f 100644
 -  add_custom_target(onepcm ALL DEPENDS etc/allDict.cxx.pch)
 -  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 -  install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
-+  install(FILES etc/dictpch/allCppflags.txt etc/dictpch/allHeaders.h etc/dictpch/allLinkDefs.h DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/etc/dictpch)
++  install(FILES "${CMAKE_BINARY_DIR}/etc/dictpch/allCppflags.txt" "${CMAKE_BINARY_DIR}/etc/dictpch/allHeaders.h" "${CMAKE_BINARY_DIR}/etc/dictpch/allLinkDefs.h" DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/etc/dictpch)
  endif()
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
