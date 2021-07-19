@@ -25,6 +25,7 @@ sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules
 declare -a CMAKE_PLATFORM_FLAGS
 
 export AR=`which $AR`
+export RANLIB=`which $RANLIB`
 
 if [[ "${target_platform}" == linux* ]]; then
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_AR=${GCC_AR}")
@@ -69,6 +70,8 @@ export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DLLVM_ENABLE_TERMINFO=0 -Dminimal=
 export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -Dbuiltin_llvm=OFF -Dbuiltin_clang=OFF"
 # Use the cross ar and not the host's ar
 export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_AR=$AR"
+# Use the cross ranlib and not the host's ranlib
+export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_RANLIB=$RANLIB"
 
 python -m pip install . --no-deps -vv
 
