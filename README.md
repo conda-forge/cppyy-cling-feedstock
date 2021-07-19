@@ -21,7 +21,21 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/cppyy-cling-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/cppyy-cling-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/cppyy-cling-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/cppyy-cling-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
