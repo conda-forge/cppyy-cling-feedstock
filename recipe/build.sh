@@ -79,7 +79,7 @@ if [[ "${python_impl}" == "pypy" ]]; then
     CMAKE_CLING_ARGS="$CMAKE_CLING_ARGS -DPYTHON_LIBRARY=$PREFIX/lib/libpypy3-c.so"
 fi
 
-cmake $CMAKE_CLING_ARGS ../src
+cmake ${CMAKE_ARGS} $CMAKE_CLING_ARGS ../src
 cmake --build . --target install --config Release
 
 echo "Check that generated files do not need to be updated in cross-compiled builds."
