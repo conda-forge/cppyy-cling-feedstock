@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.25.0" %}
+{% set version = "6.25.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: 377043089f449ba695c93fb698272424833f5d7e3aabfc2c1d99c1ad00f191ee
+  sha256: bedb63a5b47a2bcb482f793fbd992f4b4a9318dd0dbd24e6dd57de07c30b66fd
   patches:
     - use-dumb-setup.py.patch
     - llvm.patch
