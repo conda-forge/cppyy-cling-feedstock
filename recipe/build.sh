@@ -73,11 +73,6 @@ export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_AR=$AR"
 # Use the cross ranlib and not the host's ranlib
 export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_RANLIB=$RANLIB"
 
-python -m pip install . --no-deps -vv
-
-mkdir build
-cd build
-
 if [[ "${python_impl}" == "pypy" ]]; then
     # CMake 3.17 needs some help to find Python. According to
     # https://cmake.org/cmake/help/v3.17/module/FindPython.html#module:FindPython,
@@ -87,8 +82,15 @@ if [[ "${python_impl}" == "pypy" ]]; then
     CMAKE_CLING_ARGS="$CMAKE_CLING_ARGS -DPYTHON_LIBRARY=$PREFIX/lib/libpypy3-c.so"
 fi
 
+mkdir build
+cd build
+
 cmake $CMAKE_CLING_ARGS ../src
 cmake --build . --target install --config Release
+
+cd ..
+
+python -m pip install . --no-deps -vv
 
 echo "Check that generated files do not need to be updated in cross-compiled builds."
 for item in `ls ${RECIPE_DIR}/rootcling`; do

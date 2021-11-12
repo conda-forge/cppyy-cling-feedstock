@@ -20,7 +20,7 @@ source:
     - thread.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
