@@ -1,14 +1,14 @@
-From d64ea46a34971d5df9629658cfb569103dc2c66d Mon Sep 17 00:00:00 2001
+From 10fea606649485290c242b44f56b5e78558d6b19 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Thu, 27 May 2021 02:01:31 +0200
-Subject: [PATCH] minimal setup.py for conda-forge
+Date: Mon, 22 Nov 2021 00:33:16 -0600
+Subject: [PATCH] simplify setup
 
 ---
- setup.py | 326 -------------------------------------------------------
- 1 file changed, 326 deletions(-)
+ setup.py | 331 -------------------------------------------------------
+ 1 file changed, 331 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index bafb49b..4839d9f 100755
+index f793e6f..c2a3597 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -1,22 +1,5 @@
@@ -34,11 +34,10 @@ index bafb49b..4839d9f 100755
  
  here = os.path.abspath(os.path.dirname(__file__))
  with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
-@@ -35,312 +18,6 @@ def find_version(*file_paths):
-         return version_match.group(1)
+@@ -36,317 +19,6 @@ def find_version(*file_paths):
      raise RuntimeError("Unable to find version string.")
  
--
+ 
 -#
 -# platform-dependent helpers
 -#
@@ -160,6 +159,10 @@ index bafb49b..4839d9f 100755
 -            import platform
 -            if '64' in platform.architecture()[0]:
 -                CMAKE_COMMAND += ['-Thost=x64', '-DCMAKE_GENERATOR_PLATFORM=x64']
+-        elif 'darwin' in sys.platform:
+-            import platform
+-            if 'arm64' in platform.machine():
+-                CMAKE_COMMAND += ['-DLLVM_TARGETS_TO_BUILD=ARM;AArch64;NVPTX']
 -        CMAKE_COMMAND.append('-DCMAKE_INSTALL_PREFIX='+prefix)
 -
 -        log.info('Running cmake for cppyy-cling: %s', ' '.join(CMAKE_COMMAND))
@@ -296,7 +299,9 @@ index bafb49b..4839d9f 100755
 -    def get_outputs(self):
 -        outputs = _install.get_outputs(self)
 -        outputs.append(os.path.join(self._get_install_path(), 'cppyy_backend'))
--        outputs.append(os.path.join(self._get_install_path(), 'cppyy_backend', 'etc', 'allDict.cxx.pch'))
+-        version = find_version('python', 'cppyy_backend', '_version.py')
+-        outputs.append(os.path.join(
+-            self._get_install_path(), 'cppyy_backend', 'etc', 'allDict.cxx.pch.'+str(version)))
 -        return outputs
 -
 -
@@ -347,7 +352,7 @@ index bafb49b..4839d9f 100755
  setup(
      name='cppyy-cling',
      description='Re-packaged Cling, as backend for cppyy',
-@@ -388,9 +65,6 @@ setup(
+@@ -394,9 +66,6 @@ setup(
      package_dir={'': 'python'},
      packages=find_packages('python', include=['cppyy_backend']),
  
@@ -358,5 +363,5 @@ index bafb49b..4839d9f 100755
          "console_scripts": [
              "cling-config = cppyy_backend._cling_config:main",
 -- 
-2.30.1
+2.34.0
 
