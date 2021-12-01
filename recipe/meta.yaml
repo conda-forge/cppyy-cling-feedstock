@@ -18,6 +18,8 @@ source:
     - clang-cpp.patch
     - pri.patch
     - thread.patch
+    # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
+    - system_dirs.patch  # [osx]
 
 build:
   number: 0
