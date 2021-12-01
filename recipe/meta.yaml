@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.25.1" %}
+{% set version = "6.25.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: bedb63a5b47a2bcb482f793fbd992f4b4a9318dd0dbd24e6dd57de07c30b66fd
+  sha256: 63946588becac7b34c10cca080ff9af7bcfa0e2fe9cfa639073e957717ed9ce0
   patches:
     - use-dumb-setup.py.patch
     - llvm.patch
@@ -18,9 +18,11 @@ source:
     - clang-cpp.patch
     - pri.patch
     - thread.patch
+    # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
+    - system_dirs.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
