@@ -12,7 +12,7 @@ diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
 index afca457..b7e2cb6 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -367,26 +367,17 @@ else()
+@@ -367,26 +367,18 @@ else()
    get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
    get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
  
@@ -36,9 +36,9 @@ index afca457..b7e2cb6 100644
    )
 -  add_custom_target(onepcm ALL DEPENDS etc/allDict.cxx.pch)
 -  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
--  install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 +  add_custom_target(onepcm ALL DEPENDS etc/dictpch/allCppflags.txt)
 +  install(FILES "${CMAKE_BINARY_DIR}/etc/dictpch/allCppflags.txt" "${CMAKE_BINARY_DIR}/etc/dictpch/allHeaders.h" "${CMAKE_BINARY_DIR}/etc/dictpch/allLinkDefs.h" DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/dictpch)
+   install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
  endif()
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
