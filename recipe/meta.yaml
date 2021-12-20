@@ -22,8 +22,7 @@ source:
     - system_dirs.patch  # [osx]
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 2
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
 
@@ -32,8 +31,10 @@ requirements:
     - python  # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - sed
+    - sed  # [osx]
     - cmake
+    - make  # [unix]
+    - autotools_clang_conda  # [win]
   host:
     - python
     - pip

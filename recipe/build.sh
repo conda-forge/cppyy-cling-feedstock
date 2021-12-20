@@ -19,8 +19,10 @@ export EXTRA_CLING_ARGS=-O2
 
 # Manually set the deployment_target
 # May not be very important but nice to do
-OLDVERSIONMACOS='${MACOSX_VERSION}'
-sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
+if [ `uname` == "Darwin" ]; then
+  OLDVERSIONMACOS='${MACOSX_VERSION}'
+  sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
+fi
 
 declare -a CMAKE_PLATFORM_FLAGS
 
