@@ -33,7 +33,8 @@ requirements:
     - {{ compiler('cxx') }}
     - sed  # [osx]
     - cmake
-    - make
+    - make  # [unix]
+    - autotools_clang_conda  # [win]
   host:
     - python
     - pip
