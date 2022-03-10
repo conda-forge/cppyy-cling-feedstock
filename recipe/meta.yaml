@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.25.2" %}
+{% set version = "6.25.4" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: 63946588becac7b34c10cca080ff9af7bcfa0e2fe9cfa639073e957717ed9ce0
+  sha256: 412183ed752a2424a8843d8dadf9da346efb720a491f091c7ab6aac92c21536b
   patches:
     - use-dumb-setup.py.patch
     - llvm.patch
@@ -22,7 +22,7 @@ source:
     - system_dirs.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
