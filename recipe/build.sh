@@ -1,14 +1,6 @@
 #!/bin/bash
 set -exo pipefail
 
-# Cling needs some minor patches to the LLVM sources.
-# We apply these patches to the installed LLVM headers, in the same way that
-# clangdev-feedstock does this when building the root variant.
-cd "${PREFIX}"
-patch -p1 < "${RECIPE_DIR}/llvm/0001-Fix-the-compilation.patch"
-patch -p1 < "${RECIPE_DIR}/llvm/0002-Make-datamember-protected.patch"
-cd -
-
 # Much of this file (and the entire recipe in fact) has been taken from the
 # root-feedstock.
 
