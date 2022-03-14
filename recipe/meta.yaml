@@ -39,10 +39,10 @@ requirements:
     - python
     - pip
     - zlib
-    - clangdev =9.0.1 root_62600*
+    - clangdev =9.0.1 root_62400*
     # Use the same versions of llvm that clangdev's root variant uses
-    - llvmdev ==9.0.1 cling_v0.9*
-    - llvm ==9.0.1 cling_v0.9*
+    - llvmdev ==9.0.1 cling*
+    - llvm ==9.0.1
   run:
     - {{ compiler('cxx') }}
     - python
