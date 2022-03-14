@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.25.2" %}
+{% set version = "6.25.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: 63946588becac7b34c10cca080ff9af7bcfa0e2fe9cfa639073e957717ed9ce0
+  sha256: 34476c3a0ffc6a3bb5fea71f1f892158c981c86822661df057e7f7aeece76efc
   patches:
     - use-dumb-setup.py.patch
     - llvm.patch
@@ -22,7 +22,7 @@ source:
     - system_dirs.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -34,13 +34,15 @@ requirements:
     - {{ compiler('cxx') }}
     - sed
     - cmake
+    - make  # [unix]
   host:
     - python
     - pip
     - zlib
     - clangdev =9.0.1 root_62400*
-    - llvmdev 9
-    - llvm 9
+    # Use the same versions of llvm that clangdev's root variant uses
+    - llvmdev ==9.0.1 cling*
+    - llvm ==9.0.1
   run:
     - {{ compiler('cxx') }}
     - python
