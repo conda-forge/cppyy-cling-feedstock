@@ -26,6 +26,8 @@ build:
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
+  ignore_run_exports_from:
+    - clangdev
 
 requirements:
   build:
@@ -39,10 +41,10 @@ requirements:
     - python
     - pip
     - zlib
-    - clangdev =9.0.1 root_62600*
-    # Use the same versions of llvm that clangdev's root variant uses
-    - llvmdev ==9.0.1 cling_v0.9*
-    - llvm ==9.0.1 cling_v0.9*
+    # Use the same versions that the root feedstock uses
+    - llvm 9.0.1
+    - llvmdev 9.0.1 cling*
+    - clangdev 9.0.1 root_62600*
   run:
     - {{ compiler('cxx') }}
     - python
