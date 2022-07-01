@@ -19,6 +19,8 @@ source:
     - thread.patch
     # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
     - system_dirs.patch  # [osx]
+    # Do not use -march=native on platforms that do not support it yet.
+    - aarch64.patch  # [aarch64]
 
 build:
   number: 1

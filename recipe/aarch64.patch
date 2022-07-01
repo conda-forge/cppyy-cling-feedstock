@@ -1,0 +1,25 @@
+From ea356fa8bc8ee1d4776017f6dd3c615918d142ac Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Fri, 1 Jul 2022 23:07:59 +0300
+Subject: [PATCH] clang for aarch64 does not support march=native
+
+---
+ python/cppyy_backend/loader.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/python/cppyy_backend/loader.py b/python/cppyy_backend/loader.py
+index f8fa1b1..e6b1585 100644
+--- a/python/cppyy_backend/loader.py
++++ b/python/cppyy_backend/loader.py
+@@ -117,7 +117,7 @@ def set_cling_compile_options(add_defaults = False):
+ 
+     if add_defaults:
+        # M1 does not support -march=native until LLVM 15
+-        if sys.platform != sys.platform or not 'arm64' in platform.machine():
++        if sys.platform != sys.platform or ('arm64' not in platform.machine() and 'aarch64' not in platform.machine()):
+             CURRENT_ARGS += ' -O2 -march=native'
+         else:
+             CURRENT_ARGS += ' -O2'
+-- 
+2.36.1
+
