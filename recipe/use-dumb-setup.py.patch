@@ -1,7 +1,7 @@
-From 10fea606649485290c242b44f56b5e78558d6b19 Mon Sep 17 00:00:00 2001
+From 8dc0a3d36637f5d78e7e4411c3b01f420d280d32 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Mon, 22 Nov 2021 00:33:16 -0600
-Subject: [PATCH] simplify setup
+Date: Thu, 30 Jun 2022 17:29:54 +0300
+Subject: [PATCH] Simplify setup.py
 
 ---
  setup.py | 331 -------------------------------------------------------
@@ -363,5 +363,5 @@ index f793e6f..c2a3597 100755
          "console_scripts": [
              "cling-config = cppyy_backend._cling_config:main",
 -- 
-2.34.0
+2.36.1
 
