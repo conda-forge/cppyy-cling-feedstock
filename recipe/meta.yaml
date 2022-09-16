@@ -40,6 +40,8 @@ requirements:
     - {{ compiler('cxx') }}
     - sed
     - cmake
+    # We need a find that understand -name
+    - findutils
     - make  # [unix]
   host:
     - python
