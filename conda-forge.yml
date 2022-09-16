@@ -9,4 +9,4 @@ provider:
   linux_aarch64: default
   # Compile on Azure since we otherwise exceed the time limit on TravisCI
   linux_ppc64le: azure
-test: all
+test: native_and_emulated
