@@ -21,7 +21,7 @@ source:
     - system_dirs.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -43,7 +43,11 @@ requirements:
     - llvmdev ==9.0.1 cling*
     - llvm ==9.0.1
   run:
-    - {{ compiler('cxx') }}
+    # We need a C++ compiler at runtime to compile cppdef snippets and glue
+    # code and also so that all the standard headers are available. We do not
+    # need the exact compiler that was used during the build {{ compiler('cxx') }}
+    # but just any functional C++ compiler.
+    - cxx-compiler
     - python
 
 test:
