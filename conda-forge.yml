@@ -8,4 +8,4 @@ provider:
   linux_aarch64: default
   # Cross-compile since otherwise we exceed the time limit on TravisCI
   linux_ppc64le: azure
-test: native
+test: all
