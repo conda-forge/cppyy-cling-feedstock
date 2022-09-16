@@ -57,6 +57,9 @@ requirements:
 
 test:
   commands:
+    - hash -r
+    - ls -l $CONDA_PREFIX/bin
+    - cat $CONDA_PREFIX/bin/cppyy-generator || true
     - which rootcling
     # calling rootcling directly without argument fails but it should find all
     # its libraries (it exits with 134 on macOS otherwise.)
