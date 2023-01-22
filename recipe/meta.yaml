@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.27.0" %}
+{% set version = "6.27.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: 9c077c2b31e002cae7c9f48b4b5863611e7f392353cc7c66317d2ff6503a392d
+  sha256: 067841201d4696739939e752381dfd495ef45d04cdbe3b435d757b70438675d9
   patches:
     - use-dumb-setup.py.patch
     # Disable use of llvm-config, a binary which we cannot invoke when cross-compiling
@@ -21,7 +21,7 @@ source:
     - system_dirs.patch  # [osx]
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
