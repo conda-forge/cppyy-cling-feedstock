@@ -1,11 +1,11 @@
-About cppyy-cling
-=================
+About cppyy-cling-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cppyy-cling-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/cppyy-cling
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cppyy-cling-feedstock/blob/main/LICENSE.txt)
 
 Summary: A repackaging of Cling for Automatic Python-C++ Bindings
 
