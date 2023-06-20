@@ -19,6 +19,8 @@ source:
     - thread.patch
     # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
     - system_dirs.patch  # [osx]
+    # Fix dependency resolution when building rootcling
+    - clangdriver.patch
 
 build:
   number: 0
