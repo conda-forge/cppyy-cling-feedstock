@@ -1,14 +1,14 @@
-From 8dc0a3d36637f5d78e7e4411c3b01f420d280d32 Mon Sep 17 00:00:00 2001
+From 15018084f101aabaf6ca23568a67b73675bf48bf Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Thu, 30 Jun 2022 17:29:54 +0300
-Subject: [PATCH] Simplify setup.py
+Date: Tue, 20 Jun 2023 12:42:31 +0300
+Subject: [PATCH] Simplify setup for conda-forge
 
 ---
- setup.py | 331 -------------------------------------------------------
- 1 file changed, 331 deletions(-)
+ setup.py | 337 +------------------------------------------------------
+ 1 file changed, 2 insertions(+), 335 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index f793e6f..c2a3597 100755
+index b66b46c..c2a3597 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -1,22 +1,5 @@
@@ -34,7 +34,7 @@ index f793e6f..c2a3597 100755
  
  here = os.path.abspath(os.path.dirname(__file__))
  with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
-@@ -36,317 +19,6 @@ def find_version(*file_paths):
+@@ -36,320 +19,6 @@ def find_version(*file_paths):
      raise RuntimeError("Unable to find version string.")
  
  
@@ -120,12 +120,12 @@ index f793e6f..c2a3597 100755
 -            stdcxx = os.environ['STDCXX']
 -        except KeyError:
 -            if is_manylinux():
--                stdcxx = '11'
+-                stdcxx = '14'
 -            else:
--                stdcxx = '17'
+-                stdcxx = '20'
 -
--        if not stdcxx in ['11', '14', '17', '20']:
--            log.fatal('FATAL: envar STDCXX should be one of 11, 14, 17, or 20')
+-        if not stdcxx in ['14', '17', '20']:
+-            log.fatal('FATAL: envar STDCXX should be one of 14, 17, or 20')
 -            sys.exit(1)
 -
 -        stdcxx='-DCMAKE_CXX_STANDARD='+stdcxx
@@ -157,8 +157,11 @@ index f793e6f..c2a3597 100755
 -        CMAKE_COMMAND.append('-DCMAKE_BUILD_TYPE='+get_build_type())
 -        if 'win32' in sys.platform:
 -            import platform
--            if '64' in platform.architecture()[0]:
+-            bits = platform.architecture()[0]
+-            if '64' in bits:
 -                CMAKE_COMMAND += ['-Thost=x64', '-DCMAKE_GENERATOR_PLATFORM=x64']
+-            elif '32' in bits:
+-                CMAKE_COMMAND += ['-Thost=x86', '-DCMAKE_GENERATOR_PLATFORM=win32']
 -        elif 'darwin' in sys.platform:
 -            import platform
 -            if 'arm64' in platform.machine():
@@ -352,7 +355,14 @@ index f793e6f..c2a3597 100755
  setup(
      name='cppyy-cling',
      description='Re-packaged Cling, as backend for cppyy',
-@@ -394,9 +66,6 @@ setup(
+@@ -391,14 +60,12 @@ setup(
+ 
+     setup_requires=['wheel'],
+ 
+-    package_data={'cppyy_backend': ['cmake/*.cmake', 'pkg_templates/*.in', 'pkg_templates/*.py']},
++    include_package_data=True,
++    package_data={'': ['cmake/*.cmake', 'pkg_templates/*.in', 'pkg_templates/*.py']},
+ 
      package_dir={'': 'python'},
      packages=find_packages('python', include=['cppyy_backend']),
  
@@ -363,5 +373,5 @@ index f793e6f..c2a3597 100755
          "console_scripts": [
              "cling-config = cppyy_backend._cling_config:main",
 -- 
-2.36.1
+2.41.0
 
