@@ -14,6 +14,8 @@ source:
     - cross.patch  # [build_platform != target_platform]
     # Use pre-built generated files when we cannot invoke rootcling
     - rootcling.patch  # [build_platform != target_platform]
+    # Use pre-built generated files to work around https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1598928859
+    - rootcling.patch  # [build_platform == target_platform]
     - clang-cpp.patch
     - pri.patch
     - thread.patch
