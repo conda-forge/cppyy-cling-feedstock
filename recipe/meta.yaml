@@ -21,6 +21,7 @@ source:
     - system_dirs.patch  # [osx]
     # Fix dependency resolution when building rootcling
     - clangdriver.patch
+    - debug.patch # TODO
 
 build:
   number: 0
@@ -37,6 +38,7 @@ requirements:
     - cmake
     - make  # [unix]
   host:
+    - boost-cpp
     - python
     - pip
     - zlib
