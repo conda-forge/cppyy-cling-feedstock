@@ -77,8 +77,8 @@ fi
 mkdir build
 cd build
 
-cmake $CMAKE_CLING_ARGS ../src
-cmake --build . --target install --config Release
+cmake --trace-expand $CMAKE_CLING_ARGS ../src
+cmake --trace-expand --build . --target install --config Release
 
 cd ..
 
