@@ -10,8 +10,8 @@ source:
   sha256: ae67fc338510d03b68dde08add5b519e2c6434d40fe07e23e7ebace3caa684e7
   patches:
     - use-dumb-setup.py.patch
-    # Disable use of llvm-config, a binary which we cannot invoke when cross-compiling
-    - cross.patch  # [build_platform != target_platform]
+    # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
+    - cross.patch
     # Use pre-built generated files when we cannot invoke rootcling
     - rootcling.patch  # [build_platform != target_platform]
     - clang-cpp.patch
