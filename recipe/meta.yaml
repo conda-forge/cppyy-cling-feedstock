@@ -42,9 +42,8 @@ requirements:
     - python
     - pip
     - zlib
-    - clangdev =13.0.1 root_62800*
-    # Use the same versions of llvm that clangdev's root variant uses
-    - llvm =13.0.1
+    - libclang =13.0.1 root_62800*
+    - libclang-cpp =13.0.1 root_62800*
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
