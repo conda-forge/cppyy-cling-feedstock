@@ -43,6 +43,8 @@ requirements:
     # Use the same versions of llvm that clangdev's root variant uses
     - llvmdev ==9.0.1 cling*
     - llvm ==9.0.1
+    # See https://github.com/conda-forge/conda-forge-repodata-patches-feedstock/pull/414. Can be dropped with cppyy 3.
+    - libcxx <15  # [osx]
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
