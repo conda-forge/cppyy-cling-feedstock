@@ -38,7 +38,8 @@ requirements:
     - python
     - pip
     - zlib
-    - clangdev =9.0.1 root_62400*
+    # There is no root_62701 build of clangdev so we use the latest build before that
+    - clangdev =9.0.1 root_62600*
     # Use the same versions of llvm that clangdev's root variant uses
     - llvmdev ==9.0.1 cling*
     - llvm ==9.0.1
