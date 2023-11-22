@@ -1,17 +1,14 @@
-From 28d2e5984ea5871e5b8ed81ac6d7a9c0c38a1ddf Mon Sep 17 00:00:00 2001
+From 67d614101499360913df76916d07c017d6b2662a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 15:40:50 +0200
 Subject: [PATCH] Remove libLLVM.so when linking
 
-Add temporary debug to understand cmake problems
-
-Remove libLLVM.so when linking
 ---
- src/core/rootcling_stage1/CMakeLists.txt | 36 ++++++++++++++++++++++++
- 1 file changed, 36 insertions(+)
+ src/core/rootcling_stage1/CMakeLists.txt | 24 +++++++++++++++++++++++-
+ 1 file changed, 23 insertions(+), 1 deletion(-)
 
 diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
-index a5483b7..8685b88 100644
+index a5483b7..ec6645b 100644
 --- a/src/core/rootcling_stage1/CMakeLists.txt
 +++ b/src/core/rootcling_stage1/CMakeLists.txt
 @@ -8,6 +8,8 @@
@@ -23,19 +20,11 @@ index a5483b7..8685b88 100644
  include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../dictgen/res)
  
  if(WIN32)
-@@ -30,6 +32,40 @@ if(NOT builtin_clang)
+@@ -30,12 +32,32 @@ if(NOT builtin_clang)
    link_directories("${LLVM_LIBRARY_DIR}")
  endif()
  
-+cmake_print_variables(CLING_LIBRARIES LINK_LIBS CMAKE_DL_LIBS CMAKE_THREAD_LIBS_INIT ROOT_ATOMIC_LIBS)
-+
-+get_target_property(clingInterpreterInterface clingInterpreter INTERFACE_LINK_LIBRARIES)
-+get_target_property(clingMetaProcessorInterface clingMetaProcessor INTERFACE_LINK_LIBRARIES)
-+get_target_property(clingUtilsInterface clingUtils INTERFACE_LINK_LIBRARIES)
-+
-+cmake_print_variables(clingInterpreterInterface clingMetaProcessorInterface clingUtilsInterface)
-+
-+foreach(lib clingInterpreter clingMetaProcessor clingUtils)
++foreach(lib ${CLING_LIBRARIES})
 +  get_target_property(transitive_libs ${lib} INTERFACE_LINK_LIBRARIES)
 +  if (NOT transitive_libs)
 +    continue()
@@ -55,15 +44,16 @@ index a5483b7..8685b88 100644
 +  set(static_transitive_libs "")
 +endforeach()
 +
-+get_target_property(clingInterpreterInterface clingInterpreter INTERFACE_LINK_LIBRARIES)
-+get_target_property(clingMetaProcessorInterface clingMetaProcessor INTERFACE_LINK_LIBRARIES)
-+get_target_property(clingUtilsInterface clingUtils INTERFACE_LINK_LIBRARIES)
-+
-+cmake_print_variables(clingInterpreterInterface clingMetaProcessorInterface clingUtilsInterface)
-+
  ROOT_EXECUTABLE(rootcling_stage1 src/rootcling_stage1.cxx
                                $<TARGET_OBJECTS:Clib>
                                $<TARGET_OBJECTS:ClingUtils>
+                               $<TARGET_OBJECTS:Dictgen>
+                               $<TARGET_OBJECTS:Foundation_Stage1>
+-                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS}
++                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS} ${LLVM_LIBRARY_DIR}/libLLVMSupport.a ${LLVM_LIBRARY_DIR}/libLLVMCore.a
+                               NOINSTALL)
+ set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
+ add_dependencies(rootcling_stage1 ClingUtils)
 -- 
 2.43.0
 
