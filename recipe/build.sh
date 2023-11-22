@@ -36,6 +36,9 @@ else
     CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='9.0.1'")
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
 
+    # Do not err when shared_mutex is used, see https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+
     # Print out and possibly fix SDKROOT (Might help Azure)
     echo "SDKROOT is: '${SDKROOT}'"
     echo "CONDA_BUILD_SYSROOT is: '${CONDA_BUILD_SYSROOT}'"
