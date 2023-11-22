@@ -1,4 +1,4 @@
-From 67d614101499360913df76916d07c017d6b2662a Mon Sep 17 00:00:00 2001
+From e8b086876a887eb40eb7a37bccf47309aef72382 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 15:40:50 +0200
 Subject: [PATCH] Remove libLLVM.so when linking
@@ -8,7 +8,7 @@ Subject: [PATCH] Remove libLLVM.so when linking
  1 file changed, 23 insertions(+), 1 deletion(-)
 
 diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
-index a5483b7..ec6645b 100644
+index a5483b7..4199538 100644
 --- a/src/core/rootcling_stage1/CMakeLists.txt
 +++ b/src/core/rootcling_stage1/CMakeLists.txt
 @@ -8,6 +8,8 @@
@@ -50,7 +50,7 @@ index a5483b7..ec6645b 100644
                                $<TARGET_OBJECTS:Dictgen>
                                $<TARGET_OBJECTS:Foundation_Stage1>
 -                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS}
-+                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS} ${LLVM_LIBRARY_DIR}/libLLVMSupport.a ${LLVM_LIBRARY_DIR}/libLLVMCore.a
++                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS} ${LLVM_LIBRARY_DIR}/libLLVMSupport.a ${LLVM_LIBRARY_DIR}/libLLVMCore.a ${LLVM_LIBRARY_DIR}/libLLVMBinaryFormat.a ${LLVM_LIBRARY_DIR}/libLLVMBinaryFormat.a
                                NOINSTALL)
  set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
  add_dependencies(rootcling_stage1 ClingUtils)
