@@ -21,7 +21,8 @@ source:
     - system_dirs.patch  # [osx]
     # Fix dependency resolution when building rootcling
     - clangdriver.patch
-    - debug.patch # TODO
+    # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
+    - remove-libLLVM.patch
 
 build:
   number: 1

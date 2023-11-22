@@ -1,0 +1,69 @@
+From 28d2e5984ea5871e5b8ed81ac6d7a9c0c38a1ddf Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Fri, 15 Sep 2023 15:40:50 +0200
+Subject: [PATCH] Remove libLLVM.so when linking
+
+Add temporary debug to understand cmake problems
+
+Remove libLLVM.so when linking
+---
+ src/core/rootcling_stage1/CMakeLists.txt | 36 ++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
+index a5483b7..8685b88 100644
+--- a/src/core/rootcling_stage1/CMakeLists.txt
++++ b/src/core/rootcling_stage1/CMakeLists.txt
+@@ -8,6 +8,8 @@
+ # CMakeLists.txt file for building ROOT core/rootcling_stage1 package
+ ############################################################################
+ 
++include(CMakePrintHelpers)
++
+ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../dictgen/res)
+ 
+ if(WIN32)
+@@ -30,6 +32,40 @@ if(NOT builtin_clang)
+   link_directories("${LLVM_LIBRARY_DIR}")
+ endif()
+ 
++cmake_print_variables(CLING_LIBRARIES LINK_LIBS CMAKE_DL_LIBS CMAKE_THREAD_LIBS_INIT ROOT_ATOMIC_LIBS)
++
++get_target_property(clingInterpreterInterface clingInterpreter INTERFACE_LINK_LIBRARIES)
++get_target_property(clingMetaProcessorInterface clingMetaProcessor INTERFACE_LINK_LIBRARIES)
++get_target_property(clingUtilsInterface clingUtils INTERFACE_LINK_LIBRARIES)
++
++cmake_print_variables(clingInterpreterInterface clingMetaProcessorInterface clingUtilsInterface)
++
++foreach(lib clingInterpreter clingMetaProcessor clingUtils)
++  get_target_property(transitive_libs ${lib} INTERFACE_LINK_LIBRARIES)
++  if (NOT transitive_libs)
++    continue()
++  endif()
++
++  set(static_transitive_libs "")
++  foreach(transitive_lib ${transitive_libs})
++    if("${transitive_lib}" STREQUAL "LLVM")
++      # Filter our libLLVM.so and friends, see https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
++      continue()
++    else()
++      list(APPEND static_transitive_libs ${transitive_lib})
++    endif()
++  endforeach(transitive_lib)
++  # Update the target properties with the list of only static libraries.
++  set_target_properties(${lib} PROPERTIES INTERFACE_LINK_LIBRARIES "${static_transitive_libs}")
++  set(static_transitive_libs "")
++endforeach()
++
++get_target_property(clingInterpreterInterface clingInterpreter INTERFACE_LINK_LIBRARIES)
++get_target_property(clingMetaProcessorInterface clingMetaProcessor INTERFACE_LINK_LIBRARIES)
++get_target_property(clingUtilsInterface clingUtils INTERFACE_LINK_LIBRARIES)
++
++cmake_print_variables(clingInterpreterInterface clingMetaProcessorInterface clingUtilsInterface)
++
+ ROOT_EXECUTABLE(rootcling_stage1 src/rootcling_stage1.cxx
+                               $<TARGET_OBJECTS:Clib>
+                               $<TARGET_OBJECTS:ClingUtils>
+-- 
+2.43.0
+
