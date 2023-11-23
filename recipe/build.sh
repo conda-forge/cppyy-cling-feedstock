@@ -33,7 +33,7 @@ if [[ "${target_platform}" == linux* ]]; then
     echo "CXXFLAGS is now '${CXXFLAGS}'"
 else
     CMAKE_PLATFORM_FLAGS+=("-Dcocoa=ON")
-    CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='9.0.1'")
+    CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='13.0.1'")
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
 
     # Do not err when shared_mutex is used, see https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
