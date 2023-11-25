@@ -35,8 +35,6 @@ requirements:
     - python  # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    # See https://github.com/conda-forge/conda-forge-repodata-patches-feedstock/pull/414. Can be dropped with cppyy 3.
-    - libcxx <15  # [osx]
     - sed
     - cmake
     - make  # [unix]
@@ -46,7 +44,7 @@ requirements:
     - pip
     - zlib
     # There is no root_62701 build of clangdev so we use the latest build before that
-    - clangdev =13.0.1 root_62800*
+    - clangdev =13.0.1 root_63000*
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
