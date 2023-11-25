@@ -10,8 +10,8 @@ source:
   sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
     - use-dumb-setup.py.patch
-    # Disable use of llvm-config, a binary which we cannot invoke when cross-compiling
-    - cross.patch  # [build_platform != target_platform]
+    # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
+    - cross.patch
     # Use pre-built generated files when we cannot invoke rootcling
     - rootcling.patch  # [build_platform != target_platform]
     - clang-cpp.patch
@@ -19,6 +19,10 @@ source:
     - thread.patch
     # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
     - system_dirs.patch  # [osx]
+    # Fix dependency resolution when building rootcling
+    - clangdriver.patch
+    # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
+    - remove-libLLVM.patch
 
 build:
   number: 0
@@ -37,14 +41,12 @@ requirements:
     - cmake
     - make  # [unix]
   host:
+    - boost-cpp
     - python
     - pip
     - zlib
     # There is no root_62701 build of clangdev so we use the latest build before that
-    - clangdev =9.0.1 root_62600*
-    # Use the same versions of llvm that clangdev's root variant uses
-    - llvmdev ==9.0.1 cling*
-    - llvm ==9.0.1
+    - clangdev =13.0.1 root_62800*
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
