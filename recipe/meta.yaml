@@ -25,7 +25,7 @@ source:
     - remove-libLLVM.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -35,8 +35,6 @@ requirements:
     - python  # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    # See https://github.com/conda-forge/conda-forge-repodata-patches-feedstock/pull/414. Can be dropped with cppyy 3.
-    - libcxx <15  # [osx]
     - sed
     - cmake
     - make  # [unix]
