@@ -39,7 +39,7 @@ requirements:
     - cmake
     - make  # [unix]
   host:
-    - boost-cpp
+    - libboost-headers
     - python
     - pip
     - zlib
