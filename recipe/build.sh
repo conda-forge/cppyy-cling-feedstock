@@ -39,6 +39,9 @@ else
     # Do not err when shared_mutex is used, see https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 
+    # Ignore spurious warnings in the I/O code, see https://github.com/conda-forge/cppyy-cling-feedstock/pull/60#issuecomment-1832544382
+    export CXXFLAGS="${CXXFLAGS} -Wnoenum-constexpr-conversion"
+
     # Print out and possibly fix SDKROOT (Might help Azure)
     echo "SDKROOT is: '${SDKROOT}'"
     echo "CONDA_BUILD_SYSROOT is: '${CONDA_BUILD_SYSROOT}'"
