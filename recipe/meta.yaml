@@ -1,5 +1,5 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.28.0" %}
+{% set version = "6.30.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: ae67fc338510d03b68dde08add5b519e2c6434d40fe07e23e7ebace3caa684e7
+  sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
     - use-dumb-setup.py.patch
     # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
@@ -25,7 +25,7 @@ source:
     - remove-libLLVM.patch
 
 build:
-  number: 3
+  number: 1
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -44,7 +44,7 @@ requirements:
     - pip
     - zlib
     # There is no root_62701 build of clangdev so we use the latest build before that
-    - clangdev =13.0.1 root_62800*
+    - clangdev =13.0.1 root_63002*
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not

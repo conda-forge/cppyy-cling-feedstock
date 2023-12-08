@@ -1,19 +1,20 @@
-From 74b63d47349bfa6410b9704c6d3486c60ff71b95 Mon Sep 17 00:00:00 2001
+From ad4eeb0ca1743848144dfe9f7eb2b08eabc8060d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
-Date: Tue, 20 Jun 2023 12:58:39 +0300
-Subject: [PATCH] Cross compile without invoking llvm-config
+Date: Fri, 8 Dec 2023 02:03:00 +0200
+Subject: [PATCH] Do not use llvm-config when cross-compiling
 
+we cannot invoke a host binary.
 ---
- src/interpreter/CMakeLists.txt | 66 ++++------------------------------
- 1 file changed, 7 insertions(+), 59 deletions(-)
+ src/interpreter/CMakeLists.txt | 62 ++++------------------------------
+ 1 file changed, 6 insertions(+), 56 deletions(-)
 
 diff --git a/src/interpreter/CMakeLists.txt b/src/interpreter/CMakeLists.txt
-index 4435aa9..04a6d2b 100644
+index b74cee9..c109f52 100644
 --- a/src/interpreter/CMakeLists.txt
 +++ b/src/interpreter/CMakeLists.txt
-@@ -257,65 +257,13 @@ if(builtin_llvm)
-   endforeach()
-   set(LLVM_VERSION "${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH}" PARENT_SCOPE)
+@@ -244,62 +244,12 @@ if(builtin_llvm)
+   #---Forward TARGET_TRIPLE for check-cling------------------------------------------------------------
+   get_directory_property(TARGET_TRIPLE DIRECTORY llvm-project/llvm DEFINITION TARGET_TRIPLE)
  else()
 -  # Rely on llvm-config.
 -  set(CONFIG_OUTPUT)
@@ -26,7 +27,6 @@ index 4435aa9..04a6d2b 100644
 -      "--libdir"
 -      "--includedir"
 -      "--prefix"
--      "--src-root"
 -      "--cmakedir"
 -      "--build-mode"
 -      "--version")
@@ -53,10 +53,9 @@ index 4435aa9..04a6d2b 100644
 -  list(GET CONFIG_OUTPUT 2 LIBRARY_DIR)
 -  list(GET CONFIG_OUTPUT 3 INCLUDE_DIR)
 -  list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
--  list(GET CONFIG_OUTPUT 5 MAIN_SRC_DIR)
--  list(GET CONFIG_OUTPUT 6 LLVM_CONFIG_CMAKE_PATH)
--  list(GET CONFIG_OUTPUT 7 LLVM_BUILD_MODE)
--  list(GET CONFIG_OUTPUT 8 LLVM_VERSION_S)
+-  list(GET CONFIG_OUTPUT 5 LLVM_CONFIG_CMAKE_PATH)
+-  list(GET CONFIG_OUTPUT 6 LLVM_BUILD_MODE)
+-  list(GET CONFIG_OUTPUT 7 LLVM_VERSION_S)
 -
 -  set(LLVM_VERSION_SAVE "${LLVM_VERSION_S}")
 -
@@ -73,17 +72,15 @@ index 4435aa9..04a6d2b 100644
 -  set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
 -  set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
 -  set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
--  set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
 +  set(LLVM_ENABLE_ASSERTIONS OFF CACHE BOOL "Enable assertions")
 +  set(LLVM_TOOLS_BINARY_DIR $ENV{PREFIX}/bin CACHE PATH "Path to llvm/bin")
 +  set(LLVM_LIBRARY_DIR $ENV{PREFIX}/lib CACHE PATH "Path to llvm/lib")
 +  set(LLVM_MAIN_INCLUDE_DIR $ENV{PREFIX}/include CACHE PATH "Path to llvm/include")
 +  set(LLVM_BINARY_DIR $ENV{PREFIX} CACHE PATH "Path to LLVM build tree")
 +  set(LLVM_CONFIG_CMAKE_PATH $ENV{PREFIX}/lib/cmake/llvm CACHE PATH "Path to llvm cmake rules")
-+  set(LLVM_MAIN_SRC_DIR /no-such-directory CACHE PATH "Path to LLVM source tree")
  
    set(LLVM_DIR "${LLVM_BINARY_DIR}")
  
 -- 
-2.41.0
+2.43.0
 
