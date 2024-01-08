@@ -33,8 +33,11 @@ if [[ "${target_platform}" == linux* ]]; then
     echo "CXXFLAGS is now '${CXXFLAGS}'"
 else
     CMAKE_PLATFORM_FLAGS+=("-Dcocoa=ON")
-    CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='9.0.1'")
+    CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='13.0.1'")
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
+
+    # Do not err when shared_mutex is used, see https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 
     # Print out and possibly fix SDKROOT (Might help Azure)
     echo "SDKROOT is: '${SDKROOT}'"
@@ -46,6 +49,12 @@ fi
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-isystem @-I@g')
 export CXXFLAGS
+
+# ROOT uses these flags. Without them, we get relocation truncated to fit: R_PPC64_REL24 errors when lirking libCling
+if [[ "${target_platform}" == "linux-ppc64le" ]]; then
+  export CXXFLAGS="${CXXFLAGS} -fplt"
+  export CFLAGS="${CFLAGS} -fplt"
+fi
 
 # The cross-linux toolchain breaks find_file relative to the current file
 # Patch up with sed
