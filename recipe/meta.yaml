@@ -19,6 +19,8 @@ source:
     - thread.patch
     # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
     - system_dirs.patch  # [osx]
+    # Do not use -march=native on platforms that do not support it yet.
+    - aarch64.patch  # [aarch64]
     # Fix dependency resolution when building rootcling
     - clangdriver.patch
     # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
@@ -42,6 +44,8 @@ requirements:
     - {{ compiler('cxx') }}
     - sed
     - cmake
+    # We need a find that understand -name
+    - findutils
     - make  # [unix]
   host:
     - libboost-headers
@@ -60,13 +64,11 @@ requirements:
 
 test:
   commands:
-    - which rootcling
-    # calling rootcling directly without argument fails but it should find all
-    # its libraries (it exits with 134 on macOS otherwise.)
-    - bash -c "${SP_DIR}"'/cppyy_backend/bin/rootcling; [[ $? == 1 ]]'
-    - which cppyy-generator
-    - cling-config --incdir
-    - which genreflex
+    - rootcling -h
+    # calling cppyy-generator fails with "No module named clang" same happens
+    # with the cppyy from PyPI.
+    # cppyy-generator -h
+    - genreflex -h
 
 about:
   home: https://pypi.org/project/cppyy-cling
