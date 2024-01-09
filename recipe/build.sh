@@ -86,8 +86,8 @@ fi
 mkdir build
 cd build
 
-cmake $CMAKE_CLING_ARGS ../src
-cmake --build . --target install --config Release
+cmake ${CMAKE_ARGS} $CMAKE_CLING_ARGS ../src
+cmake --build . --target install --config Release -- --quiet
 
 cd ..
 
