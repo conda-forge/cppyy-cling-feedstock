@@ -1,0 +1,27 @@
+From 465cc1fd17ba61bd81ad85159668a5fe3ef4547e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Tue, 20 Jun 2023 16:04:03 +0300
+Subject: [PATCH] Fix order of clang libraries
+
+clangFrontend needs symbols from clangDriver so it needs to come first
+---
+ src/interpreter/cling/lib/Interpreter/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+index 1f15fa1..f7b93a4 100644
+--- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+@@ -9,8 +9,8 @@
+ set(LIBS
+   clingUtils
+   clangCodeGen
+-  clangDriver
+   clangFrontend
++  clangDriver
+   clangParse
+   clangSema
+   clangAnalysis
+-- 
+2.41.0
+
