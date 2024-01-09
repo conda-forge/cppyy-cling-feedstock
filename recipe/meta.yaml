@@ -73,6 +73,7 @@ test:
     # calling rootcling directly without argument fails but it should find all
     # its libraries (it exits with 134 on macOS otherwise.)
     - bash -c "${SP_DIR}"'/cppyy_backend/bin/rootcling; [[ $? == 1 ]]'
+    - alias
     - which cppyy-generator
     - cling-config --incdir
     - which genreflex
