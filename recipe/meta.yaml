@@ -27,7 +27,7 @@ source:
     - remove-libLLVM.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -61,6 +61,8 @@ requirements:
     # but just any functional C++ compiler.
     - cxx-compiler
     - python
+    # There are problem with libcxx=17 on macOS, see https://github.com/conda-forge/cppyy-feedstock/issues/78
+    - libcxx <17  # [osx]
 
 test:
   commands:
