@@ -27,7 +27,7 @@ source:
     - remove-libLLVM.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
