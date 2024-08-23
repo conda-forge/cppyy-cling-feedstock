@@ -52,6 +52,7 @@ requirements:
     - libboost-headers
     - python
     - pip
+    - setuptools
     - zlib
     # There is no root_62701 build of clangdev so we use the latest build before that
     - clangdev =13 root_63004*
