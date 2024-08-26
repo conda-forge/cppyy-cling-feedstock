@@ -25,6 +25,8 @@ source:
     - clangdriver.patch
     # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
     - remove-libLLVM.patch
+    # Be verbose during build
+    - verbose.patch
 
 build:
   number: 3
