@@ -48,6 +48,7 @@ fi
 # Remove -std=c++XX from build ${CXXFLAGS}
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-isystem @-I@g')
+CXXFLAGS="$CXXFLAGS -Wno-enum-constexpr-conversion"
 export CXXFLAGS
 
 # ROOT uses these flags. Without them, we get relocation truncated to fit: R_PPC64_REL24 errors when lirking libCling
