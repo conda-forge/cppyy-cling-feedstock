@@ -1,0 +1,24 @@
+From 4021a38eef5886fe4aafd67645df0a2bf898bdb4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 21 Jun 2021 23:03:50 +0200
+Subject: [PATCH 06/11] add ThreadLocalStorage.h directory
+
+---
+ src/core/CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+index 8e3245b..b8a78bb 100644
+--- a/src/core/CMakeLists.txt
++++ b/src/core/CMakeLists.txt
+@@ -55,6 +55,7 @@ include_directories(
+   meta/inc
+   gui/inc
+   textinput/inc
++  thread/inc
+ )
+ 
+ set(objectlibs $<TARGET_OBJECTS:Base>
+-- 
+2.46.0
+

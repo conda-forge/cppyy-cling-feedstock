@@ -1,0 +1,24 @@
+From 2ab64b0412adc87086792233933d7330ee313e7a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Sun, 20 Jun 2021 18:05:30 +0200
+Subject: [PATCH 04/11] link against libclangASTMatchers
+
+---
+ src/interpreter/cling/lib/Utils/CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/interpreter/cling/lib/Utils/CMakeLists.txt b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+index 327c9ff..bdf8ee8 100644
+--- a/src/interpreter/cling/lib/Utils/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+@@ -38,6 +38,7 @@ set(LIBS
+   clangRewriteFrontend
+   clangSerialization
+   clangAST
++  clangASTMatchers
+   clangBasic
+   clangLex
+ )
+-- 
+2.46.0
+

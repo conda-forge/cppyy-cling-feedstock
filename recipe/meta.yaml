@@ -9,25 +9,23 @@ source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
   sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
-    - use-dumb-setup.py.patch
+    - 0001-Simplify-setup.py.patch
     # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
-    - cross.patch
+    - 0002-Do-not-use-llvm-config-when-cross-compiling.patch
     # Use pre-built generated files when we cannot invoke rootcling
-    - rootcling.patch  # [build_platform != target_platform]
-    - clang-cpp.patch
-    - pri.patch
-    - thread.patch
+    - 0003-use-pre-built-dictionary-and-rootmap.patch  # [build_platform != target_platform]
+    - 0004-link-against-libclangASTMatchers.patch
+    - 0005-make-sure-C-formatting-symbols-are-available-in-C.patch
+    - 0006-add-ThreadLocalStorage.h-directory.patch
     # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
-    - system_dirs.patch  # [osx]
+    - 0007-.patch  # [osx]
     # Do not use -march=native on platforms that do not support it yet.
-    - aarch64.patch  # [aarch64]
+    - 0008-clang-for-aarch64-does-not-support-march-native.patch
     # Fix dependency resolution when building rootcling
-    - clangdriver.patch
+    - 0009-Fix-order-of-clang-libraries.patch
     # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
-    - remove-libLLVM.patch
-    # Be verbose during build
-    - verbose.patch
-    - include.patch  # [osx]
+    - 0010-Remove-libLLVM.so-when-linking.patch
+    - 0011-Hardcode-C-include-path-from-host.patch  # [osx]
 
 build:
   number: 3

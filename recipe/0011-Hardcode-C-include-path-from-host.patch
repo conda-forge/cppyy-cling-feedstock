@@ -1,0 +1,65 @@
+From 480894c470185f68ac7a63e5594331ab85f5e93c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 26 Aug 2024 19:55:45 +0300
+Subject: [PATCH 11/11] Hardcode C++ include path from host
+
+---
+ .../cling/lib/Interpreter/CIFactory.cpp       | 42 +------------------
+ 1 file changed, 1 insertion(+), 41 deletions(-)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+index 2304311..ed4ebc2 100644
+--- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
++++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+@@ -112,47 +112,7 @@ namespace {
+                                        llvm::SmallVectorImpl<char>& Buf,
+                                        AdditionalArgList& Args,
+                                        bool Verbose) {
+-    std::string CppInclQuery("LC_ALL=C ");
+-    CppInclQuery.append(Compiler);
+-
+-    CppInclQuery.append(" -xc++ -E -v /dev/null 2>&1 |"
+-                        " sed -n -e '/^.*include/,${' -e '/^ \\/.*++/p' -e '}'");
+-
+-    if (Verbose)
+-      cling::log() << "Looking for C++ headers with:\n  " << CppInclQuery << "\n";
+-
+-    if (FILE *PF = ::popen(CppInclQuery.c_str(), "r")) {
+-      Buf.resize(Buf.capacity_in_bytes());
+-      while (fgets(&Buf[0], Buf.capacity_in_bytes(), PF) && Buf[0]) {
+-        llvm::StringRef Path(&Buf[0]);
+-        // Skip leading and trailing whitespace
+-        Path = Path.trim();
+-        if (!Path.empty()) {
+-          if (!llvm::sys::fs::is_directory(Path)) {
+-            if (Verbose)
+-              cling::utils::LogNonExistantDirectory(Path);
+-          }
+-          else
+-            Args.addArgument("-cxx-isystem", Path.str());
+-        }
+-      }
+-      ::pclose(PF);
+-    } else {
+-      ::perror("popen failure");
+-      // Don't be overly verbose, we already printed the command
+-      if (!Verbose)
+-        cling::errs() << " for '" << CppInclQuery << "'\n";
+-    }
+-
+-    // Return the query in Buf on failure
+-    if (Args.empty()) {
+-      Buf.resize(0);
+-      Buf.insert(Buf.begin(), CppInclQuery.begin(), CppInclQuery.end());
+-    } else if (Verbose) {
+-      cling::log() << "Found:\n";
+-      for (const auto& Arg : Args)
+-        cling::log() << "  " << Arg.second << "\n";
+-    }
++    Args.addArgument("-cxx-isystem", std::string(::getenv("PREFIX")) + std::string("/include/c++/v1"));
+   }
+ 
+   static bool AddCxxPaths(llvm::StringRef PathStr, AdditionalArgList& Args,
+-- 
+2.46.0
+
