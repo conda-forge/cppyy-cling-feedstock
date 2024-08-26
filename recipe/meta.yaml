@@ -27,6 +27,7 @@ source:
     - remove-libLLVM.patch
     # Be verbose during build
     - verbose.patch
+    - include.patch  # [osx]
 
 build:
   number: 3
