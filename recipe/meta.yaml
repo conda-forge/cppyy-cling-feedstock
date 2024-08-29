@@ -28,7 +28,7 @@ source:
     - 0011-Hardcode-C-include-path-from-host.patch  # [osx]
 
 build:
-  number: 5
+  number: 6
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
@@ -68,8 +68,11 @@ requirements:
     - libcxx ={{ cxx_compiler_version }}.*  # [osx]
 
 test:
+  files:
+    - test.h
   commands:
     - rootcling -h
+    - rootcling test.dict test.h
     # calling cppyy-generator fails with "No module named clang" same happens
     # with the cppyy from PyPI.
     # cppyy-generator -h
