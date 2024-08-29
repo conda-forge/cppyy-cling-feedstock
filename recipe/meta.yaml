@@ -28,13 +28,10 @@ source:
     - 0011-Hardcode-C-include-path-from-host.patch  # [osx]
 
 build:
-  number: 5
+  number: 6
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
-  # We hard code the host path in CIFactory.cpp in the 0011.patch above and
-  # need it to be replace when installing.
-  detect_binary_files_with_prefix: True
   entry_points:
     - cling-config = cppyy_backend._cling_config:main
     - genreflex = cppyy_backend._genreflex:main
@@ -71,8 +68,11 @@ requirements:
     - libcxx ={{ cxx_compiler_version }}.*  # [osx]
 
 test:
+  files:
+    - test.h
   commands:
     - rootcling -h
+    - rootcling test.dict test.h
     # calling cppyy-generator fails with "No module named clang" same happens
     # with the cppyy from PyPI.
     # cppyy-generator -h
