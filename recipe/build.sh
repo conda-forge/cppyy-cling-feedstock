@@ -62,9 +62,6 @@ fi
 sed -i -E 's#(ROOT_TEST_DRIVER RootTestDriver.cmake PATHS \$\{THISDIR\} \$\{CMAKE_MODULE_PATH\} NO_DEFAULT_PATH)#\1 CMAKE_FIND_ROOT_PATH_BOTH#g' \
     src/cmake/modules/RootNewMacros.cmake
 
-# Help the compiler find its header files on macOS
-sed -i -E 's#__CONDA_PREFIX_HERE__#'${PREFIX}'#g' src/interpreter/cling/lib/Interpreter/CIFactory.cpp
-
 export CMAKE_CLING_ARGS=${CMAKE_PLATFORM_FLAGS[@]}
 
 # Some flags that root-feedstock sets. They probably don't hurt when building cppyy…

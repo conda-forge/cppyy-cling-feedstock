@@ -56,7 +56,7 @@ index 2304311..ed4ebc2 100644
 -      for (const auto& Arg : Args)
 -        cling::log() << "  " << Arg.second << "\n";
 -    }
-+    Args.addArgument("-cxx-isystem", std::string("__CONDA_PREFIX_HERE__") + std::string("/include/c++/v1"));
++    Args.addArgument("-cxx-isystem", std::string(::getenv("PREFIX")) + std::string("/include/c++/v1"));
    }
  
    static bool AddCxxPaths(llvm::StringRef PathStr, AdditionalArgList& Args,
