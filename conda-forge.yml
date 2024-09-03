@@ -1,5 +1,4 @@
 build_platform:
-  # Cross-compile since otherwise we exceed the time limit on TravisCI
   osx_arm64: osx_64
 conda_build:
   pkg_format: '2'
@@ -8,8 +7,6 @@ github:
   branch_name: main
   tooling_branch_name: main
 provider:
-  # Compile on Azure since Travis does not like us at the moment
   linux_aarch64: azure
-  # Compile on Azure since we otherwise exceed the time limit on TravisCI
   linux_ppc64le: azure
 test: native_and_emulated
