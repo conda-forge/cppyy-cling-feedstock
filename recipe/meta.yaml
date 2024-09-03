@@ -28,7 +28,7 @@ source:
     - 0011-Hardcode-C-include-path-from-host.patch  # [osx]
 
 build:
-  number: 6
+  number: 7
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
