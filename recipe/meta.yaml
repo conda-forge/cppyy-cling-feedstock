@@ -1,13 +1,13 @@
 {% set name = "cppyy-cling" %}
-{% set version = "6.30.0" %}
+{% set version = "6.32.8" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
-  sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
+  url: https://pypi.org/packages/source/c/cppyy-cling/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f51ea2e9bd1418c27d1fca3ba97e322ad660a5e18180aad2d17fb55db43a0b49
   patches:
     - 0001-Simplify-setup.py.patch
     # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
@@ -28,7 +28,7 @@ source:
     - 0011-Hardcode-C-include-path-from-host.patch  # [osx]
 
 build:
-  number: 8
+  number: 0
   skip: true  # [win]
   # cross-python does not support pypy yet
   skip: true  # [build_platform != target_platform and python_impl == "pypy"]
