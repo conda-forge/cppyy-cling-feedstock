@@ -55,7 +55,7 @@ requirements:
     - pip
     - setuptools
     - zlib
-    - clangdev =13 root_63004*
+    - clangdev 18.* root_63402*
     # Same pin as clangdev
     - libcxx-devel {{ cxx_compiler_version }}  # [osx]
   run:
