@@ -86,7 +86,7 @@ about:
     A repackaging of Cling, the interactive C++ interpreter, including C/C++
     wrappers that expose no further external headers or types.
   homepage: https://pypi.org/project/cppyy-cling
-  repository: https://bitbucket.org/wlav/cppyy-backend/src/master/cling/
+  repository: https://github.com/wlav/cppyy-backend/tree/master/cling
   documentation: http://cppyy.readthedocs.io/
 
 extra:
