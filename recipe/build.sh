@@ -45,6 +45,8 @@ CMAKE_FLAGS+=("-Dbuiltin_llvm=OFF")
 CMAKE_FLAGS+=("-DLLVM_PREFIX=$PREFIX")
 # Do not vendor Clang but use our own ROOT-patched Clang build
 CMAKE_FLAGS+=("-Dbuiltin_clang=OFF")
+# Do not vendor Clang but use our own Cling build
+CMAKE_FLAGS+=("-Dbuiltin_cling=OFF")
 # Do not include debug info in build since we run out of disk space on Azure when building ppc64 otherwise
 CMAKE_FLAGS+=("-DCMAKE_BUILD_TYPE=Release")
 # Work around issues such as void cling::Transaction::addNestedTransaction(cling::Transaction*): Assertion `!m_Unloading && "Must not nest within unloading transaction"' failed.
