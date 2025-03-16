@@ -1,5 +1,6 @@
 context:
   version: "6.32.8"
+  cling_version: "1.1"
 
 package:
   name: cppyy-cling
@@ -55,15 +56,10 @@ requirements:
     - pip
     - setuptools
     - zlib
-    # Upstream uses 6.32.8 but using a later patch release does not seem to cause any issues downstream
-    - clangdev =16 root_632*
+    - cling ${{ cling_version }}.*
   run:
-    # We need a C++ compiler at runtime to compile cppdef snippets and glue
-    # code and also so that all the standard headers are available. We do not
-    # need the exact compiler that was used during the build {{ compiler('cxx') }}
-    # but just any functional C++ compiler.
-    - cxx-compiler
     - python
+    - cling ${{ cling_version }}.*
     # cppyy-cling invokes clang 16 at runtime which is not compatible with recent libcxx headers,
     # so we need to force older headers since otherwise we get "Libc++ only supports Clang 18 and later" and compile errors
     - if: osx
