@@ -28,7 +28,7 @@ source:
     - 0011-Hardcode-C-include-path-from-host.patch
 
 build:
-  number: 8
+  number: 9
   skip:
     - win
   python:
