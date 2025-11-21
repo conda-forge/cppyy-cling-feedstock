@@ -24,8 +24,6 @@ export RANLIB=`which $RANLIB`
 if [[ "${target_platform}" == linux* ]]; then
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_AR=${GCC_AR}")
     CMAKE_PLATFORM_FLAGS+=("-DCLANG_DEFAULT_LINKER=ld")
-    CMAKE_PLATFORM_FLAGS+=("-DDEFAULT_SYSROOT=${INSTALL_SYSROOT}")
-    CMAKE_PLATFORM_FLAGS+=("-DRT_LIBRARY=${INSTALL_SYSROOT}/usr/lib/librt.so")
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
 
     # Hide symbols from LLVM/clang to avoid conflicts with other libraries
