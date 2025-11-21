@@ -5,6 +5,8 @@ set -exuo pipefail
 # root-feedstock.
 
 export VERBOSE=1
+export MAKEFLAGS="-j`nproc || sysctl -n hw.ncpu`"
+
 
 # Do not perform auto-detection of CPU features
 export EXTRA_CLING_ARGS=-O2
