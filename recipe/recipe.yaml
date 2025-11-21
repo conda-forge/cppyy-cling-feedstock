@@ -1,12 +1,12 @@
-{% set name = "cppyy-cling" %}
-{% set version = "6.30.0" %}
+context:
+  version: "6.30.0"
 
 package:
-  name: {{ name }}
-  version: {{ version }}
+  name: cppyy-cling
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-${{ version }}.tar.gz
   sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
     - 0001-Simplify-setup.py.patch
@@ -29,24 +29,29 @@ source:
 
 build:
   number: 8
-  skip: true  # [win]
-  entry_points:
-    - cling-config = cppyy_backend._cling_config:main
-    - genreflex = cppyy_backend._genreflex:main
-    - rootcling = cppyy_backend._rootcling:main
-    - cppyy-generator = cppyy_backend._cppyy_generator:main
+  skip:
+    - win
+  python:
+    entry_points:
+      - cling-config = cppyy_backend._cling_config:main
+      - genreflex = cppyy_backend._genreflex:main
+      - rootcling = cppyy_backend._rootcling:main
+      - cppyy-generator = cppyy_backend._cppyy_generator:main
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
     - sed
     - cmake
     # We need a find that understand -name
     - findutils
-    - make  # [unix]
+    - if: unix
+      then: make
   host:
     - libboost-headers
     - python
@@ -55,7 +60,8 @@ requirements:
     - zlib
     - clangdev =13 root_63004*
     # Same pin as clangdev
-    - libcxx-devel {{ cxx_compiler_version }}  # [osx]
+    - if: osx
+      then: libcxx-devel ==${{ cxx_compiler_version }}
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
@@ -63,30 +69,28 @@ requirements:
     # but just any functional C++ compiler.
     - cxx-compiler
     - python
-    - libcxx-devel ={{ cxx_compiler_version }}.*  # [osx]
+    - if: osx
+      then: libcxx-devel ==${{ cxx_compiler_version }}
 
-test:
-  files:
-    - test.h
-  commands:
-    - rootcling -h
-    - rootcling test.dict test.h
-    # calling cppyy-generator fails with "No module named clang" same happens
-    # with the cppyy from PyPI.
-    # cppyy-generator -h
-    - genreflex -h
+tests:
+  - files:
+      recipe:
+        - test.h
+    script:
+      - rootcling -h
+      - rootcling test.dict test.h
+      - genreflex -h
 
 about:
-  home: https://pypi.org/project/cppyy-cling
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE.txt
   summary: A repackaging of Cling for Automatic Python-C++ Bindings
   description: |
     A repackaging of Cling, the interactive C++ interpreter, including C/C++
     wrappers that expose no further external headers or types.
-  doc_url: http://cppyy.readthedocs.io/
-  dev_url: https://bitbucket.org/wlav/cppyy-backend/src/master/cling/
+  homepage: https://pypi.org/project/cppyy-cling
+  repository: https://bitbucket.org/wlav/cppyy-backend/src/master/cling/
+  documentation: http://cppyy.readthedocs.io/
 
 extra:
   recipe-maintainers:
