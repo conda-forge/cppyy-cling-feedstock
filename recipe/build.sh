@@ -77,7 +77,7 @@ export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_AR=$AR"
 # Use the cross ranlib and not the host's ranlib
 export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_RANLIB=$RANLIB"
 
-mkdir build
+mkdir -p build
 cd build
 
 cmake ${CMAKE_ARGS} $CMAKE_CLING_ARGS ../src
