@@ -30,8 +30,6 @@ source:
 build:
   number: 8
   skip: true  # [win]
-  # cross-python does not support pypy yet
-  skip: true  # [build_platform != target_platform and python_impl == "pypy"]
   entry_points:
     - cling-config = cppyy_backend._cling_config:main
     - genreflex = cppyy_backend._genreflex:main
