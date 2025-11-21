@@ -85,7 +85,7 @@ CONDA_PREFIX="$PREFIX" cmake --build . --target install --config Release -- --qu
 
 cd ..
 
-python -m pip install . --no-deps -vv
+python -m pip install . --no-deps --no-build-isolation -vv
 
 echo "Check that generated files do not need to be updated in cross-compiled builds."
 for item in `ls ${RECIPE_DIR}/rootcling`; do
