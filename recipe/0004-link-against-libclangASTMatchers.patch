@@ -1,4 +1,4 @@
-From 2ab64b0412adc87086792233933d7330ee313e7a Mon Sep 17 00:00:00 2001
+From 6369807120edb59af7f30c07a64abd0d4ffb221d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Sun, 20 Jun 2021 18:05:30 +0200
 Subject: [PATCH 04/11] link against libclangASTMatchers
@@ -20,5 +20,5 @@ index 327c9ff..bdf8ee8 100644
    clangLex
  )
 -- 
-2.46.0
+2.52.0
 

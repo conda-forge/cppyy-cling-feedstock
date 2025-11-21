@@ -1,4 +1,4 @@
-From e5a02dd81059ee1d56e73237ffd6f105df0ce151 Mon Sep 17 00:00:00 2001
+From 65d2da298ad174562687fc50dc776faf0f88094a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 15:40:50 +0200
 Subject: [PATCH 10/11] Remove libLLVM.so when linking
@@ -92,5 +92,5 @@ index eb83eea..8530052 100644
  target_include_directories(rootcling PRIVATE
          ${CMAKE_CURRENT_SOURCE_DIR}/../core/metacling/res
 -- 
-2.46.0
+2.52.0
 

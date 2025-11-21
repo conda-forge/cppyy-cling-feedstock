@@ -1,4 +1,4 @@
-From 4021a38eef5886fe4aafd67645df0a2bf898bdb4 Mon Sep 17 00:00:00 2001
+From 7e0e9b1516a877bde1febbf9a30418185409089c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 23:03:50 +0200
 Subject: [PATCH 06/11] add ThreadLocalStorage.h directory
@@ -20,5 +20,5 @@ index 8e3245b..b8a78bb 100644
  
  set(objectlibs $<TARGET_OBJECTS:Base>
 -- 
-2.46.0
+2.52.0
 

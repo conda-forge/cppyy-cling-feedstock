@@ -1,4 +1,4 @@
-From 104ef9581d9a8aa1bc1f55be8f57cf2904938173 Mon Sep 17 00:00:00 2001
+From c45d91426b7e3d0015a1dbbd4f4b77bcdee6f3eb Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 13:50:02 +0200
 Subject: [PATCH 07/11]
@@ -141,5 +141,5 @@ index 2145c11..2304311 100644
  
      for (auto& arg : sArguments) {
 -- 
-2.46.0
+2.52.0
 

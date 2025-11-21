@@ -1,4 +1,4 @@
-From d1ded278ca71ad26bc637abb77147ddb97c9528e Mon Sep 17 00:00:00 2001
+From e74d63bccc3769b9da6ee3409a17bf266e189fb1 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 00:37:13 +0200
 Subject: [PATCH 05/11] make sure C formatting symbols are available in C++
@@ -37,5 +37,5 @@ index 74c5bdb..196943f 100644
  
  #include "TClingUtils.h"
 -- 
-2.46.0
+2.52.0
 

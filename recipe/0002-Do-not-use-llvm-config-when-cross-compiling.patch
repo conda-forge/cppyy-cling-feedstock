@@ -1,4 +1,4 @@
-From 71d61e2f6d73ad796194380b5f7443928bb6fc12 Mon Sep 17 00:00:00 2001
+From 3ae3d1f18b4629f3f02ed4185b1c5d59b569cdd8 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 8 Dec 2023 02:03:00 +0200
 Subject: [PATCH 02/11] Do not use llvm-config when cross-compiling
@@ -82,5 +82,5 @@ index b74cee9..c109f52 100644
    set(LLVM_DIR "${LLVM_BINARY_DIR}")
  
 -- 
-2.46.0
+2.52.0
 
