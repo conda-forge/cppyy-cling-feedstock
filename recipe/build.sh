@@ -1,5 +1,5 @@
 #!/bin/bash
-set -exo pipefail
+set -exuo pipefail
 
 # Much of this file (and the entire recipe in fact) has been taken from the
 # root-feedstock.
@@ -9,10 +9,12 @@ export VERBOSE=1
 # Do not perform auto-detection of CPU features
 export EXTRA_CLING_ARGS=-O2
 
-# Manually set the deployment_target
-# May not be very important but nice to do
-OLDVERSIONMACOS='${MACOSX_VERSION}'
-sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
+if [[ "${target_platform}" == darwin* ]]; then
+  # Manually set the deployment_target
+  # May not be very important but nice to do
+  OLDVERSIONMACOS='${MACOSX_VERSION}'
+  sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
+fi
 
 declare -a CMAKE_PLATFORM_FLAGS
 
