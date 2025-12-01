@@ -1,4 +1,4 @@
-From 0f04833eb426bbbeecfab608415b1a6d52faea51 Mon Sep 17 00:00:00 2001
+From 19a2ab4729dabce0524dd95f22a01df7edda24cb Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 1 Dec 2025 22:25:23 +0200
 Subject: [PATCH 10/10] Do not invoke cmake in setup.py build since it is too
@@ -10,7 +10,7 @@ but package the Python bits of cppyy-cling
  1 file changed, 1 deletion(-)
 
 diff --git a/setup.py b/setup.py
-index 476e051..1fabe25 100755
+index cce83cd..2c56e7d 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -311,7 +311,6 @@ class my_install(_install):

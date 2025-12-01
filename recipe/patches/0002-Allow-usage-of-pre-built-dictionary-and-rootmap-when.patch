@@ -1,4 +1,4 @@
-From 07bd8098bb8253d2b3896bbf7bea1d3ad1710bce Mon Sep 17 00:00:00 2001
+From 33377f99c6c495fc557e497613beef2ed357877a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH 02/10] Allow usage of pre-built dictionary and rootmap when
@@ -12,7 +12,7 @@ i.e., when rootcling binary cannot be invoked on the build system
  3 files changed, 58 insertions(+), 15 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index e91e779..476e051 100755
+index e91e779..cce83cd 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -253,7 +253,11 @@ class my_install(_install):
@@ -22,7 +22,7 @@ index e91e779..476e051 100755
 -        os.remove(os.path.join(get_prefix(), 'etc', 'allDict.cxx.pch'))
 +        allDictPath = os.path.join(get_prefix(), 'etc', 'allDict.cxx.pch')
 +        try:
-+            os.remove()
++            os.remove(allDictPath)
 +        except FileNotFoundError:
 +            print(f"The precompiled header {allDictPath} is not present. This is expected when cross-compiling.")
       # for manylinux, reset the default cxxversion to 20 if no user override
