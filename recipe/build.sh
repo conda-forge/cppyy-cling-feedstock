@@ -27,7 +27,7 @@ CMAKE_FLAGS+=("-DCMAKE_INSTALL_PREFIX=`pwd`/install/cppyy_backend")
 # Do not vendor LLVM but use our own ROOT-patched LLVM build
 CMAKE_FLAGS+=("-Dbuiltin_llvm=OFF")
 # Do not vendor Clang but use our own ROOT-patched Clang build
-CMAKE_FLAGS+=("-builtin_clang=OFF")
+CMAKE_FLAGS+=("-Dbuiltin_clang=OFF")
 
 # ROOT uses these flags. Without them, we get relocation truncated to fit: R_PPC64_REL24 errors when lirking libCling
 if [[ "${target_platform}" == "linux-ppc64le" ]]; then
