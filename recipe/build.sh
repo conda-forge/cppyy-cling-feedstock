@@ -42,4 +42,4 @@ make
 cd ..
 
 # Install cppyy-cling and some Python bits into site-packages/cppyy_backend.
-python setup.py install --skip-build
+python -m pip install . --no-deps --no-build-isolation -vv

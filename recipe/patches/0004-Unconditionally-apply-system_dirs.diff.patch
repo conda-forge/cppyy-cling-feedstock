@@ -1,7 +1,7 @@
 From a6dbf3e6a7fe1285c99e48baf270f346476f946d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 13:50:02 +0200
-Subject: [PATCH 4/9] Unconditionally apply system_dirs.diff
+Subject: [PATCH 04/10] Unconditionally apply system_dirs.diff
 
 this is in upstream called system_dirs.diff. However we make this
 independent of architecture (upstream it gets only applied on Linux

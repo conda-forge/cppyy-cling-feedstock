@@ -18,6 +18,7 @@ source:
     - patches/0007-Remove-libLLVM.so-when-linking.patch
     - patches/0008-Prevent-constants-from-being-dropped-from-archives-d.patch
     - patches/0009-InterpreterCallbacks-is-polymorphic.patch
+    - patches/0010-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
 
 build:
   number: 9
