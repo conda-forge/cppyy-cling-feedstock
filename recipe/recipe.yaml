@@ -9,23 +9,15 @@ source:
   url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-${{ version }}.tar.gz
   sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
-    - 0001-Simplify-setup.py.patch
-    # Disable use of llvm-config, a binary which we cannot install since it pulls in libllvm which breaks the build (also, we cannot use it when cross-compiling)
-    - 0002-Do-not-use-llvm-config-when-cross-compiling.patch
-    # Use pre-built generated files when we cannot invoke rootcling
-    - 0003-use-pre-built-dictionary-and-rootmap.patch
-    - 0004-link-against-libclangASTMatchers.patch
-    - 0005-make-sure-C-formatting-symbols-are-available-in-C.patch
-    - 0006-add-ThreadLocalStorage.h-directory.patch
-    # Revert patch for non-macOS https://github.com/conda-forge/cppyy-cling-feedstock/pull/40#issuecomment-975781900
-    - 0007-.patch  # [osx]
-    # Do not use -march=native on platforms that do not support it yet.
-    - 0008-clang-for-aarch64-does-not-support-march-native.patch
-    # Fix dependency resolution when building rootcling
-    - 0009-Fix-order-of-clang-libraries.patch
-    # Fix https://github.com/conda-forge/cppyy-cling-feedstock/pull/56#issuecomment-1800307065
-    - 0010-Remove-libLLVM.so-when-linking.patch
-    - 0011-Hardcode-C-include-path-from-host.patch
+    - patches/0001-Do-not-use-llvm-config-when-cross-compiling.patch
+    - patches/0002-Allow-usage-of-pre-built-dictionary-and-rootmap-when.patch
+    - patches/0003-make-sure-C-formatting-symbols-are-available-in-C.patch
+    - patches/0004-Unconditionally-apply-system_dirs.diff.patch
+    - patches/0005-clang-for-aarch64-does-not-support-march-native.patch
+    - patches/0006-Fix-order-of-clang-libraries.patch
+    - patches/0007-Remove-libLLVM.so-when-linking.patch
+    - patches/0008-Prevent-constants-from-being-dropped-from-archives-d.patch
+    - patches/0009-InterpreterCallbacks-is-polymorphic.patch
 
 build:
   number: 9

@@ -1,0 +1,82 @@
+From 42a0c0ba594a1ad92b577b854fdd3ca25347ad60 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Fri, 15 Sep 2023 15:40:50 +0200
+Subject: [PATCH 7/9] Remove libLLVM.so when linking
+
+so we do not end up with two copies of LLVM that then lead to warnings
+about command line parameters registered more than once.
+---
+ src/core/metacling/src/CMakeLists.txt    | 8 +++++++-
+ src/core/rootcling_stage1/CMakeLists.txt | 8 +++++++-
+ src/main/CMakeLists.txt                  | 8 +++++++-
+ 3 files changed, 21 insertions(+), 3 deletions(-)
+
+diff --git a/src/core/metacling/src/CMakeLists.txt b/src/core/metacling/src/CMakeLists.txt
+index c28b1ab..c0f5668 100644
+--- a/src/core/metacling/src/CMakeLists.txt
++++ b/src/core/metacling/src/CMakeLists.txt
+@@ -77,11 +77,17 @@ if(NOT builtin_clang)
+   link_directories("${LLVM_LIBRARY_DIR}")
+ endif()
+ 
++if(builtin_llvm)
++  set(llvm_libs "")
++else()
++  llvm_map_components_to_libnames(llvm_libs all)
++endif()
++
+ ROOT_LINKER_LIBRARY(Cling
+         $<TARGET_OBJECTS:ClingUtils>
+         $<TARGET_OBJECTS:Dictgen>
+         $<TARGET_OBJECTS:MetaCling>
+-        LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CLING_PLUGIN_LINK_LIBS})
++        LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CLING_PLUGIN_LINK_LIBS} ${llvm_libs})
+ 
+ 
+ if(MSVC)
+diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
+index a5483b7..140b817 100644
+--- a/src/core/rootcling_stage1/CMakeLists.txt
++++ b/src/core/rootcling_stage1/CMakeLists.txt
+@@ -30,12 +30,18 @@ if(NOT builtin_clang)
+   link_directories("${LLVM_LIBRARY_DIR}")
+ endif()
+ 
++if(builtin_llvm)
++  set(llvm_libs "")
++else()
++  llvm_map_components_to_libnames(llvm_libs all)
++endif()
++
+ ROOT_EXECUTABLE(rootcling_stage1 src/rootcling_stage1.cxx
+                               $<TARGET_OBJECTS:Clib>
+                               $<TARGET_OBJECTS:ClingUtils>
+                               $<TARGET_OBJECTS:Dictgen>
+                               $<TARGET_OBJECTS:Foundation_Stage1>
+-                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS}
++                              LIBRARIES ${CLING_LIBRARIES} ${LINK_LIBS} ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${ROOT_ATOMIC_LIBS} ${llvm_libs}
+                               NOINSTALL)
+ set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
+ add_dependencies(rootcling_stage1 ClingUtils)
+diff --git a/src/main/CMakeLists.txt b/src/main/CMakeLists.txt
+index eb83eea..741ca5e 100644
+--- a/src/main/CMakeLists.txt
++++ b/src/main/CMakeLists.txt
+@@ -22,7 +22,13 @@ else()
+   set_source_files_properties(src/rootcling.cxx PROPERTIES COMPILE_FLAGS "-DNOMINMAX -D_XKEYCHECK_H")
+ endif()
+ 
+-ROOT_EXECUTABLE(rootcling src/rootcling.cxx LIBRARIES RIOLegacy Cling CoreLegacy)
++if(builtin_llvm)
++  set(llvm_libs "")
++else()
++  llvm_map_components_to_libnames(llvm_libs all)
++endif()
++
++ROOT_EXECUTABLE(rootcling src/rootcling.cxx LIBRARIES RIOLegacy Cling CoreLegacy ${llvm_libs} z dl)
+ 
+ target_include_directories(rootcling PRIVATE
+         ${CMAKE_CURRENT_SOURCE_DIR}/../core/metacling/res
+-- 
+2.52.0
+
