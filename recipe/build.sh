@@ -26,6 +26,7 @@ CMAKE_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
 CMAKE_FLAGS+=("-DCMAKE_INSTALL_PREFIX=`pwd`/install/cppyy_backend")
 # Do not vendor LLVM but use our own ROOT-patched LLVM build
 CMAKE_FLAGS+=("-Dbuiltin_llvm=OFF")
+CMAKE_FLAGS+=("-DLLVM_PREFIX=$PREFIX")
 # Do not vendor Clang but use our own ROOT-patched Clang build
 CMAKE_FLAGS+=("-Dbuiltin_clang=OFF")
 
