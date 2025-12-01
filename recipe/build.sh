@@ -8,7 +8,7 @@ export MAKEFLAGS="-j`nproc || sysctl -n hw.ncpu`"
 export EXTRA_CLING_ARGS=-O2
 
 # enum-constexpr-conversion: to ignore this compile error on modern compilers: integer value 536870912 is outside the valid range of values [0, 63] for the enumeration type 'EProperty'
-CXXFLAGS = "$CXXFLAGS -Wno-enum-constexpr-conversion"
+CXXFLAGS="$CXXFLAGS -Wno-enum-constexpr-conversion"
 
 # Build Cling with cmake (we do not use the build in setup.py because it vendors LLVM and is also too opinionated to work on conda-forge)
 mkdir -p builddir
