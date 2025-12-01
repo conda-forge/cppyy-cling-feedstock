@@ -53,7 +53,7 @@ requirements:
     - clangdev =13 root_63004*
     # Same pin as clangdev
     - if: osx
-      then: libcxx-devel ==${{ cxx_compiler_version }}.*
+      then: libcxx-devel 17.*
   run:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
@@ -62,7 +62,7 @@ requirements:
     - cxx-compiler
     - python
     - if: osx
-      then: libcxx-devel ==${{ cxx_compiler_version }}.*
+      then: libcxx-devel 17.*
 
 tests:
   - files:
