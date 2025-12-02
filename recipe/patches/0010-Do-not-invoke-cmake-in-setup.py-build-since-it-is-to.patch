@@ -1,4 +1,4 @@
-From 7f3b51d88a9ec233b70333f95c7130c7e29066b1 Mon Sep 17 00:00:00 2001
+From 7e810cf970c87050e76211a9176ffba1024bc8da Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 1 Dec 2025 22:25:23 +0200
 Subject: [PATCH 10/10] Do not invoke cmake in setup.py build since it is too
