@@ -1,4 +1,4 @@
-From ecd1a79a4272a6693dfdc472c43ce0624f915222 Mon Sep 17 00:00:00 2001
+From d54dd912d5e16fc7184f01c33d5e84bbb165846a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 1 Jul 2022 23:07:59 +0300
 Subject: [PATCH 05/10] clang for aarch64 does not support march=native

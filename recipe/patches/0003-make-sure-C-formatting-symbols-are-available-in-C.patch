@@ -1,4 +1,4 @@
-From f9dee850a4ad337941d44c458b526c61494a0f47 Mon Sep 17 00:00:00 2001
+From 5aeb8131515273e241deaf9271a0def6c3aa837a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 00:37:13 +0200
 Subject: [PATCH 03/10] make sure C formatting symbols are available in C++

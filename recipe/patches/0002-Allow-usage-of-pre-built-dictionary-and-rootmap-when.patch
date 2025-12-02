@@ -1,4 +1,4 @@
-From 33377f99c6c495fc557e497613beef2ed357877a Mon Sep 17 00:00:00 2001
+From 48cd3a59e8c4512efb53fe377db2e4544587bd85 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH 02/10] Allow usage of pre-built dictionary and rootmap when
@@ -7,9 +7,9 @@ Subject: [PATCH 02/10] Allow usage of pre-built dictionary and rootmap when
 i.e., when rootcling binary cannot be invoked on the build system
 ---
  setup.py                           |  6 ++++-
- src/CMakeLists.txt                 | 32 ++++++++++++++++-----------
- src/cmake/modules/RootMacros.cmake | 35 +++++++++++++++++++++++++++++-
- 3 files changed, 58 insertions(+), 15 deletions(-)
+ src/CMakeLists.txt                 | 40 ++++++++++++++++++++----------
+ src/cmake/modules/RootMacros.cmake | 35 +++++++++++++++++++++++++-
+ 3 files changed, 66 insertions(+), 15 deletions(-)
 
 diff --git a/setup.py b/setup.py
 index e91e779..cce83cd 100755
@@ -29,10 +29,25 @@ index e91e779..cce83cd 100755
          if not 'STDCXX' in os.environ and is_manylinux():
              log.info('updating root-config to C++20 for manylinux')
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 948d387..071419f 100644
+index 948d387..aca2817 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -379,26 +379,32 @@ else()
+@@ -23,6 +23,14 @@ include(cmake/modules/CaptureCommandLine.cmake)
+ 
+ project(ROOT)
+ 
++include(CheckCXXSourceRuns)
++
++# Detect whether freshly built binaries can be executed (respects cross emulators)
++if(NOT DEFINED CAN_RUN_BUILT_BINARIES)
++  check_cxx_source_runs("int main() { return 0; }" CAN_RUN_BUILT_BINARIES)
++endif()
++message(STATUS "Can run built binaries: ${CAN_RUN_BUILT_BINARIES}")
++
+ #---Set the locale to default C to prevent issued due to localization of commands---------------
+ # This is necessary as we for example call `clang -v` and parse its output. But on a localized
+ # program, the output parsing is much more error prone as certrain strings we're looking for
+@@ -379,26 +387,32 @@ else()
    get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
    get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
  
@@ -60,7 +75,7 @@ index 948d387..071419f 100644
 +  add_custom_target(onepcm ALL DEPENDS etc/dictpch/allCppflags.txt etc/dictpch/allHeaders.h etc/dictpch/allLinkDefs.h)
    install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
 +
-+  if(NOT CMAKE_CROSSCOMPILING)
++  if(CAN_RUN_BUILT_BINARIES)
 +    # Use the native rootcling to build allDict.cxx.pch. If we do not build it here, cppyy builds it upon its first import.
 +    add_custom_command(OUTPUT etc/allDict.cxx.pch
 +      COMMAND
@@ -79,7 +94,7 @@ index 948d387..071419f 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..67b79d5 100644
+index 3f7d9ee..22bd10c 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -478,7 +478,8 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -87,7 +102,7 @@ index 3f7d9ee..67b79d5 100644
    endif()
  
 -  #---call rootcint------------------------------------------
-+if(NOT CMAKE_CROSSCOMPILING)
++if(CAN_RUN_BUILT_BINARIES)
 +  #---call rootcling------------------------------------------
    add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
                       COMMAND ${command} -v2 -f  ${dictionary}.cxx ${newargs} ${excludepathsargs} ${rootmapargs}
