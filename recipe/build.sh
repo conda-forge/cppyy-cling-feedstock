@@ -33,6 +33,13 @@ CMAKE_FLAGS+=("-Dbuiltin_llvm=OFF")
 CMAKE_FLAGS+=("-DLLVM_PREFIX=$PREFIX")
 # Do not vendor Clang but use our own ROOT-patched Clang build
 CMAKE_FLAGS+=("-Dbuiltin_clang=OFF")
+# Include debug symbols in build
+CMAKE_FLAGS+=("-DCMAKE_BUILD_TYPE=RelWithDebInfo")
+# Work around issues such as void cling::Transaction::addNestedTransaction(cling::Transaction*): Assertion `!m_Unloading && "Must not nest within unloading transaction"' failed.
+# (Does not seem like a good idea, but upstream's setup.py sets the same flag.)
+CMAKE_FLAGS+=("-DLLVM_ENABLE_ASSERTIONS=OFF")
+# We are not building a Cling REPL so we do not need terminfo support. (Upstream sets the same flag.)
+CMAKE_FLAGS+=("-DLLVM_ENABLE_TERMINFO=OFF")
 
 # ROOT uses these flags. Without them, we get relocation truncated to fit: R_PPC64_REL24 errors when lirking libCling
 if [[ "${target_platform}" == "linux-ppc64le" ]]; then
