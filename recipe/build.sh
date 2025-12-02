@@ -16,6 +16,14 @@ cd builddir
 
 declare -a CMAKE_FLAGS
 
+# On macOS, cmake does not set CMAKE_CROSSCOMPILING when building for osx-arm64 on osx-64
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-0}" == "1" ]]; then
+  CMAKE_FLAGS+=("-DCMAKE_CROSSCOMPILING=ON")
+  if [[ -n "${CROSSCOMPILING_EMULATOR:-}" ]]; then
+    CMAKE_FLAGS+=("-DCMAKE_CROSSCOMPILING_EMULATOR=${CROSSCOMPILING_EMULATOR}")
+  fi
+fi
+
 # builtin_cling: We want to build cling. That's why we're here.
 CMAKE_FLAGS+=("-Dbuiltin_cling=ON")
 # runtime_cxxmodules: (whatever that might be) leads to "error: unknown argument: '-fmodule-name'" during the build; also disabled by upstream's setup.py
