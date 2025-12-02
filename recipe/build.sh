@@ -16,8 +16,18 @@ cd builddir
 
 declare -a CMAKE_FLAGS
 
-if [[ -n "${CROSSCOMPILING_EMULATOR:-}" ]]; then
-  CMAKE_FLAGS+=("-DCMAKE_CROSSCOMPILING_EMULATOR=${CROSSCOMPILING_EMULATOR}")
+if [[ "${target_platform}" != "${build_platform}" ]]; then
+  if [[ -n "${CROSSCOMPILING_EMULATOR:-}" ]]; then
+    CMAKE_FLAGS+=("-DCMAKE_CROSSCOMPILING_EMULATOR=${CROSSCOMPILING_EMULATOR}")
+  else
+    # We cannot invoke rootcling on this platform so we need to provide the required assets statically from previous runs.
+    CMAKE_FLAGS+=("-DSTATIC_G_CORELEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__CoreLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBCORELEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libCoreLegacy.rootmap")
+    CMAKE_FLAGS+=("-DSTATIC_G_THREADLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__ThreadLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBTHREADLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libThreadLegacy.rootmap")
+    CMAKE_FLAGS+=("-DSTATIC_G_RIOLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__RIOLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBRIOLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libRIOLegacy.rootmap")
+  fi
 fi
 
 # builtin_cling: We want to build cling. That's why we're here.
