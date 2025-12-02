@@ -1,4 +1,4 @@
-From fbe46a78f5a25f3ff92724cf77f5883648637036 Mon Sep 17 00:00:00 2001
+From 59e97eda0ec02fa4f077c00730ef9187dacf9199 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 02:51:47 +0200
 Subject: [PATCH 08/10] Prevent constants from being dropped from archives due

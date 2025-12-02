@@ -1,4 +1,4 @@
-From 48cd3a59e8c4512efb53fe377db2e4544587bd85 Mon Sep 17 00:00:00 2001
+From 0dcf2892d56ae536bad0061ce17995be4820c240 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
 Subject: [PATCH 02/10] Allow usage of pre-built dictionary and rootmap when
@@ -8,8 +8,8 @@ i.e., when rootcling binary cannot be invoked on the build system
 ---
  setup.py                           |  6 ++++-
  src/CMakeLists.txt                 | 40 ++++++++++++++++++++----------
- src/cmake/modules/RootMacros.cmake | 35 +++++++++++++++++++++++++-
- 3 files changed, 66 insertions(+), 15 deletions(-)
+ src/cmake/modules/RootMacros.cmake | 40 +++++++++++++++++++++++++++++-
+ 3 files changed, 71 insertions(+), 15 deletions(-)
 
 diff --git a/setup.py b/setup.py
 index e91e779..cce83cd 100755
@@ -94,7 +94,7 @@ index 948d387..aca2817 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..22bd10c 100644
+index 3f7d9ee..4745223 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
 @@ -478,7 +478,8 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
@@ -107,7 +107,7 @@ index 3f7d9ee..22bd10c 100644
    add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
                       COMMAND ${command} -v2 -f  ${dictionary}.cxx ${newargs} ${excludepathsargs} ${rootmapargs}
                                          ${definitions} "$<$<BOOL:${module_defs}>:-D$<JOIN:${module_defs},;-D>>"
-@@ -489,6 +490,38 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -489,6 +490,43 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
                               ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
                               ${runtime_cxxmodule_dependencies}
                       COMMAND_EXPAND_LISTS)
@@ -133,6 +133,11 @@ index 3f7d9ee..22bd10c 100644
 +                       COMMAND ${CMAKE_COMMAND} -E copy
 +                       ${${identifier}}
 +                       ${fname}
++                       IMPLICIT_DEPENDS ${_implicitdeps}
++                       DEPENDS ${_list_of_header_dependencies} ${_linkdef} ${ROOTCINTDEP}
++                               ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
++                               ${runtime_cxxmodule_dependencies}
++                       COMMAND_EXPAND_LISTS
 +    )
 +  endfunction()
 +

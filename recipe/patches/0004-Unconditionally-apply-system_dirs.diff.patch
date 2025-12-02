@@ -1,4 +1,4 @@
-From b07f9f23a27c1b7049b98731466ecb50292f4f29 Mon Sep 17 00:00:00 2001
+From 8b3d60c867829cb73c910ebacf83c75e5d59826e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 13:50:02 +0200
 Subject: [PATCH 04/10] Unconditionally apply system_dirs.diff

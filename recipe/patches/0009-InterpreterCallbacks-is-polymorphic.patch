@@ -1,4 +1,4 @@
-From a4467a1b033e69c9ffbd77b4ec76cc792467e582 Mon Sep 17 00:00:00 2001
+From 3ec4616fe292dccec44135ff9cd411f7b0adac70 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 21:42:35 +0200
 Subject: [PATCH 09/10] InterpreterCallbacks is polymorphic
