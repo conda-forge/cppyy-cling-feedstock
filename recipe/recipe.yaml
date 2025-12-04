@@ -20,6 +20,7 @@ source:
     - patches/0009-InterpreterCallbacks-is-polymorphic.patch
     - patches/0010-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
     - patches/0011-Do-not-use-the-default-SDK.patch
+    - patches/0012-Hardcode-C-standard-library-include-paths.patch
 
 build:
   number: 9
