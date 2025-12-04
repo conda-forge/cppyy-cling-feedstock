@@ -55,9 +55,6 @@ CMAKE_FLAGS+=("-DLLVM_ENABLE_TERMINFO=OFF")
 if [[ "${target_platform}" == "linux-ppc64le" ]]; then
   export CXXFLAGS="${CXXFLAGS} -fplt"
   export CFLAGS="${CFLAGS} -fplt"
-elif [[ "${target_platform}" == "osx-64" ]]; then
-  # delete existing SDK that might be found before ours
-  rm -rf $CONDA_BUILD_SYSROOT/../MacOSX.sdk
 fi
 
 cmake ${CMAKE_FLAGS[@]} ../src
