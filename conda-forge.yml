@@ -1,11 +1,9 @@
+azure:
+  free_disk_space: true
 build_platform:
+  linux_aarch64: linux_64
+  linux_ppc64le: linux_64
   osx_arm64: osx_64
-  # We cannot cross build since these cross-compilation environments take too much disk space on Azure currently.
-  # linux_ppc64le: linux_64
-  # linux_aarch64: linux_64
-provider:
-  linux_ppc64le: azure
-  linux_aarch64: azure
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
