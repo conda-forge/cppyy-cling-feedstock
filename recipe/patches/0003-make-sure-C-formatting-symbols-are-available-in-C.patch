@@ -1,7 +1,7 @@
-From b00110ad43926234be19318d58e4258f5512e1c7 Mon Sep 17 00:00:00 2001
+From 17d2353c965a64f6bb01f4aa4c49b11eed113d1a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 00:37:13 +0200
-Subject: [PATCH 03/10] make sure C formatting symbols are available in C++
+Subject: [PATCH 03/11] make sure C formatting symbols are available in C++
 
 ---
  src/core/metacling/src/TCling.cxx                         | 5 +++++
@@ -9,7 +9,7 @@ Subject: [PATCH 03/10] make sure C formatting symbols are available in C++
  2 files changed, 10 insertions(+)
 
 diff --git a/src/core/metacling/src/TCling.cxx b/src/core/metacling/src/TCling.cxx
-index 5a827d5..86d464d 100644
+index 5a827d55..86d464d9 100644
 --- a/src/core/metacling/src/TCling.cxx
 +++ b/src/core/metacling/src/TCling.cxx
 @@ -17,6 +17,11 @@ Cling is a full ANSI compliant C++-11 interpreter based on
@@ -25,7 +25,7 @@ index 5a827d5..86d464d 100644
  
  #include "ROOT/FoundationUtils.hxx"
 diff --git a/src/core/metacling/src/TClingRdictModuleFileExtension.cxx b/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
-index 74c5bdb..0c6709b 100644
+index 74c5bdbf..0c6709b8 100644
 --- a/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
 +++ b/src/core/metacling/src/TClingRdictModuleFileExtension.cxx
 @@ -15,6 +15,11 @@

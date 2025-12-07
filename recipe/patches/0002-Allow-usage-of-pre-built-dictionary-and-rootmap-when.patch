@@ -1,18 +1,18 @@
-From 54567bb5b0e47615dff7c967638bef9326d04039 Mon Sep 17 00:00:00 2001
+From 9cdef8963862c62a3b29dc2d895507e8b0411c40 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
-Subject: [PATCH 02/10] Allow usage of pre-built dictionary and rootmap when
+Subject: [PATCH 02/11] Allow usage of pre-built dictionary and rootmap when
  crosscompiling
 
 i.e., when rootcling binary cannot be invoked on the build system
 ---
  setup.py                           |  6 ++-
- src/CMakeLists.txt                 | 40 ++++++++++++------
- src/cmake/modules/RootMacros.cmake | 66 ++++++++++++++++++++++++------
- 3 files changed, 86 insertions(+), 26 deletions(-)
+ src/CMakeLists.txt                 | 40 +++++++++++------
+ src/cmake/modules/RootMacros.cmake | 70 +++++++++++++++++++++++++-----
+ 3 files changed, 90 insertions(+), 26 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index e91e779..cce83cd 100755
+index e91e7790..cce83cd3 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -253,7 +253,11 @@ class my_install(_install):
@@ -29,7 +29,7 @@ index e91e779..cce83cd 100755
          if not 'STDCXX' in os.environ and is_manylinux():
              log.info('updating root-config to C++20 for manylinux')
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 948d387..aca2817 100644
+index 948d387b..aca2817a 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -23,6 +23,14 @@ include(cmake/modules/CaptureCommandLine.cmake)
@@ -94,10 +94,10 @@ index 948d387..aca2817 100644
  
  # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
 diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
-index 3f7d9ee..e6c3835 100644
+index 3f7d9ee8..182b7c50 100644
 --- a/src/cmake/modules/RootMacros.cmake
 +++ b/src/cmake/modules/RootMacros.cmake
-@@ -478,17 +478,56 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -478,17 +478,59 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
      endif()
    endif()
  
@@ -162,10 +162,13 @@ index 3f7d9ee..e6c3835 100644
 +
 +    unset(copy_static_asset)
 +  endif()
++
++  # Make sure the files are built so we could install them.
++  add_custom_target("${dictionary}_sources" ALL DEPENDS ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file})
  
    # If we are adding to an existing target and it's not the dictionary itself,
    # we make an object library and add its output object file as source to the target.
-@@ -509,7 +548,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+@@ -509,9 +551,12 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
      target_include_directories(${dictionary} PRIVATE
        ${includedirs} $<TARGET_PROPERTY:${ARG_MODULE},INCLUDE_DIRECTORIES>)
    else()
@@ -173,13 +176,16 @@ index 3f7d9ee..e6c3835 100644
 +    add_custom_target(${dictionary} DEPENDS ${dictionary}.cxx)
    endif()
  
++  # Explicitly make the dictionary depend on all sources so that rootcling does not get invoked twice for the generation.
++  add_dependencies(${dictionary} "${dictionary}_sources")
++
    if(PROJECT_NAME STREQUAL "ROOT")
-@@ -527,6 +566,9 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+     set_property(GLOBAL APPEND PROPERTY ROOT_PCH_DEPENDENCIES ${dictionary})
+     set_property(GLOBAL APPEND PROPERTY ROOT_PCH_DICTIONARIES ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx)
+@@ -527,6 +572,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
    endif()
  
    if(NOT ARG_NOINSTALL AND NOT CMAKE_ROOTTEST_DICT AND DEFINED CMAKE_LIBRARY_OUTPUT_DIRECTORY)
-+    # Make sure the files are built so we can install them.
-+    add_custom_target("${dictionary}_sources" ALL DEPENDS ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file})
 +
      ROOT_GET_INSTALL_DIR(shared_lib_install_dir)
      # Install the C++ module if we generated one.

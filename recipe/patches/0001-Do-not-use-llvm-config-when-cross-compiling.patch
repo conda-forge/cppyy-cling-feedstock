@@ -1,7 +1,7 @@
 From ad8317378c9c124c323e3a5343c1263523a98a6e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 8 Dec 2023 02:03:00 +0200
-Subject: [PATCH 01/10] Do not use llvm-config when cross-compiling
+Subject: [PATCH 01/11] Do not use llvm-config when cross-compiling
 
 we cannot invoke a host binary.
 ---
@@ -9,7 +9,7 @@ we cannot invoke a host binary.
  1 file changed, 46 insertions(+), 30 deletions(-)
 
 diff --git a/src/interpreter/CMakeLists.txt b/src/interpreter/CMakeLists.txt
-index b74cee9..570ab32 100644
+index b74cee9a..570ab329 100644
 --- a/src/interpreter/CMakeLists.txt
 +++ b/src/interpreter/CMakeLists.txt
 @@ -245,10 +245,15 @@ if(builtin_llvm)

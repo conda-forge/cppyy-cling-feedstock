@@ -1,7 +1,7 @@
-From ac7e9935d0725294e180289ac5dd51ab71e4358b Mon Sep 17 00:00:00 2001
+From a3ee323aa9bd83137a5ca190e4fe3e253af43087 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 21:42:35 +0200
-Subject: [PATCH 09/10] InterpreterCallbacks is polymorphic
+Subject: [PATCH 09/11] InterpreterCallbacks is polymorphic
 
 InterpreterCallbacks is polymorphic with TRootClingCallbacks inheriting
 from it so it must be compiled with RTTI so we override any previous
@@ -11,7 +11,7 @@ from it so it must be compiled with RTTI so we override any previous
  1 file changed, 4 insertions(+)
 
 diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
-index 841f68b..ab4dca0 100644
+index 841f68b5..ab4dca02 100644
 --- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
 +++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
 @@ -380,3 +380,7 @@ endif()

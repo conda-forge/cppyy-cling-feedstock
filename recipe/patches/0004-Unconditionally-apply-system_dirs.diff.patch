@@ -1,7 +1,7 @@
-From 360023e721aa435fa1dad88610d486457c71b6a5 Mon Sep 17 00:00:00 2001
+From 29e72dcbfd736d7ea29ec0bc6f84f865f90caac2 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 13:50:02 +0200
-Subject: [PATCH 04/10] Unconditionally apply system_dirs.diff
+Subject: [PATCH 04/11] Unconditionally apply system_dirs.diff
 
 this is in upstream called system_dirs.diff. However we make this
 independent of architecture (upstream it gets only applied on Linux
@@ -11,7 +11,7 @@ builds.)
  1 file changed, 46 insertions(+), 1 deletion(-)
 
 diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
-index 2145c11..762b5b2 100644
+index 2145c113..762b5b21 100644
 --- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
 +++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
 @@ -97,9 +97,12 @@ namespace {

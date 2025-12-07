@@ -1,7 +1,7 @@
-From ef6347a664e3e5fc3131e43fc86d83f82da141f3 Mon Sep 17 00:00:00 2001
+From 48604eefd55ec937b5410b95b8599e25811c7c70 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 15:40:50 +0200
-Subject: [PATCH 07/10] Remove libLLVM.so when linking
+Subject: [PATCH 07/11] Remove libLLVM.so when linking
 
 so we do not end up with two copies of LLVM that then lead to warnings
 about command line parameters registered more than once.
@@ -12,7 +12,7 @@ about command line parameters registered more than once.
  3 files changed, 21 insertions(+), 3 deletions(-)
 
 diff --git a/src/core/metacling/src/CMakeLists.txt b/src/core/metacling/src/CMakeLists.txt
-index c28b1ab..c0f5668 100644
+index c28b1ab9..c0f56686 100644
 --- a/src/core/metacling/src/CMakeLists.txt
 +++ b/src/core/metacling/src/CMakeLists.txt
 @@ -77,11 +77,17 @@ if(NOT builtin_clang)
@@ -35,7 +35,7 @@ index c28b1ab..c0f5668 100644
  
  if(MSVC)
 diff --git a/src/core/rootcling_stage1/CMakeLists.txt b/src/core/rootcling_stage1/CMakeLists.txt
-index a5483b7..140b817 100644
+index a5483b73..140b817c 100644
 --- a/src/core/rootcling_stage1/CMakeLists.txt
 +++ b/src/core/rootcling_stage1/CMakeLists.txt
 @@ -30,12 +30,18 @@ if(NOT builtin_clang)
@@ -59,7 +59,7 @@ index a5483b7..140b817 100644
  set_target_properties(rootcling_stage1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY src)
  add_dependencies(rootcling_stage1 ClingUtils)
 diff --git a/src/main/CMakeLists.txt b/src/main/CMakeLists.txt
-index eb83eea..741ca5e 100644
+index eb83eea6..741ca5e9 100644
 --- a/src/main/CMakeLists.txt
 +++ b/src/main/CMakeLists.txt
 @@ -22,7 +22,13 @@ else()

@@ -19,8 +19,7 @@ source:
     - patches/0008-Prevent-constants-from-being-dropped-from-archives-d.patch
     - patches/0009-InterpreterCallbacks-is-polymorphic.patch
     - patches/0010-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
-    - patches/0011-Do-not-use-the-default-SDK.patch
-    - patches/0012-Hardcode-C-standard-library-include-paths.patch
+    - patches/0011-Rely-on-patched-clangdev-in-conda-forge-to-detect-ma.patch
 
 build:
   number: 9
@@ -53,7 +52,7 @@ requirements:
     - pip
     - setuptools
     - zlib
-    - clangdev =13 root_63004*
+    - clangdev =13 root_63008*
     # Same pin as clangdev
     - if: osx
       then: libcxx-devel 17.*

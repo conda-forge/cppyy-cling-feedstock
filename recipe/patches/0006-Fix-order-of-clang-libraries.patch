@@ -1,7 +1,7 @@
-From 328f5ba98bd645f0a9781962bc65511d917e666f Mon Sep 17 00:00:00 2001
+From a7bd930b52d4d24f402261bd16d8b64fd3a2efb1 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Tue, 20 Jun 2023 16:04:03 +0300
-Subject: [PATCH 06/10] Fix order of clang libraries
+Subject: [PATCH 06/11] Fix order of clang libraries
 
 clangFrontend needs symbols from clangDriver so it needs to come first
 ---
@@ -11,7 +11,7 @@ clangFrontend needs symbols from clangDriver so it needs to come first
  3 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
-index 87e8353..841f68b 100644
+index 87e83535..841f68b5 100644
 --- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
 +++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
 @@ -9,8 +9,8 @@
@@ -25,7 +25,7 @@ index 87e8353..841f68b 100644
    clangSema
    clangAnalysis
 diff --git a/src/interpreter/cling/tools/Jupyter/CMakeLists.txt b/src/interpreter/cling/tools/Jupyter/CMakeLists.txt
-index aad5f3f..a156bcc 100644
+index aad5f3f7..a156bccb 100644
 --- a/src/interpreter/cling/tools/Jupyter/CMakeLists.txt
 +++ b/src/interpreter/cling/tools/Jupyter/CMakeLists.txt
 @@ -43,8 +43,8 @@ set(LIBS
@@ -39,7 +39,7 @@ index aad5f3f..a156bcc 100644
          clangParse
          clangSema
 diff --git a/src/interpreter/cling/tools/libcling/CMakeLists.txt b/src/interpreter/cling/tools/libcling/CMakeLists.txt
-index 2a2b15e..6ed0626 100644
+index 2a2b15e0..6ed0626e 100644
 --- a/src/interpreter/cling/tools/libcling/CMakeLists.txt
 +++ b/src/interpreter/cling/tools/libcling/CMakeLists.txt
 @@ -12,8 +12,8 @@ set(SOURCES
