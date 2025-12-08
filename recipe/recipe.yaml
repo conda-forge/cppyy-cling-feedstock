@@ -6,7 +6,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cppyy-cling/cppyy-cling-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/cppyy-cling/cppyy-cling-${{ version }}.tar.gz
   sha256: 5d9e0551a4cb618eb3392001b3dc2c6294f02257f02fcd4d868999ba04f92af1
   patches:
     - patches/0001-Do-not-use-llvm-config-when-cross-compiling.patch
@@ -23,7 +23,7 @@ source:
     - patches/0012-Use-CXX-to-invoke-compiler.patch
 
 build:
-  number: 10
+  number: 11
   skip:
     - win
   python:
