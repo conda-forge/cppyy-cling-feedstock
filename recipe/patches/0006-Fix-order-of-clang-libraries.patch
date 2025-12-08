@@ -1,7 +1,7 @@
-From a7bd930b52d4d24f402261bd16d8b64fd3a2efb1 Mon Sep 17 00:00:00 2001
+From 9dceebb804098cba297f3dd190b40e55ade7b6c9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Tue, 20 Jun 2023 16:04:03 +0300
-Subject: [PATCH 06/11] Fix order of clang libraries
+Subject: [PATCH 06/12] Fix order of clang libraries
 
 clangFrontend needs symbols from clangDriver so it needs to come first
 ---

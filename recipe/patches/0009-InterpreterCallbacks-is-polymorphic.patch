@@ -1,7 +1,7 @@
-From a3ee323aa9bd83137a5ca190e4fe3e253af43087 Mon Sep 17 00:00:00 2001
+From bd9e92b8acc9ba3d8608e6d9a8413428df207a68 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 21:42:35 +0200
-Subject: [PATCH 09/11] InterpreterCallbacks is polymorphic
+Subject: [PATCH 09/12] InterpreterCallbacks is polymorphic
 
 InterpreterCallbacks is polymorphic with TRootClingCallbacks inheriting
 from it so it must be compiled with RTTI so we override any previous

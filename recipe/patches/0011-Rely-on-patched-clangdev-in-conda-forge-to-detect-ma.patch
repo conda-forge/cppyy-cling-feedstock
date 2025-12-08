@@ -1,7 +1,7 @@
-From a729cffc4138222925e1342699cb286be8a9e9a4 Mon Sep 17 00:00:00 2001
+From e022ece809006153944ef84d5fea507e11ad99f3 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Thu, 4 Dec 2025 22:02:36 +0200
-Subject: [PATCH 11/11] Rely on patched clangdev in conda-forge to detect macOS
+Subject: [PATCH 11/12] Rely on patched clangdev in conda-forge to detect macOS
  SDK
 
 These patches try SDKROOT, CONDA_BUILD_SYSROOT, xcrun to find the SDK path.
@@ -12,10 +12,10 @@ Users need to point us to a reasonably old SDK for this to work.
  2 files changed, 79 deletions(-)
 
 diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
-index 762b5b21..956b1b0a 100644
+index 23043115..04193a3c 100644
 --- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
 +++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
-@@ -405,66 +405,6 @@ namespace {
+@@ -346,66 +346,6 @@ namespace {
            sArguments.addArgument("-nostdinc++");
        }
  
@@ -81,7 +81,7 @@ index 762b5b21..956b1b0a 100644
 -
  #endif // _MSC_VER
  
- #if __linux__
+       if (!opts.ResourceDir && !opts.NoBuiltinInc) {
 diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
 index ab4dca02..c5a336aa 100644
 --- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt

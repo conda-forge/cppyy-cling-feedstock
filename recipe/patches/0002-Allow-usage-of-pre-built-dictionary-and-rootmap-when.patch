@@ -1,7 +1,7 @@
 From 9cdef8963862c62a3b29dc2d895507e8b0411c40 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
-Subject: [PATCH 02/11] Allow usage of pre-built dictionary and rootmap when
+Subject: [PATCH 02/12] Allow usage of pre-built dictionary and rootmap when
  crosscompiling
 
 i.e., when rootcling binary cannot be invoked on the build system

@@ -20,6 +20,7 @@ source:
     - patches/0009-InterpreterCallbacks-is-polymorphic.patch
     - patches/0010-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
     - patches/0011-Rely-on-patched-clangdev-in-conda-forge-to-detect-ma.patch
+    - patches/0012-Use-CXX-to-invoke-compiler.patch
 
 build:
   number: 9

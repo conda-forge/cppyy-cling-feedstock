@@ -1,7 +1,7 @@
 From 17d2353c965a64f6bb01f4aa4c49b11eed113d1a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 00:37:13 +0200
-Subject: [PATCH 03/11] make sure C formatting symbols are available in C++
+Subject: [PATCH 03/12] make sure C formatting symbols are available in C++
 
 ---
  src/core/metacling/src/TCling.cxx                         | 5 +++++
