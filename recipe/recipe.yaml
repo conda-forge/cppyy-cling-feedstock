@@ -17,10 +17,11 @@ source:
     - patches/0006-Fix-order-of-clang-libraries.patch
     - patches/0007-Remove-libLLVM.so-when-linking.patch
     - patches/0008-Prevent-constants-from-being-dropped-from-archives-d.patch
-    - patches/0009-InterpreterCallbacks-is-polymorphic.patch
-    - patches/0010-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
-    - patches/0011-Rely-on-patched-clangdev-in-conda-forge-to-detect-ma.patch
-    - patches/0012-Use-CXX-to-invoke-compiler.patch
+    - patches/0009-Add-missing-link-dependencies.patch
+    - patches/0010-InterpreterCallbacks-is-polymorphic.patch
+    - patches/0011-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
+    - patches/0012-Rely-on-patched-clangdev-in-conda-forge-to-detect-ma.patch
+    - patches/0013-Use-CXX-to-invoke-compiler.patch
 
 build:
   number: 0

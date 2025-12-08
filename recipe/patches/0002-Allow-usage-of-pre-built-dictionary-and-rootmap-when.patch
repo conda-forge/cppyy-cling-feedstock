@@ -1,7 +1,7 @@
-From 9cdef8963862c62a3b29dc2d895507e8b0411c40 Mon Sep 17 00:00:00 2001
+From 844dbad33f309a784c2d1d8f06db0e10691d10ed Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 21 Jun 2021 15:25:53 +0200
-Subject: [PATCH 02/12] Allow usage of pre-built dictionary and rootmap when
+Subject: [PATCH 02/13] Allow usage of pre-built dictionary and rootmap when
  crosscompiling
 
 i.e., when rootcling binary cannot be invoked on the build system
@@ -12,7 +12,7 @@ i.e., when rootcling binary cannot be invoked on the build system
  3 files changed, 90 insertions(+), 26 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index e91e7790..cce83cd3 100755
+index d7826bfc..920b4fc7 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -253,7 +253,11 @@ class my_install(_install):
@@ -25,16 +25,16 @@ index e91e7790..cce83cd3 100755
 +            os.remove(allDictPath)
 +        except FileNotFoundError:
 +            print(f"The precompiled header {allDictPath} is not present. This is expected when cross-compiling.")
-      # for manylinux, reset the default cxxversion to 20 if no user override
-         if not 'STDCXX' in os.environ and is_manylinux():
-             log.info('updating root-config to C++20 for manylinux')
+      # fix-up the standard reported by cling-config (which calls root-config): if C++14
+      # was requested, LLVM16 (and thus ROOT) will up it 17; and for manylinux,# which
+      # was build with 17, reset the default cxxversion to 20 if no user override
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 948d387b..aca2817a 100644
+index 8a0c9304..fb2f8142 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -23,6 +23,14 @@ include(cmake/modules/CaptureCommandLine.cmake)
- 
- project(ROOT)
+@@ -28,6 +28,14 @@ if ((MSVC) AND (MSVC_VERSION GREATER_EQUAL 1914))
+    set(CMAKE_CXX_FLAGS            "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
+ endif()
  
 +include(CheckCXXSourceRuns)
 +
@@ -44,10 +44,10 @@ index 948d387b..aca2817a 100644
 +endif()
 +message(STATUS "Can run built binaries: ${CAN_RUN_BUILT_BINARIES}")
 +
- #---Set the locale to default C to prevent issued due to localization of commands---------------
+ #---Set the locale to default C to prevent issued due to localization of commands--------------
  # This is necessary as we for example call `clang -v` and parse its output. But on a localized
  # program, the output parsing is much more error prone as certrain strings we're looking for
-@@ -379,26 +387,32 @@ else()
+@@ -364,26 +372,32 @@ else()
    get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
    get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
  

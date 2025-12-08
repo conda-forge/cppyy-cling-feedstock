@@ -1,7 +1,7 @@
-From 7e431b988b475c5fd396d1f513965d06110a8942 Mon Sep 17 00:00:00 2001
+From c373685175771263700162ae9c9bdbfa49a12620 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 8 Dec 2025 02:25:04 +0200
-Subject: [PATCH 04/12] Revert system_dirs.diff
+Subject: [PATCH 04/13] Revert system_dirs.diff
 
 this patch from upstream should only be applied on Linux builds.
 However, probably because the tarball is generated on Linux, it's
@@ -21,7 +21,7 @@ for conda-forge.
  1 file changed, 21 insertions(+), 40 deletions(-)
 
 diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
-index 2145c113..23043115 100644
+index c0c73026..16659c29 100644
 --- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
 +++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
 @@ -93,13 +93,11 @@ namespace {
