@@ -57,6 +57,9 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
   export CFLAGS="${CFLAGS} -fplt"
 fi
 
+# cling uses std::filesystem::path, see https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
+export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+
 cmake ${CMAKE_FLAGS[@]} ../src
 make
 
