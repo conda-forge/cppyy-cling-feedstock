@@ -12,7 +12,7 @@ source:
     - patches/0001-Do-not-use-llvm-config-when-cross-compiling.patch
     - patches/0002-Allow-usage-of-pre-built-dictionary-and-rootmap-when.patch
     - patches/0003-make-sure-C-formatting-symbols-are-available-in-C.patch
-    - patches/0004-Unconditionally-apply-system_dirs.diff.patch
+    - patches/0004-Revert-system_dirs.diff.patch
     - patches/0005-clang-for-aarch64-does-not-support-march-native.patch
     - patches/0006-Fix-order-of-clang-libraries.patch
     - patches/0007-Remove-libLLVM.so-when-linking.patch
