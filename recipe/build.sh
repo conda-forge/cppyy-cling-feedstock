@@ -1,55 +1,55 @@
 #!/bin/bash
-set -exo pipefail
-
-# Much of this file (and the entire recipe in fact) has been taken from the
-# root-feedstock.
+set -exuo pipefail
 
 export VERBOSE=1
+export MAKEFLAGS="-j`nproc || sysctl -n hw.ncpu`"
 
 # Do not perform auto-detection of CPU features
 export EXTRA_CLING_ARGS=-O2
 
-# Manually set the deployment_target
-# May not be very important but nice to do
-OLDVERSIONMACOS='${MACOSX_VERSION}'
-sed -i -e "s@${OLDVERSIONMACOS}@${MACOSX_DEPLOYMENT_TARGET}@g" src/cmake/modules/SetUpMacOS.cmake
+# enum-constexpr-conversion: to ignore this compile error on modern compilers: integer value 536870912 is outside the valid range of values [0, 63] for the enumeration type 'EProperty'
+CXXFLAGS="$CXXFLAGS -Wno-enum-constexpr-conversion"
 
-declare -a CMAKE_PLATFORM_FLAGS
+# Build Cling with cmake (we do not use the build in setup.py because it vendors LLVM and is also too opinionated to work on conda-forge)
+mkdir -p builddir
+cd builddir
 
-export AR=`which $AR`
-export RANLIB=`which $RANLIB`
+declare -a CMAKE_FLAGS
 
-if [[ "${target_platform}" == linux* ]]; then
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_AR=${GCC_AR}")
-    CMAKE_PLATFORM_FLAGS+=("-DCLANG_DEFAULT_LINKER=${LD_GOLD}")
-    CMAKE_PLATFORM_FLAGS+=("-DDEFAULT_SYSROOT=${INSTALL_SYSROOT}")
-    CMAKE_PLATFORM_FLAGS+=("-DRT_LIBRARY=${INSTALL_SYSROOT}/usr/lib/librt.so")
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
-
-    # Hide symbols from LLVM/clang to avoid conflicts with other libraries
-    for lib_name in $(ls $PREFIX/lib | grep -E 'lib(LLVM|clang).*\.a'); do
-        export CXXFLAGS="${CXXFLAGS} -Wl,--exclude-libs,${lib_name}"
-    done
-    echo "CXXFLAGS is now '${CXXFLAGS}'"
-else
-    CMAKE_PLATFORM_FLAGS+=("-Dcocoa=ON")
-    CMAKE_PLATFORM_FLAGS+=("-DCLANG_RESOURCE_DIR_VERSION='13.0.1'")
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
-
-    # Do not err when shared_mutex is used, see https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
-    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
-
-    # Print out and possibly fix SDKROOT (Might help Azure)
-    echo "SDKROOT is: '${SDKROOT}'"
-    echo "CONDA_BUILD_SYSROOT is: '${CONDA_BUILD_SYSROOT}'"
-    export SDKROOT="${CONDA_BUILD_SYSROOT}"
+if [[ "${target_platform}" != "${build_platform}" ]]; then
+  if [[ -n "${CROSSCOMPILING_EMULATOR:-}" ]]; then
+    CMAKE_FLAGS+=("-DCMAKE_CROSSCOMPILING_EMULATOR=${CROSSCOMPILING_EMULATOR}")
+  else
+    # We cannot invoke rootcling on this platform so we need to provide the required assets statically from previous runs.
+    CMAKE_FLAGS+=("-DSTATIC_G_CORELEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__CoreLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBCORELEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libCoreLegacy.rootmap")
+    CMAKE_FLAGS+=("-DSTATIC_G_THREADLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__ThreadLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBTHREADLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libThreadLegacy.rootmap")
+    CMAKE_FLAGS+=("-DSTATIC_G_RIOLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__RIOLegacy.cxx")
+    CMAKE_FLAGS+=("-DSTATIC_LIBRIOLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libRIOLegacy.rootmap")
+  fi
 fi
 
-# Remove -std=c++XX from build ${CXXFLAGS}
-CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
-CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-isystem @-I@g')
-CXXFLAGS="$CXXFLAGS -Wno-enum-constexpr-conversion"
-export CXXFLAGS
+# builtin_cling: We want to build cling. That's why we're here.
+CMAKE_FLAGS+=("-Dbuiltin_cling=ON")
+# runtime_cxxmodules: (whatever that might be) leads to "error: unknown argument: '-fmodule-name'" during the build; also disabled by upstream's setup.py
+CMAKE_FLAGS+=("-Druntime_cxxmodules=OFF")
+# CMAKE_CXX_STANDARD: clang at least is using some C++17 features
+CMAKE_FLAGS+=("-DCMAKE_CXX_STANDARD=17")
+# CMAKE_INSTALL_PREFIX: we do not want to install this Cling into the CONDA_PREFIX directly. Instead cppyy-cling vendors this in its setup.py into site-packages/cppyy_backend.
+CMAKE_FLAGS+=("-DCMAKE_INSTALL_PREFIX=`pwd`/install/cppyy_backend")
+# Do not vendor LLVM but use our own ROOT-patched LLVM build
+CMAKE_FLAGS+=("-Dbuiltin_llvm=OFF")
+CMAKE_FLAGS+=("-DLLVM_PREFIX=$PREFIX")
+# Do not vendor Clang but use our own ROOT-patched Clang build
+CMAKE_FLAGS+=("-Dbuiltin_clang=OFF")
+# Do not include debug info in build since we run out of disk space on Azure when building ppc64 otherwise
+CMAKE_FLAGS+=("-DCMAKE_BUILD_TYPE=Release")
+# Work around issues such as void cling::Transaction::addNestedTransaction(cling::Transaction*): Assertion `!m_Unloading && "Must not nest within unloading transaction"' failed.
+# (Does not seem like a good idea, but upstream's setup.py sets the same flag.)
+CMAKE_FLAGS+=("-DLLVM_ENABLE_ASSERTIONS=OFF")
+# We are not building a Cling REPL so we do not need terminfo support. (Upstream sets the same flag.)
+CMAKE_FLAGS+=("-DLLVM_ENABLE_TERMINFO=OFF")
 
 # ROOT uses these flags. Without them, we get relocation truncated to fit: R_PPC64_REL24 errors when lirking libCling
 if [[ "${target_platform}" == "linux-ppc64le" ]]; then
@@ -57,47 +57,10 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
   export CFLAGS="${CFLAGS} -fplt"
 fi
 
-# The cross-linux toolchain breaks find_file relative to the current file
-# Patch up with sed
-sed -i -E 's#(ROOT_TEST_DRIVER RootTestDriver.cmake PATHS \$\{THISDIR\} \$\{CMAKE_MODULE_PATH\} NO_DEFAULT_PATH)#\1 CMAKE_FIND_ROOT_PATH_BOTH#g' \
-    src/cmake/modules/RootNewMacros.cmake
-
-export CMAKE_CLING_ARGS=${CMAKE_PLATFORM_FLAGS[@]}
-
-# Some flags that root-feedstock sets. They probably don't hurt when building cppyy…
-export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_PREFIX_PATH=${PREFIX} -DCMAKE_INSTALL_RPATH=${SP_DIR}/cppyy_backend/lib -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON -DCMAKE_SKIP_BUILD_RPATH=OFF -DCLING_BUILD_PLUGINS=OFF -DTBB_ROOT_DIR=${SP_DIR}/cppyy_backend -DPYTHON_EXECUTABLE=${PYTHON} -DCMAKE_INSTALL_PREFIX=${SP_DIR}/cppyy_backend -Dexplicitlink=ON -Dexceptions=ON -Dfail-on-missing=ON -Dgnuinstall=OFF -Dshared=ON -Dsoversion=ON -Dbuiltin-glew=OFF -Dbuiltin_xrootd=OFF -Dbuiltin_davix=OFF -Dbuiltin_afterimage=OFF -Drpath=ON -Dcastor=off -Dgfal=OFF -Dmysql=OFF -Doracle=OFF -Dpgsql=OFF -Dpythia6=OFF -Droottest=OFF"
-# Variables that cppyy's setup.py usually sets, we might not actually want all of this 
-export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DLLVM_ENABLE_TERMINFO=0 -Dminimal=ON -Dasimage=OFF -Droot7=OFF -Dhttp=OFF -Dbuiltin_pcre=ON -Dbuiltin_freetype=OFF -Dbuiltin_zlib=OFF -Dbuiltin_xxhash=ON -Dbuiltin_cling=ON"
-# Use conda-forge's clang & llvm
-export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -Dbuiltin_llvm=OFF -Dbuiltin_clang=OFF"
-# Use the cross ar and not the host's ar
-export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_AR=$AR"
-# Use the cross ranlib and not the host's ranlib
-export CMAKE_CLING_ARGS="${CMAKE_CLING_ARGS} -DCMAKE_RANLIB=$RANLIB"
-
-if [[ "${python_impl}" == "pypy" ]]; then
-    # CMake 3.17 needs some help to find Python. According to
-    # https://cmake.org/cmake/help/v3.17/module/FindPython.html#module:FindPython,
-    # we're supposed to set Python_LIBRARY but actually, looking at the code,
-    # we need to set PYTHON_LIBRARY. Much of this is changing in cmake 3.18,
-    # so expect this to break again in future upgrades.
-    CMAKE_CLING_ARGS="$CMAKE_CLING_ARGS -DPYTHON_LIBRARY=$PREFIX/lib/libpypy3-c.so"
-fi
-
-mkdir build
-cd build
-
-cmake ${CMAKE_ARGS} $CMAKE_CLING_ARGS ../src
-CONDA_PREFIX="$PREFIX" cmake --build . --target install --config Release -- --quiet
+cmake ${CMAKE_FLAGS[@]} ../src
+make
 
 cd ..
 
-python -m pip install . --no-deps -vv
-
-echo "Check that generated files do not need to be updated in cross-compiled builds."
-for item in `ls ${RECIPE_DIR}/rootcling`; do
-  echo "Checking $item..."
-  diff "${RECIPE_DIR}/rootcling/${item}" `find -name ${item}` || true
-done
-
-rm "${SP_DIR}/cppyy_backend/etc/allDict.cxx.pch" || true
+# Install cppyy-cling and some Python bits into site-packages/cppyy_backend.
+python -m pip install . --no-deps --no-build-isolation -vv

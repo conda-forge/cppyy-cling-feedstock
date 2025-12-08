@@ -1,0 +1,195 @@
+From 9cdef8963862c62a3b29dc2d895507e8b0411c40 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 21 Jun 2021 15:25:53 +0200
+Subject: [PATCH 02/12] Allow usage of pre-built dictionary and rootmap when
+ crosscompiling
+
+i.e., when rootcling binary cannot be invoked on the build system
+---
+ setup.py                           |  6 ++-
+ src/CMakeLists.txt                 | 40 +++++++++++------
+ src/cmake/modules/RootMacros.cmake | 70 +++++++++++++++++++++++++-----
+ 3 files changed, 90 insertions(+), 26 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index e91e7790..cce83cd3 100755
+--- a/setup.py
++++ b/setup.py
+@@ -253,7 +253,11 @@ class my_install(_install):
+ 
+      # remove allDict.cxx.pch as it's not portable (rebuild on first run, see cppyy)
+         log.info('removing allDict.cxx.pch')
+-        os.remove(os.path.join(get_prefix(), 'etc', 'allDict.cxx.pch'))
++        allDictPath = os.path.join(get_prefix(), 'etc', 'allDict.cxx.pch')
++        try:
++            os.remove(allDictPath)
++        except FileNotFoundError:
++            print(f"The precompiled header {allDictPath} is not present. This is expected when cross-compiling.")
+      # for manylinux, reset the default cxxversion to 20 if no user override
+         if not 'STDCXX' in os.environ and is_manylinux():
+             log.info('updating root-config to C++20 for manylinux')
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 948d387b..aca2817a 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -23,6 +23,14 @@ include(cmake/modules/CaptureCommandLine.cmake)
+ 
+ project(ROOT)
+ 
++include(CheckCXXSourceRuns)
++
++# Detect whether freshly built binaries can be executed (respects cross emulators)
++if(NOT DEFINED CAN_RUN_BUILT_BINARIES)
++  check_cxx_source_runs("int main() { return 0; }" CAN_RUN_BUILT_BINARIES)
++endif()
++message(STATUS "Can run built binaries: ${CAN_RUN_BUILT_BINARIES}")
++
+ #---Set the locale to default C to prevent issued due to localization of commands---------------
+ # This is necessary as we for example call `clang -v` and parse its output. But on a localized
+ # program, the output parsing is much more error prone as certrain strings we're looking for
+@@ -379,26 +387,32 @@ else()
+   get_property(__pch_dependencies GLOBAL PROPERTY ROOT_PCH_DEPENDENCIES)
+   get_property(__pch_dictionaries GLOBAL PROPERTY ROOT_PCH_DICTIONARIES)
+ 
+-  add_custom_command(OUTPUT etc/allDict.cxx.pch
+-    BYPRODUCTS
+-      etc/dictpch/allCppflags.txt
+-      etc/dictpch/allHeaders.h
+-      etc/dictpch/allLinkDefs.h
++  add_custom_command(OUTPUT etc/dictpch/allCppflags.txt etc/dictpch/allHeaders.h etc/dictpch/allLinkDefs.h
+     COMMAND
+       ${PYTHON_EXECUTABLE} ${CMAKE_SOURCE_DIR}/build/unix/makepchinput.py
+       ${CMAKE_SOURCE_DIR} . ${pyroot_experimental} ${__cling_pch} -- ${CMAKE_CXX_FLAGS_SEPARATE}
+-    COMMAND
+-      ${CMAKE_COMMAND} -E env ROOTIGNOREPREFIX=1 ${PYTHON_EXECUTABLE}
+-      ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py etc/allDict.cxx.pch
+-      ${__allIncludes} -I${CMAKE_BINARY_DIR}/include
+     DEPENDS
+-      rootcling ${__pch_dependencies} ${__pch_dictionaries}
++      ${__pch_dependencies} ${__pch_dictionaries}
+       ${CMAKE_SOURCE_DIR}/build/unix/makepchinput.py
+-      ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py
+   )
+-  add_custom_target(onepcm ALL DEPENDS etc/allDict.cxx.pch)
+-  install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
++  add_custom_target(onepcm ALL DEPENDS etc/dictpch/allCppflags.txt etc/dictpch/allHeaders.h etc/dictpch/allLinkDefs.h)
+   install(DIRECTORY ${CMAKE_BINARY_DIR}/etc/dictpch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
++
++  if(CAN_RUN_BUILT_BINARIES)
++    # Use the native rootcling to build allDict.cxx.pch. If we do not build it here, cppyy builds it upon its first import.
++    add_custom_command(OUTPUT etc/allDict.cxx.pch
++      COMMAND
++        ${CMAKE_COMMAND} -E env ROOTIGNOREPREFIX=1 ${PYTHON_EXECUTABLE}
++        ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py etc/allDict.cxx.pch
++        ${__allIncludes} -I${CMAKE_BINARY_DIR}/include
++      DEPENDS
++        rootcling etc/dictpch/allCppflags.txt etc/dictpch/allHeaders.h etc/dictpch/allLinkDefs.h
++        ${CMAKE_SOURCE_DIR}/etc/dictpch/makepch.py
++    )
++    add_custom_target(allDictPCH DEPENDS etc/allDict.cxx.pch)
++    add_dependencies(onepcm allDictPCH)
++    install(FILES ${CMAKE_BINARY_DIR}/etc/allDict.cxx.pch DESTINATION ${CMAKE_INSTALL_SYSCONFDIR})
++  endif()
+ endif()
+ 
+ # FIXME: move installation of PCMS in ROOT_GENERATE_DICTIONARY().
+diff --git a/src/cmake/modules/RootMacros.cmake b/src/cmake/modules/RootMacros.cmake
+index 3f7d9ee8..182b7c50 100644
+--- a/src/cmake/modules/RootMacros.cmake
++++ b/src/cmake/modules/RootMacros.cmake
+@@ -478,17 +478,59 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+     endif()
+   endif()
+ 
+-  #---call rootcint------------------------------------------
+-  add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
+-                     COMMAND ${command} -v2 -f  ${dictionary}.cxx ${newargs} ${excludepathsargs} ${rootmapargs}
+-                                        ${definitions} "$<$<BOOL:${module_defs}>:-D$<JOIN:${module_defs},;-D>>"
+-                                        ${includedirs} "$<$<BOOL:${module_incs}>:-I$<JOIN:${module_incs},;-I>>"
+-                                        ${ARG_OPTIONS} ${headerfiles} ${_linkdef}
+-                     IMPLICIT_DEPENDS ${_implicitdeps}
+-                     DEPENDS ${_list_of_header_dependencies} ${_linkdef} ${ROOTCINTDEP}
+-                             ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
+-                             ${runtime_cxxmodule_dependencies}
+-                     COMMAND_EXPAND_LISTS)
++  if(CAN_RUN_BUILT_BINARIES)
++    #---call rootcling------------------------------------------
++    add_custom_command(OUTPUT ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file}
++                       COMMAND ${command} -v2 -f  ${dictionary}.cxx ${newargs} ${excludepathsargs} ${rootmapargs}
++                                          ${definitions} "$<$<BOOL:${module_defs}>:-D$<JOIN:${module_defs},;-D>>"
++                                          ${includedirs} "$<$<BOOL:${module_incs}>:-I$<JOIN:${module_incs},;-I>>"
++                                          ${ARG_OPTIONS} ${headerfiles} ${_linkdef}
++                       IMPLICIT_DEPENDS ${_implicitdeps}
++                       DEPENDS ${_list_of_header_dependencies} ${_linkdef} ${ROOTCINTDEP}
++                              ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
++                              ${runtime_cxxmodule_dependencies}
++                       COMMAND_EXPAND_LISTS)
++  else()
++    function(copy_static_asset fname)
++      if ("${fname}" STREQUAL "")
++        return()
++      endif()
++
++      # Compute a reasonable cmake identifier from fname, i.e., turn x/something.cxx into SOMETHING_CXX
++      get_filename_component(identifier "${fname}" NAME)
++      string(REGEX REPLACE "([^A-Za-z0-9]|_)+" "_" identifier "${identifier}")
++      string(TOUPPER "${identifier}" identifier)
++      set(identifier "STATIC_${identifier}")
++
++      # Copy a pregenerated file to fname
++      set("${identifier}" "" CACHE PATH "Path to rootcling generated ${fname}")
++      if("${${identifier}}" STREQUAL "")
++        message(FATAL_ERROR "When cross-compiling, ${fname} cannot be created and must be provided with -D${identifier} to cmake")
++      endif()
++
++      add_custom_command(OUTPUT ${fname}
++                         COMMAND ${CMAKE_COMMAND} -E copy
++                         ${${identifier}}
++                         ${fname}
++                         IMPLICIT_DEPENDS ${_implicitdeps}
++                         DEPENDS ${_list_of_header_dependencies} ${_linkdef} ${ROOTCINTDEP}
++                                 ${MODULE_LIB_DEPENDENCY} ${ARG_EXTRA_DEPENDENCIES}
++                                 ${runtime_cxxmodule_dependencies}
++                         COMMAND_EXPAND_LISTS
++                         COMMENT "Copying prebuilt user-provided ${${identifier}} to ${fname}"
++      )
++    endfunction()
++
++    copy_static_asset("${dictionary}.cxx")
++    copy_static_asset("${pcm_name}")
++    copy_static_asset("${rootmap_name}")
++    copy_static_asset("${cpp_module_file}")
++
++    unset(copy_static_asset)
++  endif()
++
++  # Make sure the files are built so we could install them.
++  add_custom_target("${dictionary}_sources" ALL DEPENDS ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file})
+ 
+   # If we are adding to an existing target and it's not the dictionary itself,
+   # we make an object library and add its output object file as source to the target.
+@@ -509,9 +551,12 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+     target_include_directories(${dictionary} PRIVATE
+       ${includedirs} $<TARGET_PROPERTY:${ARG_MODULE},INCLUDE_DIRECTORIES>)
+   else()
+-    add_custom_target(${dictionary} DEPENDS ${dictionary}.cxx ${pcm_name} ${rootmap_name} ${cpp_module_file})
++    add_custom_target(${dictionary} DEPENDS ${dictionary}.cxx)
+   endif()
+ 
++  # Explicitly make the dictionary depend on all sources so that rootcling does not get invoked twice for the generation.
++  add_dependencies(${dictionary} "${dictionary}_sources")
++
+   if(PROJECT_NAME STREQUAL "ROOT")
+     set_property(GLOBAL APPEND PROPERTY ROOT_PCH_DEPENDENCIES ${dictionary})
+     set_property(GLOBAL APPEND PROPERTY ROOT_PCH_DICTIONARIES ${CMAKE_CURRENT_BINARY_DIR}/${dictionary}.cxx)
+@@ -527,6 +572,7 @@ function(ROOT_GENERATE_DICTIONARY dictionary)
+   endif()
+ 
+   if(NOT ARG_NOINSTALL AND NOT CMAKE_ROOTTEST_DICT AND DEFINED CMAKE_LIBRARY_OUTPUT_DIRECTORY)
++
+     ROOT_GET_INSTALL_DIR(shared_lib_install_dir)
+     # Install the C++ module if we generated one.
+     if (cpp_module_file)
+-- 
+2.52.0
+

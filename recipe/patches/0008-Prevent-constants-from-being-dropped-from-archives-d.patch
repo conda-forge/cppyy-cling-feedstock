@@ -1,0 +1,45 @@
+From 8c47d3f32595871873234b169238b1796d020258 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Fri, 28 Nov 2025 02:51:47 +0200
+Subject: [PATCH 08/12] Prevent constants from being dropped from archives due
+ to inlining
+
+on macOS with clang 13, these constants are missing when linking
+otherwise.
+---
+ src/interpreter/cling/lib/Utils/AST.cpp   | 2 +-
+ src/interpreter/cling/lib/Utils/Paths.cpp | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/interpreter/cling/lib/Utils/AST.cpp b/src/interpreter/cling/lib/Utils/AST.cpp
+index 17e7130b..d683cef1 100644
+--- a/src/interpreter/cling/lib/Utils/AST.cpp
++++ b/src/interpreter/cling/lib/Utils/AST.cpp
+@@ -167,7 +167,7 @@ namespace utils {
+     return result;
+   }
+ 
+-  const char* const Synthesize::UniquePrefix = "__cling_Un1Qu3";
++  const char* const Synthesize::UniquePrefix __attribute__((used)) = "__cling_Un1Qu3";
+ 
+   IntegerLiteral* Synthesize::IntegerLiteralExpr(ASTContext& C, uintptr_t Ptr) {
+     const llvm::APInt Addr(8 * sizeof(void*), Ptr);
+diff --git a/src/interpreter/cling/lib/Utils/Paths.cpp b/src/interpreter/cling/lib/Utils/Paths.cpp
+index 5327ffc4..cff137ac 100644
+--- a/src/interpreter/cling/lib/Utils/Paths.cpp
++++ b/src/interpreter/cling/lib/Utils/Paths.cpp
+@@ -20,9 +20,9 @@ namespace utils {
+ 
+ namespace platform {
+ #if defined(LLVM_ON_UNIX)
+-  const char* const kEnvDelim = ":";
++  const char* const kEnvDelim __attribute__((used)) = ":";
+ #elif defined(_WIN32)
+-  const char* const kEnvDelim = ";";
++  const char* const kEnvDelim __attribute__((used)) = ";";
+ #else
+   #error "Unknown platform (environmental delimiter)"
+ #endif
+-- 
+2.52.0
+
