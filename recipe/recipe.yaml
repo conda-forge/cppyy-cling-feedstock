@@ -23,7 +23,7 @@ source:
     - patches/0012-Use-CXX-to-invoke-compiler.patch
 
 build:
-  number: 10
+  number: 11
   skip:
     - win
   python:
