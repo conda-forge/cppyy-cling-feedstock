@@ -22,6 +22,7 @@ source:
     - patches/0011-Do-not-invoke-cmake-in-setup.py-build-since-it-is-to.patch
     - patches/0012-Rely-on-patched-clangdev-in-conda-forge-to-detect-ma.patch
     - patches/0013-Use-CXX-to-invoke-compiler.patch
+    - patches/0014-Do-not-invoke-llvm-tblgen-when-cross-compiling.patch
 
 build:
   number: 0
@@ -40,8 +41,6 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        # we need a working llvm-tblgen to create ClingOptions.inc
-        - llvm-tools =16
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - sed
