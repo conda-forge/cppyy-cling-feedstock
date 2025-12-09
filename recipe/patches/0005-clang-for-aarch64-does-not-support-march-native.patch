@@ -1,7 +1,7 @@
 From cd61aef9a59c1ac78bdafc5c3128615cc7ad1476 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 1 Jul 2022 23:07:59 +0300
-Subject: [PATCH 05/13] clang for aarch64 does not support march=native
+Subject: [PATCH 05/14] clang for aarch64 does not support march=native
 
 ---
  python/cppyy_backend/loader.py | 2 +-

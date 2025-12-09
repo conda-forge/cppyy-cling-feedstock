@@ -1,7 +1,7 @@
 From 9af9029244eef4f01420b1298252011504dc55fa Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Thu, 4 Dec 2025 22:02:36 +0200
-Subject: [PATCH 12/13] Rely on patched clangdev in conda-forge to detect macOS
+Subject: [PATCH 12/14] Rely on patched clangdev in conda-forge to detect macOS
  SDK
 
 These patches try SDKROOT, CONDA_BUILD_SYSROOT, xcrun to find the SDK path.

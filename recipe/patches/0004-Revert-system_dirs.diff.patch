@@ -1,7 +1,7 @@
 From c373685175771263700162ae9c9bdbfa49a12620 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 8 Dec 2025 02:25:04 +0200
-Subject: [PATCH 04/13] Revert system_dirs.diff
+Subject: [PATCH 04/14] Revert system_dirs.diff
 
 this patch from upstream should only be applied on Linux builds.
 However, probably because the tarball is generated on Linux, it's

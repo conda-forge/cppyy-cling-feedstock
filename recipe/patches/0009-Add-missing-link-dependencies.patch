@@ -1,7 +1,7 @@
 From fafcfd3c3131f3cc485c42518b6e6cc0c7d1c6c6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Thu, 4 Dec 2025 16:44:51 +0200
-Subject: [PATCH 09/13] Add missing link dependencies
+Subject: [PATCH 09/14] Add missing link dependencies
 
 * clangCodeGen needs LLVMFrontendHLSL
 * clangAnalysis needs clangASTMatchers

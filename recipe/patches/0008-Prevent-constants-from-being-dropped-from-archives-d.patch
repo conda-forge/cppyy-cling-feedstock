@@ -1,7 +1,7 @@
 From 934c200bf34c7c8c696e27b6fcb68a5bdc37470e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 02:51:47 +0200
-Subject: [PATCH 08/13] Prevent constants from being dropped from archives due
+Subject: [PATCH 08/14] Prevent constants from being dropped from archives due
  to inlining
 
 on macOS with clang 13, these constants are missing when linking

@@ -1,7 +1,7 @@
 From 58c0473c049718ab1318356a5d62331a8e143001 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 1 Dec 2025 22:25:23 +0200
-Subject: [PATCH 11/13] Do not invoke cmake in setup.py build since it is too
+Subject: [PATCH 11/14] Do not invoke cmake in setup.py build since it is too
  opinionated for a conda-forge based system
 
 but package the Python bits of cppyy-cling

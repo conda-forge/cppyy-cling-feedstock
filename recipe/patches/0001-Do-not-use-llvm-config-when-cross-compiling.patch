@@ -1,7 +1,7 @@
 From fcef159904b08fa997c28d9b6fd3b2ed9b371539 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 8 Dec 2023 02:03:00 +0200
-Subject: [PATCH 01/13] Do not use llvm-config when cross-compiling
+Subject: [PATCH 01/14] Do not use llvm-config when cross-compiling
 
 we cannot invoke a host binary.
 ---

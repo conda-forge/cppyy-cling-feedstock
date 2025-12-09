@@ -27,6 +27,8 @@ if [[ "${target_platform}" != "${build_platform}" ]]; then
     CMAKE_FLAGS+=("-DSTATIC_LIBTHREADLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libThreadLegacy.rootmap")
     CMAKE_FLAGS+=("-DSTATIC_G_RIOLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__RIOLegacy.cxx")
     CMAKE_FLAGS+=("-DSTATIC_LIBRIOLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libRIOLegacy.rootmap")
+    # We cannot invoke llvm-tblgen on this platform so we need to provide the required assets statically from previous runs.
+    CMAKE_FLAGS+=("-DSTATIC_CLING_OPTIONS_INC=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/ClingOptions.inc")
   fi
 fi
 

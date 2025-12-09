@@ -1,7 +1,7 @@
 From 107eba854052780088a8cf26c3845e38864f284d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 15 Sep 2023 15:40:50 +0200
-Subject: [PATCH 07/13] Remove libLLVM.so when linking
+Subject: [PATCH 07/14] Remove libLLVM.so when linking
 
 so we do not end up with two copies of LLVM that then lead to warnings
 about command line parameters registered more than once.

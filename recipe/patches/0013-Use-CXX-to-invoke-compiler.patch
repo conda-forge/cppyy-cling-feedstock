@@ -1,7 +1,7 @@
 From b043cd4b70c6db34db6937f68c450891b9a8aa71 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Mon, 8 Dec 2025 02:33:43 +0200
-Subject: [PATCH 13/13] Use $CXX to invoke compiler
+Subject: [PATCH 13/14] Use $CXX to invoke compiler
 
 on conda-forge at least we can essentially guarantee that $CXX is set to
 the compiler that we should be using, namely the one that has been
