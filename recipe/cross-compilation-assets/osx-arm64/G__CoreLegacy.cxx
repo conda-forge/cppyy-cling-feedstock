@@ -194,9 +194,2879 @@ namespace CppyyLegacy {
 }
 
 namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,char*>*)
+   {
+      std::pair<const char*,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,char*>", "string", 63,
+                  typeid(std::pair<const char*,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,char*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEstdcLcLstringcOintgR_Dictionary();
+   static void stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEstdcLcLstringcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEstdcLcLstringcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
+   static void destruct_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,int>*)
+   {
+      std::pair<std::string,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<std::string,int>", "string", 63,
+                  typeid(std::pair<std::string,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEstdcLcLstringcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<std::string,int>) );
+      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,int>*)0x0)->GetClass();
+      stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,char*>*)
+   {
+      std::pair<const double,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,char*>", "string", 63,
+                  typeid(std::pair<const double,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,char*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,void*>*)
+   {
+      std::pair<const double,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,void*>", "string", 63,
+                  typeid(std::pair<const double,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,double>*)
+   {
+      std::pair<const double,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,double>", "string", 63,
+                  typeid(std::pair<const double,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,float>*)
+   {
+      std::pair<const double,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,float>", "string", 63,
+                  typeid(std::pair<const double,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,long>*)
+   {
+      std::pair<const double,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,long>", "string", 63,
+                  typeid(std::pair<const double,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPdoublecOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPdoublecOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPdoublecOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPdoublecOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPdoublecOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPdoublecOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPdoublecOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,int>*)
+   {
+      std::pair<const double,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const double,int>", "string", 63,
+                  typeid(std::pair<const double,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPdoublecOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const double,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPdoublecOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPdoublecOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,char*>*)
+   {
+      std::pair<const float,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,char*>", "string", 63,
+                  typeid(std::pair<const float,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,char*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,void*>*)
+   {
+      std::pair<const float,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,void*>", "string", 63,
+                  typeid(std::pair<const float,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,double>*)
+   {
+      std::pair<const float,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,double>", "string", 63,
+                  typeid(std::pair<const float,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,float>*)
+   {
+      std::pair<const float,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,float>", "string", 63,
+                  typeid(std::pair<const float,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,long>*)
+   {
+      std::pair<const float,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,long>", "string", 63,
+                  typeid(std::pair<const float,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPfloatcOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPfloatcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPfloatcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPfloatcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPfloatcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPfloatcOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPfloatcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,int>*)
+   {
+      std::pair<const float,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const float,int>", "string", 63,
+                  typeid(std::pair<const float,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPfloatcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const float,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPfloatcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPfloatcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,char*>*)
+   {
+      std::pair<const long,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,char*>", "string", 63,
+                  typeid(std::pair<const long,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,char*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,void*>*)
+   {
+      std::pair<const long,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,void*>", "string", 63,
+                  typeid(std::pair<const long,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,double>*)
+   {
+      std::pair<const long,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,double>", "string", 63,
+                  typeid(std::pair<const long,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,float>*)
+   {
+      std::pair<const long,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,float>", "string", 63,
+                  typeid(std::pair<const long,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,long>*)
+   {
+      std::pair<const long,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,long>", "string", 63,
+                  typeid(std::pair<const long,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPlongcOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPlongcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPlongcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPlongcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPlongcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPlongcOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPlongcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,int>*)
+   {
+      std::pair<const long,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const long,int>", "string", 63,
+                  typeid(std::pair<const long,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPlongcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const long,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPlongcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPlongcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,char*>*)
+   {
+      std::pair<const int,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,char*>", "string", 63,
+                  typeid(std::pair<const int,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,char*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,void*>*)
+   {
+      std::pair<const int,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,void*>", "string", 63,
+                  typeid(std::pair<const int,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,double>*)
+   {
+      std::pair<const int,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,double>", "string", 63,
+                  typeid(std::pair<const int,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,float>*)
+   {
+      std::pair<const int,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,float>", "string", 63,
+                  typeid(std::pair<const int,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,long>*)
+   {
+      std::pair<const int,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,long>", "string", 63,
+                  typeid(std::pair<const int,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPintcOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPintcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPintcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPintcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPintcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPintcOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPintcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,int>*)
+   {
+      std::pair<const int,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const int,int>", "string", 63,
+                  typeid(std::pair<const int,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPintcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const int,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPintcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPintcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPintcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,void*>*)
+   {
+      std::pair<const std::string,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const std::string,void*>", "string", 63,
+                  typeid(std::pair<const std::string,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const std::string,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,double>*)
+   {
+      std::pair<const std::string,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const std::string,double>", "string", 63,
+                  typeid(std::pair<const std::string,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const std::string,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,float>*)
+   {
+      std::pair<const std::string,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const std::string,float>", "string", 63,
+                  typeid(std::pair<const std::string,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const std::string,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,long>*)
+   {
+      std::pair<const std::string,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const std::string,long>", "string", 63,
+                  typeid(std::pair<const std::string,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const std::string,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,int>*)
+   {
+      std::pair<const std::string,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const std::string,int>", "string", 63,
+                  typeid(std::pair<const std::string,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const std::string,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,void*>*)
+   {
+      std::pair<const char*,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,void*>", "string", 63,
+                  typeid(std::pair<const char*,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,void*>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,double>*)
+   {
+      std::pair<const char*,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,double>", "string", 63,
+                  typeid(std::pair<const char*,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,double>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,double>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,float>*)
+   {
+      std::pair<const char*,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,float>", "string", 63,
+                  typeid(std::pair<const char*,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,float>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,float>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,long>*)
+   {
+      std::pair<const char*,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,long>", "string", 63,
+                  typeid(std::pair<const char*,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,long>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,long>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEconstsPcharmUcOintgR_Dictionary();
+   static void stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEconstsPcharmUcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
+   static void destruct_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,int>*)
+   {
+      std::pair<const char*,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<const char*,int>", "string", 63,
+                  typeid(std::pair<const char*,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEconstsPcharmUcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<const char*,int>) );
+      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,int>*)0x0)->GetClass();
+      stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOcharmUgR_Dictionary();
+   static void stdcLcLpairlEdoublecOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,char*>*)
+   {
+      std::pair<double,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,char*>", "string", 63,
+                  typeid(std::pair<double,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,char*>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEdoublecOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,void*>*)
+   {
+      std::pair<double,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,void*>", "string", 63,
+                  typeid(std::pair<double,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,void*>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOdoublegR_Dictionary();
+   static void stdcLcLpairlEdoublecOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,double>*)
+   {
+      std::pair<double,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,double>", "string", 63,
+                  typeid(std::pair<double,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,double>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,double>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOfloatgR_Dictionary();
+   static void stdcLcLpairlEdoublecOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,float>*)
+   {
+      std::pair<double,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,float>", "string", 63,
+                  typeid(std::pair<double,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,float>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,float>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOlonggR_Dictionary();
+   static void stdcLcLpairlEdoublecOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOlonggR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,long>*)
+   {
+      std::pair<double,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,long>", "string", 63,
+                  typeid(std::pair<double,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,long>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,long>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEdoublecOintgR_Dictionary();
+   static void stdcLcLpairlEdoublecOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEdoublecOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEdoublecOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEdoublecOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEdoublecOintgR(void *p);
+   static void destruct_stdcLcLpairlEdoublecOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,int>*)
+   {
+      std::pair<double,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<double,int>", "string", 63,
+                  typeid(std::pair<double,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEdoublecOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<double,int>) );
+      instance.SetNew(&new_stdcLcLpairlEdoublecOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEdoublecOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,int>*)0x0)->GetClass();
+      stdcLcLpairlEdoublecOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEdoublecOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEfloatcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,char*>*)
+   {
+      std::pair<float,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,char*>", "string", 63,
+                  typeid(std::pair<float,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,char*>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEfloatcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,void*>*)
+   {
+      std::pair<float,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,void*>", "string", 63,
+                  typeid(std::pair<float,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,void*>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOdoublegR_Dictionary();
+   static void stdcLcLpairlEfloatcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,double>*)
+   {
+      std::pair<float,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,double>", "string", 63,
+                  typeid(std::pair<float,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,double>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,double>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOfloatgR_Dictionary();
+   static void stdcLcLpairlEfloatcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,float>*)
+   {
+      std::pair<float,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,float>", "string", 63,
+                  typeid(std::pair<float,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,float>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,float>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOlonggR_Dictionary();
+   static void stdcLcLpairlEfloatcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,long>*)
+   {
+      std::pair<float,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,long>", "string", 63,
+                  typeid(std::pair<float,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,long>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,long>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEfloatcOintgR_Dictionary();
+   static void stdcLcLpairlEfloatcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEfloatcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEfloatcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEfloatcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEfloatcOintgR(void *p);
+   static void destruct_stdcLcLpairlEfloatcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,int>*)
+   {
+      std::pair<float,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<float,int>", "string", 63,
+                  typeid(std::pair<float,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEfloatcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<float,int>) );
+      instance.SetNew(&new_stdcLcLpairlEfloatcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEfloatcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,int>*)0x0)->GetClass();
+      stdcLcLpairlEfloatcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEfloatcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOcharmUgR_Dictionary();
+   static void stdcLcLpairlElongcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlElongcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,char*>*)
+   {
+      std::pair<long,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,char*>", "string", 63,
+                  typeid(std::pair<long,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,char*>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,char*>*)0x0)->GetClass();
+      stdcLcLpairlElongcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlElongcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlElongcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,void*>*)
+   {
+      std::pair<long,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,void*>", "string", 63,
+                  typeid(std::pair<long,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,void*>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,void*>*)0x0)->GetClass();
+      stdcLcLpairlElongcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOdoublegR_Dictionary();
+   static void stdcLcLpairlElongcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlElongcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,double>*)
+   {
+      std::pair<long,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,double>", "string", 63,
+                  typeid(std::pair<long,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,double>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,double>*)0x0)->GetClass();
+      stdcLcLpairlElongcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOfloatgR_Dictionary();
+   static void stdcLcLpairlElongcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlElongcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,float>*)
+   {
+      std::pair<long,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,float>", "string", 63,
+                  typeid(std::pair<long,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,float>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,float>*)0x0)->GetClass();
+      stdcLcLpairlElongcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOlonggR_Dictionary();
+   static void stdcLcLpairlElongcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOlonggR(void *p);
+   static void destruct_stdcLcLpairlElongcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,long>*)
+   {
+      std::pair<long,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,long>", "string", 63,
+                  typeid(std::pair<long,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,long>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,long>*)0x0)->GetClass();
+      stdcLcLpairlElongcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlElongcOintgR_Dictionary();
+   static void stdcLcLpairlElongcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlElongcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlElongcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlElongcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlElongcOintgR(void *p);
+   static void destruct_stdcLcLpairlElongcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,int>*)
+   {
+      std::pair<long,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<long,int>", "string", 63,
+                  typeid(std::pair<long,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlElongcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<long,int>) );
+      instance.SetNew(&new_stdcLcLpairlElongcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlElongcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlElongcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlElongcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,int>*)0x0)->GetClass();
+      stdcLcLpairlElongcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlElongcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEintcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEintcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,char*>*)
+   {
+      std::pair<int,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,char*>", "string", 63,
+                  typeid(std::pair<int,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,char*>*)0x0)->GetClass();
+      stdcLcLpairlEintcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEintcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEintcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,void*>*)
+   {
+      std::pair<int,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,void*>", "string", 63,
+                  typeid(std::pair<int,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,void*>*)0x0)->GetClass();
+      stdcLcLpairlEintcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOdoublegR_Dictionary();
+   static void stdcLcLpairlEintcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEintcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,double>*)
+   {
+      std::pair<int,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,double>", "string", 63,
+                  typeid(std::pair<int,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,double>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,double>*)0x0)->GetClass();
+      stdcLcLpairlEintcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOfloatgR_Dictionary();
+   static void stdcLcLpairlEintcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEintcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,float>*)
+   {
+      std::pair<int,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,float>", "string", 63,
+                  typeid(std::pair<int,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,float>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,float>*)0x0)->GetClass();
+      stdcLcLpairlEintcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOlonggR_Dictionary();
+   static void stdcLcLpairlEintcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEintcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,long>*)
+   {
+      std::pair<int,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,long>", "string", 63,
+                  typeid(std::pair<int,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,long>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,long>*)0x0)->GetClass();
+      stdcLcLpairlEintcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEintcOintgR_Dictionary();
+   static void stdcLcLpairlEintcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEintcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEintcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEintcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEintcOintgR(void *p);
+   static void destruct_stdcLcLpairlEintcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,int>*)
+   {
+      std::pair<int,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<int,int>", "string", 63,
+                  typeid(std::pair<int,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEintcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<int,int>) );
+      instance.SetNew(&new_stdcLcLpairlEintcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEintcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEintcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEintcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,int>*)0x0)->GetClass();
+      stdcLcLpairlEintcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEintcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,void*>*)
+   {
+      std::pair<std::string,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<std::string,void*>", "string", 63,
+                  typeid(std::pair<std::string,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<std::string,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,void*>*)0x0)->GetClass();
+      stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary();
+   static void stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEstdcLcLstringcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,double>*)
+   {
+      std::pair<std::string,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<std::string,double>", "string", 63,
+                  typeid(std::pair<std::string,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<std::string,double>) );
+      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,double>*)0x0)->GetClass();
+      stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary();
+   static void stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEstdcLcLstringcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,float>*)
+   {
+      std::pair<std::string,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<std::string,float>", "string", 63,
+                  typeid(std::pair<std::string,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<std::string,float>) );
+      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,float>*)0x0)->GetClass();
+      stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary();
+   static void stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEstdcLcLstringcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEstdcLcLstringcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,long>*)
+   {
+      std::pair<std::string,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<std::string,long>", "string", 63,
+                  typeid(std::pair<std::string,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<std::string,long>) );
+      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,long>*)0x0)->GetClass();
+      stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOcharmUgR_Dictionary();
+   static void stdcLcLpairlEcharmUcOcharmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOcharmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOcharmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOcharmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOcharmUgR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOcharmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,char*>*)
+   {
+      std::pair<char*,char*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,char*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,char*>", "string", 63,
+                  typeid(std::pair<char*,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOcharmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,char*>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOcharmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOcharmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOcharmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOcharmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOcharmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOcharmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,char*>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOcharmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOcharmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOvoidmUgR_Dictionary();
+   static void stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOvoidmUgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOvoidmUgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,void*>*)
+   {
+      std::pair<char*,void*> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,void*>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,void*>", "string", 63,
+                  typeid(std::pair<char*,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOvoidmUgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,void*>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOvoidmUgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOvoidmUgR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOvoidmUgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOvoidmUgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOvoidmUgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOvoidmUgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,void*>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOdoublegR_Dictionary();
+   static void stdcLcLpairlEcharmUcOdoublegR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOdoublegR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOdoublegR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOdoublegR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOdoublegR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,double>*)
+   {
+      std::pair<char*,double> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,double>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,double>", "string", 63,
+                  typeid(std::pair<char*,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,double>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOdoublegR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOdoublegR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOdoublegR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOdoublegR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOdoublegR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOdoublegR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,double>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOfloatgR_Dictionary();
+   static void stdcLcLpairlEcharmUcOfloatgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOfloatgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOfloatgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOfloatgR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOfloatgR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOfloatgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,float>*)
+   {
+      std::pair<char*,float> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,float>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,float>", "string", 63,
+                  typeid(std::pair<char*,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOfloatgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,float>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOfloatgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOfloatgR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOfloatgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOfloatgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOfloatgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOfloatgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,float>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOfloatgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOfloatgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOlonggR_Dictionary();
+   static void stdcLcLpairlEcharmUcOlonggR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOlonggR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOlonggR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOlonggR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOlonggR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,long>*)
+   {
+      std::pair<char*,long> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,long>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,long>", "string", 63,
+                  typeid(std::pair<char*,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,long>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOlonggR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOlonggR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOlonggR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOlonggR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOlonggR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOlonggR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,long>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
+   static TClass *stdcLcLpairlEcharmUcOintgR_Dictionary();
+   static void stdcLcLpairlEcharmUcOintgR_TClassManip(TClass*);
+   static void *new_stdcLcLpairlEcharmUcOintgR(void *p = nullptr);
+   static void *newArray_stdcLcLpairlEcharmUcOintgR(Long_t size, void *p);
+   static void delete_stdcLcLpairlEcharmUcOintgR(void *p);
+   static void deleteArray_stdcLcLpairlEcharmUcOintgR(void *p);
+   static void destruct_stdcLcLpairlEcharmUcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,int>*)
+   {
+      std::pair<char*,int> *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,int>));
+      static ::CppyyLegacy::TGenericClassInfo 
+         instance("std::pair<char*,int>", "string", 63,
+                  typeid(std::pair<char*,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
+                  &stdcLcLpairlEcharmUcOintgR_Dictionary, isa_proxy, 4,
+                  sizeof(std::pair<char*,int>) );
+      instance.SetNew(&new_stdcLcLpairlEcharmUcOintgR);
+      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOintgR);
+      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOintgR);
+      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOintgR);
+      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOintgR);
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOintgR_Dictionary() {
+      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,int>*)0x0)->GetClass();
+      stdcLcLpairlEcharmUcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void stdcLcLpairlEcharmUcOintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace CppyyLegacy
+
+namespace CppyyLegacy {
    static TClass *timespec_Dictionary();
    static void timespec_TClassManip(TClass*);
-   static void *new_timespec(void *p = 0);
+   static void *new_timespec(void *p = nullptr);
    static void *newArray_timespec(Long_t size, void *p);
    static void delete_timespec(void *p);
    static void deleteArray_timespec(void *p);
@@ -205,10 +3075,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::timespec*)
    {
-      ::timespec *ptr = 0;
+      ::timespec *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::timespec));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("timespec", "time.h", 120,
+         instance("timespec", "time.h", 33,
                   typeid(::timespec), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &timespec_Dictionary, isa_proxy, 0,
                   sizeof(::timespec) );
@@ -239,2876 +3109,6 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,int>*)
-   {
-      std::pair<const int,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,int>", "string", 208,
-                  typeid(std::pair<const int,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEstdcLcLstringcOintgR_Dictionary();
-   static void stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEstdcLcLstringcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEstdcLcLstringcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
-   static void destruct_stdcLcLpairlEstdcLcLstringcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,int>*)
-   {
-      std::pair<std::string,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<std::string,int>", "string", 208,
-                  typeid(std::pair<std::string,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEstdcLcLstringcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<std::string,int>) );
-      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,int>*)0x0)->GetClass();
-      stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEstdcLcLstringcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,char*>*)
-   {
-      std::pair<const double,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,char*>", "string", 208,
-                  typeid(std::pair<const double,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,char*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,void*>*)
-   {
-      std::pair<const double,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,void*>", "string", 208,
-                  typeid(std::pair<const double,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,double>*)
-   {
-      std::pair<const double,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,double>", "string", 208,
-                  typeid(std::pair<const double,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,float>*)
-   {
-      std::pair<const double,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,float>", "string", 208,
-                  typeid(std::pair<const double,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,long>*)
-   {
-      std::pair<const double,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,long>", "string", 208,
-                  typeid(std::pair<const double,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPdoublecOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPdoublecOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPdoublecOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPdoublecOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPdoublecOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPdoublecOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPdoublecOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const double,int>*)
-   {
-      std::pair<const double,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const double,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const double,int>", "string", 208,
-                  typeid(std::pair<const double,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPdoublecOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const double,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPdoublecOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPdoublecOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPdoublecOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPdoublecOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPdoublecOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const double,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPdoublecOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const double,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPdoublecOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPdoublecOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,char*>*)
-   {
-      std::pair<const float,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,char*>", "string", 208,
-                  typeid(std::pair<const float,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,char*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,void*>*)
-   {
-      std::pair<const float,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,void*>", "string", 208,
-                  typeid(std::pair<const float,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,double>*)
-   {
-      std::pair<const float,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,double>", "string", 208,
-                  typeid(std::pair<const float,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,float>*)
-   {
-      std::pair<const float,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,float>", "string", 208,
-                  typeid(std::pair<const float,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,long>*)
-   {
-      std::pair<const float,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,long>", "string", 208,
-                  typeid(std::pair<const float,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPfloatcOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPfloatcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPfloatcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPfloatcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPfloatcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPfloatcOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPfloatcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const float,int>*)
-   {
-      std::pair<const float,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const float,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const float,int>", "string", 208,
-                  typeid(std::pair<const float,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPfloatcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const float,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPfloatcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPfloatcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPfloatcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPfloatcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPfloatcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const float,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPfloatcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const float,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPfloatcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPfloatcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,char*>*)
-   {
-      std::pair<const long,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,char*>", "string", 208,
-                  typeid(std::pair<const long,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,char*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,void*>*)
-   {
-      std::pair<const long,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,void*>", "string", 208,
-                  typeid(std::pair<const long,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,double>*)
-   {
-      std::pair<const long,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,double>", "string", 208,
-                  typeid(std::pair<const long,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,float>*)
-   {
-      std::pair<const long,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,float>", "string", 208,
-                  typeid(std::pair<const long,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,long>*)
-   {
-      std::pair<const long,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,long>", "string", 208,
-                  typeid(std::pair<const long,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPlongcOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPlongcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPlongcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPlongcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPlongcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPlongcOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPlongcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const long,int>*)
-   {
-      std::pair<const long,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const long,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const long,int>", "string", 208,
-                  typeid(std::pair<const long,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPlongcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const long,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPlongcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPlongcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPlongcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPlongcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPlongcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const long,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPlongcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const long,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPlongcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPlongcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,char*>*)
-   {
-      std::pair<const int,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,char*>", "string", 208,
-                  typeid(std::pair<const int,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,char*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,void*>*)
-   {
-      std::pair<const int,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,void*>", "string", 208,
-                  typeid(std::pair<const int,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,double>*)
-   {
-      std::pair<const int,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,double>", "string", 208,
-                  typeid(std::pair<const int,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,float>*)
-   {
-      std::pair<const int,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,float>", "string", 208,
-                  typeid(std::pair<const int,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPintcOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPintcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPintcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPintcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPintcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPintcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPintcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const int,long>*)
-   {
-      std::pair<const int,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const int,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const int,long>", "string", 208,
-                  typeid(std::pair<const int,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPintcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const int,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPintcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPintcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPintcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPintcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPintcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const int,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPintcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const int,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPintcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPintcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,void*>*)
-   {
-      std::pair<const std::string,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const std::string,void*>", "string", 208,
-                  typeid(std::pair<const std::string,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const std::string,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,double>*)
-   {
-      std::pair<const std::string,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const std::string,double>", "string", 208,
-                  typeid(std::pair<const std::string,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const std::string,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPstdcLcLstringcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,float>*)
-   {
-      std::pair<const std::string,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const std::string,float>", "string", 208,
-                  typeid(std::pair<const std::string,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const std::string,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPstdcLcLstringcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,long>*)
-   {
-      std::pair<const std::string,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const std::string,long>", "string", 208,
-                  typeid(std::pair<const std::string,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const std::string,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPstdcLcLstringcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPstdcLcLstringcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const std::string,int>*)
-   {
-      std::pair<const std::string,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const std::string,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const std::string,int>", "string", 208,
-                  typeid(std::pair<const std::string,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const std::string,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPstdcLcLstringcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const std::string,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPstdcLcLstringcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const std::string,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPstdcLcLstringcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,char*>*)
-   {
-      std::pair<const char*,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,char*>", "string", 208,
-                  typeid(std::pair<const char*,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,char*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,void*>*)
-   {
-      std::pair<const char*,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,void*>", "string", 208,
-                  typeid(std::pair<const char*,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,void*>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,double>*)
-   {
-      std::pair<const char*,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,double>", "string", 208,
-                  typeid(std::pair<const char*,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,double>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,double>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,float>*)
-   {
-      std::pair<const char*,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,float>", "string", 208,
-                  typeid(std::pair<const char*,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,float>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,float>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,long>*)
-   {
-      std::pair<const char*,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,long>", "string", 208,
-                  typeid(std::pair<const char*,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,long>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,long>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEconstsPcharmUcOintgR_Dictionary();
-   static void stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEconstsPcharmUcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
-   static void destruct_stdcLcLpairlEconstsPcharmUcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<const char*,int>*)
-   {
-      std::pair<const char*,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<const char*,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<const char*,int>", "string", 208,
-                  typeid(std::pair<const char*,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEconstsPcharmUcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<const char*,int>) );
-      instance.SetNew(&new_stdcLcLpairlEconstsPcharmUcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEconstsPcharmUcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEconstsPcharmUcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEconstsPcharmUcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEconstsPcharmUcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<const char*,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEconstsPcharmUcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<const char*,int>*)0x0)->GetClass();
-      stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEconstsPcharmUcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOcharmUgR_Dictionary();
-   static void stdcLcLpairlEdoublecOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,char*>*)
-   {
-      std::pair<double,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,char*>", "string", 208,
-                  typeid(std::pair<double,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,char*>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEdoublecOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,void*>*)
-   {
-      std::pair<double,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,void*>", "string", 208,
-                  typeid(std::pair<double,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,void*>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOdoublegR_Dictionary();
-   static void stdcLcLpairlEdoublecOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,double>*)
-   {
-      std::pair<double,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,double>", "string", 208,
-                  typeid(std::pair<double,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,double>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,double>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOfloatgR_Dictionary();
-   static void stdcLcLpairlEdoublecOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,float>*)
-   {
-      std::pair<double,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,float>", "string", 208,
-                  typeid(std::pair<double,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,float>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,float>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOlonggR_Dictionary();
-   static void stdcLcLpairlEdoublecOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOlonggR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,long>*)
-   {
-      std::pair<double,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,long>", "string", 208,
-                  typeid(std::pair<double,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,long>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,long>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEdoublecOintgR_Dictionary();
-   static void stdcLcLpairlEdoublecOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEdoublecOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEdoublecOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEdoublecOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEdoublecOintgR(void *p);
-   static void destruct_stdcLcLpairlEdoublecOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<double,int>*)
-   {
-      std::pair<double,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<double,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<double,int>", "string", 208,
-                  typeid(std::pair<double,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEdoublecOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<double,int>) );
-      instance.SetNew(&new_stdcLcLpairlEdoublecOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEdoublecOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEdoublecOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEdoublecOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEdoublecOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<double,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEdoublecOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<double,int>*)0x0)->GetClass();
-      stdcLcLpairlEdoublecOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEdoublecOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEfloatcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,char*>*)
-   {
-      std::pair<float,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,char*>", "string", 208,
-                  typeid(std::pair<float,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,char*>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEfloatcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,void*>*)
-   {
-      std::pair<float,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,void*>", "string", 208,
-                  typeid(std::pair<float,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,void*>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOdoublegR_Dictionary();
-   static void stdcLcLpairlEfloatcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,double>*)
-   {
-      std::pair<float,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,double>", "string", 208,
-                  typeid(std::pair<float,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,double>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,double>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOfloatgR_Dictionary();
-   static void stdcLcLpairlEfloatcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,float>*)
-   {
-      std::pair<float,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,float>", "string", 208,
-                  typeid(std::pair<float,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,float>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,float>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOlonggR_Dictionary();
-   static void stdcLcLpairlEfloatcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,long>*)
-   {
-      std::pair<float,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,long>", "string", 208,
-                  typeid(std::pair<float,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,long>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,long>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEfloatcOintgR_Dictionary();
-   static void stdcLcLpairlEfloatcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEfloatcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEfloatcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEfloatcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEfloatcOintgR(void *p);
-   static void destruct_stdcLcLpairlEfloatcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<float,int>*)
-   {
-      std::pair<float,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<float,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<float,int>", "string", 208,
-                  typeid(std::pair<float,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEfloatcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<float,int>) );
-      instance.SetNew(&new_stdcLcLpairlEfloatcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEfloatcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEfloatcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEfloatcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEfloatcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<float,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEfloatcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<float,int>*)0x0)->GetClass();
-      stdcLcLpairlEfloatcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEfloatcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOcharmUgR_Dictionary();
-   static void stdcLcLpairlElongcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlElongcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,char*>*)
-   {
-      std::pair<long,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,char*>", "string", 208,
-                  typeid(std::pair<long,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,char*>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,char*>*)0x0)->GetClass();
-      stdcLcLpairlElongcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlElongcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlElongcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,void*>*)
-   {
-      std::pair<long,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,void*>", "string", 208,
-                  typeid(std::pair<long,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,void*>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,void*>*)0x0)->GetClass();
-      stdcLcLpairlElongcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOdoublegR_Dictionary();
-   static void stdcLcLpairlElongcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlElongcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,double>*)
-   {
-      std::pair<long,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,double>", "string", 208,
-                  typeid(std::pair<long,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,double>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,double>*)0x0)->GetClass();
-      stdcLcLpairlElongcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOfloatgR_Dictionary();
-   static void stdcLcLpairlElongcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlElongcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,float>*)
-   {
-      std::pair<long,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,float>", "string", 208,
-                  typeid(std::pair<long,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,float>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,float>*)0x0)->GetClass();
-      stdcLcLpairlElongcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOlonggR_Dictionary();
-   static void stdcLcLpairlElongcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOlonggR(void *p);
-   static void destruct_stdcLcLpairlElongcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,long>*)
-   {
-      std::pair<long,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,long>", "string", 208,
-                  typeid(std::pair<long,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,long>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,long>*)0x0)->GetClass();
-      stdcLcLpairlElongcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlElongcOintgR_Dictionary();
-   static void stdcLcLpairlElongcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlElongcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlElongcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlElongcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlElongcOintgR(void *p);
-   static void destruct_stdcLcLpairlElongcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<long,int>*)
-   {
-      std::pair<long,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<long,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<long,int>", "string", 208,
-                  typeid(std::pair<long,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlElongcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<long,int>) );
-      instance.SetNew(&new_stdcLcLpairlElongcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlElongcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlElongcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlElongcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlElongcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<long,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlElongcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<long,int>*)0x0)->GetClass();
-      stdcLcLpairlElongcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlElongcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEintcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEintcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,char*>*)
-   {
-      std::pair<int,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,char*>", "string", 208,
-                  typeid(std::pair<int,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,char*>*)0x0)->GetClass();
-      stdcLcLpairlEintcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEintcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEintcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,void*>*)
-   {
-      std::pair<int,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,void*>", "string", 208,
-                  typeid(std::pair<int,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,void*>*)0x0)->GetClass();
-      stdcLcLpairlEintcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOdoublegR_Dictionary();
-   static void stdcLcLpairlEintcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEintcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,double>*)
-   {
-      std::pair<int,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,double>", "string", 208,
-                  typeid(std::pair<int,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,double>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,double>*)0x0)->GetClass();
-      stdcLcLpairlEintcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOfloatgR_Dictionary();
-   static void stdcLcLpairlEintcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEintcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,float>*)
-   {
-      std::pair<int,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,float>", "string", 208,
-                  typeid(std::pair<int,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,float>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,float>*)0x0)->GetClass();
-      stdcLcLpairlEintcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOlonggR_Dictionary();
-   static void stdcLcLpairlEintcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEintcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,long>*)
-   {
-      std::pair<int,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,long>", "string", 208,
-                  typeid(std::pair<int,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,long>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,long>*)0x0)->GetClass();
-      stdcLcLpairlEintcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEintcOintgR_Dictionary();
-   static void stdcLcLpairlEintcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEintcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEintcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEintcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEintcOintgR(void *p);
-   static void destruct_stdcLcLpairlEintcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<int,int>*)
-   {
-      std::pair<int,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<int,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<int,int>", "string", 208,
-                  typeid(std::pair<int,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEintcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<int,int>) );
-      instance.SetNew(&new_stdcLcLpairlEintcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEintcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEintcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEintcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEintcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<int,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEintcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<int,int>*)0x0)->GetClass();
-      stdcLcLpairlEintcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEintcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEstdcLcLstringcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,void*>*)
-   {
-      std::pair<std::string,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<std::string,void*>", "string", 208,
-                  typeid(std::pair<std::string,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<std::string,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,void*>*)0x0)->GetClass();
-      stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEstdcLcLstringcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary();
-   static void stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEstdcLcLstringcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEstdcLcLstringcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,double>*)
-   {
-      std::pair<std::string,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<std::string,double>", "string", 208,
-                  typeid(std::pair<std::string,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<std::string,double>) );
-      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,double>*)0x0)->GetClass();
-      stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEstdcLcLstringcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary();
-   static void stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEstdcLcLstringcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEstdcLcLstringcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,float>*)
-   {
-      std::pair<std::string,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<std::string,float>", "string", 208,
-                  typeid(std::pair<std::string,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<std::string,float>) );
-      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,float>*)0x0)->GetClass();
-      stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEstdcLcLstringcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary();
-   static void stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEstdcLcLstringcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEstdcLcLstringcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEstdcLcLstringcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<std::string,long>*)
-   {
-      std::pair<std::string,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<std::string,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<std::string,long>", "string", 208,
-                  typeid(std::pair<std::string,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<std::string,long>) );
-      instance.SetNew(&new_stdcLcLpairlEstdcLcLstringcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEstdcLcLstringcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEstdcLcLstringcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEstdcLcLstringcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEstdcLcLstringcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<std::string,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEstdcLcLstringcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<std::string,long>*)0x0)->GetClass();
-      stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEstdcLcLstringcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOcharmUgR_Dictionary();
-   static void stdcLcLpairlEcharmUcOcharmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOcharmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOcharmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOcharmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOcharmUgR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOcharmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,char*>*)
-   {
-      std::pair<char*,char*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,char*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,char*>", "string", 208,
-                  typeid(std::pair<char*,char*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOcharmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,char*>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOcharmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOcharmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOcharmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOcharmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOcharmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,char*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOcharmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,char*>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOcharmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOcharmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOvoidmUgR_Dictionary();
-   static void stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOvoidmUgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOvoidmUgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOvoidmUgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,void*>*)
-   {
-      std::pair<char*,void*> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,void*>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,void*>", "string", 208,
-                  typeid(std::pair<char*,void*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOvoidmUgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,void*>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOvoidmUgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOvoidmUgR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOvoidmUgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOvoidmUgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOvoidmUgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,void*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOvoidmUgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,void*>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOvoidmUgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOdoublegR_Dictionary();
-   static void stdcLcLpairlEcharmUcOdoublegR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOdoublegR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOdoublegR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOdoublegR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOdoublegR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOdoublegR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,double>*)
-   {
-      std::pair<char*,double> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,double>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,double>", "string", 208,
-                  typeid(std::pair<char*,double>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOdoublegR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,double>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOdoublegR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOdoublegR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOdoublegR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOdoublegR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOdoublegR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOdoublegR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,double>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOdoublegR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOdoublegR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOfloatgR_Dictionary();
-   static void stdcLcLpairlEcharmUcOfloatgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOfloatgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOfloatgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOfloatgR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOfloatgR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOfloatgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,float>*)
-   {
-      std::pair<char*,float> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,float>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,float>", "string", 208,
-                  typeid(std::pair<char*,float>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOfloatgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,float>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOfloatgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOfloatgR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOfloatgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOfloatgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOfloatgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,float>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOfloatgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,float>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOfloatgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOfloatgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOlonggR_Dictionary();
-   static void stdcLcLpairlEcharmUcOlonggR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOlonggR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOlonggR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOlonggR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOlonggR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOlonggR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,long>*)
-   {
-      std::pair<char*,long> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,long>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,long>", "string", 208,
-                  typeid(std::pair<char*,long>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOlonggR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,long>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOlonggR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOlonggR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOlonggR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOlonggR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOlonggR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOlonggR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,long>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOlonggR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOlonggR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
-   static TClass *stdcLcLpairlEcharmUcOintgR_Dictionary();
-   static void stdcLcLpairlEcharmUcOintgR_TClassManip(TClass*);
-   static void *new_stdcLcLpairlEcharmUcOintgR(void *p = 0);
-   static void *newArray_stdcLcLpairlEcharmUcOintgR(Long_t size, void *p);
-   static void delete_stdcLcLpairlEcharmUcOintgR(void *p);
-   static void deleteArray_stdcLcLpairlEcharmUcOintgR(void *p);
-   static void destruct_stdcLcLpairlEcharmUcOintgR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const std::pair<char*,int>*)
-   {
-      std::pair<char*,int> *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::pair<char*,int>));
-      static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::pair<char*,int>", "string", 208,
-                  typeid(std::pair<char*,int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
-                  &stdcLcLpairlEcharmUcOintgR_Dictionary, isa_proxy, 4,
-                  sizeof(std::pair<char*,int>) );
-      instance.SetNew(&new_stdcLcLpairlEcharmUcOintgR);
-      instance.SetNewArray(&newArray_stdcLcLpairlEcharmUcOintgR);
-      instance.SetDelete(&delete_stdcLcLpairlEcharmUcOintgR);
-      instance.SetDeleteArray(&deleteArray_stdcLcLpairlEcharmUcOintgR);
-      instance.SetDestructor(&destruct_stdcLcLpairlEcharmUcOintgR);
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::CppyyLegacy::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const std::pair<char*,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static ::CppyyLegacy::TClass *stdcLcLpairlEcharmUcOintgR_Dictionary() {
-      ::CppyyLegacy::TClass* theClass =::CppyyLegacy::GenerateInitInstanceLocal((const std::pair<char*,int>*)0x0)->GetClass();
-      stdcLcLpairlEcharmUcOintgR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void stdcLcLpairlEcharmUcOintgR_TClassManip(TClass* ){
-   }
-
-} // end of namespace CppyyLegacy
-
-namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTVirtualIsAProxy_Dictionary();
    static void CppyyLegacycLcLTVirtualIsAProxy_TClassManip(TClass*);
    static void delete_CppyyLegacycLcLTVirtualIsAProxy(void *p);
@@ -3118,7 +3118,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualIsAProxy*)
    {
-      ::CppyyLegacy::TVirtualIsAProxy *ptr = 0;
+      ::CppyyLegacy::TVirtualIsAProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TVirtualIsAProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualIsAProxy", "TVirtualIsAProxy.h", 27,
@@ -3159,7 +3159,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TIsAProxy*)
    {
-      ::CppyyLegacy::TIsAProxy *ptr = 0;
+      ::CppyyLegacy::TIsAProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TIsAProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TIsAProxy", "TIsAProxy.h", 30,
@@ -3191,7 +3191,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStorage(void *p = 0);
+   static void *new_CppyyLegacycLcLTStorage(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStorage(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStorage(void *p);
    static void deleteArray_CppyyLegacycLcLTStorage(void *p);
@@ -3201,8 +3201,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStorage*)
    {
-      ::CppyyLegacy::TStorage *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStorage >(0);
+      ::CppyyLegacy::TStorage *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStorage >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStorage", ::CppyyLegacy::TStorage::Class_Version(), "TStorage.h", 36,
                   typeid(::CppyyLegacy::TStorage), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3225,7 +3225,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTObject(void *p = 0);
+   static void *new_CppyyLegacycLcLTObject(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTObject(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTObject(void *p);
    static void deleteArray_CppyyLegacycLcLTObject(void *p);
@@ -3235,8 +3235,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TObject*)
    {
-      ::CppyyLegacy::TObject *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObject >(0);
+      ::CppyyLegacy::TObject *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObject >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TObject", ::CppyyLegacy::TObject::Class_Version(), "TObject.h", 36,
                   typeid(::CppyyLegacy::TObject), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3267,8 +3267,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TApplication*)
    {
-      ::CppyyLegacy::TApplication *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TApplication >(0);
+      ::CppyyLegacy::TApplication *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TApplication >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TApplication", ::CppyyLegacy::TApplication::Class_Version(), "TApplication.h", 34,
                   typeid(::CppyyLegacy::TApplication), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3298,7 +3298,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TSubString*)
    {
-      ::CppyyLegacy::TSubString *ptr = 0;
+      ::CppyyLegacy::TSubString *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TSubString));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TSubString", "TString.h", 80,
@@ -3330,7 +3330,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTString(void *p = 0);
+   static void *new_CppyyLegacycLcLTString(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTString(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTString(void *p);
    static void deleteArray_CppyyLegacycLcLTString(void *p);
@@ -3340,8 +3340,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TString*)
    {
-      ::CppyyLegacy::TString *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TString >(0);
+      ::CppyyLegacy::TString *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TString >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TString", ::CppyyLegacy::TString::Class_Version(), "TString.h", 133,
                   typeid(::CppyyLegacy::TString), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3364,7 +3364,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTNamed(void *p = 0);
+   static void *new_CppyyLegacycLcLTNamed(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTNamed(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTNamed(void *p);
    static void deleteArray_CppyyLegacycLcLTNamed(void *p);
@@ -3373,8 +3373,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TNamed*)
    {
-      ::CppyyLegacy::TNamed *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TNamed >(0);
+      ::CppyyLegacy::TNamed *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TNamed >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TNamed", ::CppyyLegacy::TNamed::Class_Version(), "TNamed.h", 30,
                   typeid(::CppyyLegacy::TNamed), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3403,8 +3403,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDictionary*)
    {
-      ::CppyyLegacy::TDictionary *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDictionary >(0);
+      ::CppyyLegacy::TDictionary *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDictionary >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDictionary", ::CppyyLegacy::TDictionary::Class_Version(), "TDictionary.h", 159,
                   typeid(::CppyyLegacy::TDictionary), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3424,7 +3424,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDataType(void *p = 0);
+   static void *new_CppyyLegacycLcLTDataType(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDataType(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDataType(void *p);
    static void deleteArray_CppyyLegacycLcLTDataType(void *p);
@@ -3434,10 +3434,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDataType*)
    {
-      ::CppyyLegacy::TDataType *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDataType >(0);
+      ::CppyyLegacy::TDataType *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDataType >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("CppyyLegacy::TDataType", ::CppyyLegacy::TDataType::Class_Version(), "TDataType.h", 46,
+         instance("CppyyLegacy::TDataType", ::CppyyLegacy::TDataType::Class_Version(), "TDataType.h", 50,
                   typeid(::CppyyLegacy::TDataType), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &::CppyyLegacy::TDataType::Dictionary, isa_proxy, 16,
                   sizeof(::CppyyLegacy::TDataType) );
@@ -3466,8 +3466,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TIterator*)
    {
-      ::CppyyLegacy::TIterator *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TIterator >(0);
+      ::CppyyLegacy::TIterator *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TIterator >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TIterator", ::CppyyLegacy::TIterator::Class_Version(), "TIterator.h", 32,
                   typeid(::CppyyLegacy::TIterator), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3496,8 +3496,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualMutex*)
    {
-      ::CppyyLegacy::TVirtualMutex *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualMutex >(0);
+      ::CppyyLegacy::TVirtualMutex *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualMutex >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualMutex", ::CppyyLegacy::TVirtualMutex::Class_Version(), "TVirtualMutex.h", 37,
                   typeid(::CppyyLegacy::TVirtualMutex), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3526,8 +3526,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TLockGuard*)
    {
-      ::CppyyLegacy::TLockGuard *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TLockGuard >(0);
+      ::CppyyLegacy::TLockGuard *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TLockGuard >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TLockGuard", ::CppyyLegacy::TLockGuard::Class_Version(), "TVirtualMutex.h", 72,
                   typeid(::CppyyLegacy::TLockGuard), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3556,8 +3556,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualRWMutex*)
    {
-      ::CppyyLegacy::TVirtualRWMutex *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualRWMutex >(0);
+      ::CppyyLegacy::TVirtualRWMutex *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualRWMutex >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualRWMutex", ::CppyyLegacy::TVirtualRWMutex::Class_Version(), "TVirtualRWMutex.h", 36,
                   typeid(::CppyyLegacy::TVirtualRWMutex), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3586,8 +3586,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TReadLockGuard*)
    {
-      ::CppyyLegacy::TReadLockGuard *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TReadLockGuard >(0);
+      ::CppyyLegacy::TReadLockGuard *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TReadLockGuard >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TReadLockGuard", ::CppyyLegacy::TReadLockGuard::Class_Version(), "TVirtualRWMutex.h", 94,
                   typeid(::CppyyLegacy::TReadLockGuard), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3616,8 +3616,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TWriteLockGuard*)
    {
-      ::CppyyLegacy::TWriteLockGuard *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TWriteLockGuard >(0);
+      ::CppyyLegacy::TWriteLockGuard *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TWriteLockGuard >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TWriteLockGuard", ::CppyyLegacy::TWriteLockGuard::Class_Version(), "TVirtualRWMutex.h", 113,
                   typeid(::CppyyLegacy::TWriteLockGuard), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3646,8 +3646,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCollection*)
    {
-      ::CppyyLegacy::TCollection *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TCollection >(0);
+      ::CppyyLegacy::TCollection *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TCollection >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCollection", ::CppyyLegacy::TCollection::Class_Version(), "TCollection.h", 61,
                   typeid(::CppyyLegacy::TCollection), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3676,8 +3676,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TIter*)
    {
-      ::CppyyLegacy::TIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TIter >(0);
+      ::CppyyLegacy::TIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TIter", ::CppyyLegacy::TIter::Class_Version(), "TCollection.h", 220,
                   typeid(::CppyyLegacy::TIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3706,8 +3706,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TSeqCollection*)
    {
-      ::CppyyLegacy::TSeqCollection *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSeqCollection >(0);
+      ::CppyyLegacy::TSeqCollection *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSeqCollection >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TSeqCollection", ::CppyyLegacy::TSeqCollection::Class_Version(), "TSeqCollection.h", 29,
                   typeid(::CppyyLegacy::TSeqCollection), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3728,7 +3728,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTObjArray(void *p = 0);
+   static void *new_CppyyLegacycLcLTObjArray(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTObjArray(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTObjArray(void *p);
    static void deleteArray_CppyyLegacycLcLTObjArray(void *p);
@@ -3738,8 +3738,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TObjArray*)
    {
-      ::CppyyLegacy::TObjArray *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjArray >(0);
+      ::CppyyLegacy::TObjArray *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjArray >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TObjArray", ::CppyyLegacy::TObjArray::Class_Version(), "TObjArray.h", 39,
                   typeid(::CppyyLegacy::TObjArray), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3770,8 +3770,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TObjArrayIter*)
    {
-      ::CppyyLegacy::TObjArrayIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjArrayIter >(0);
+      ::CppyyLegacy::TObjArrayIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjArrayIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TObjArrayIter", ::CppyyLegacy::TObjArrayIter::Class_Version(), "TObjArray.h", 123,
                   typeid(::CppyyLegacy::TObjArrayIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3792,7 +3792,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTObjString(void *p = 0);
+   static void *new_CppyyLegacycLcLTObjString(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTObjString(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTObjString(void *p);
    static void deleteArray_CppyyLegacycLcLTObjString(void *p);
@@ -3801,8 +3801,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TObjString*)
    {
-      ::CppyyLegacy::TObjString *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjString >(0);
+      ::CppyyLegacy::TObjString *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjString >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TObjString", ::CppyyLegacy::TObjString::Class_Version(), "TObjString.h", 30,
                   typeid(::CppyyLegacy::TObjString), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3824,7 +3824,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTClass(void *p = 0);
+   static void *new_CppyyLegacycLcLTClass(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTClass(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTClass(void *p);
    static void deleteArray_CppyyLegacycLcLTClass(void *p);
@@ -3834,8 +3834,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TClass*)
    {
-      ::CppyyLegacy::TClass *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClass >(0);
+      ::CppyyLegacy::TClass *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClass >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TClass", ::CppyyLegacy::TClass::Class_Version(), "TClass.h", 71,
                   typeid(::CppyyLegacy::TClass), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3866,8 +3866,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBuffer*)
    {
-      ::CppyyLegacy::TBuffer *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBuffer >(0);
+      ::CppyyLegacy::TBuffer *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBuffer >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBuffer", ::CppyyLegacy::TBuffer::Class_Version(), "TBuffer.h", 42,
                   typeid(::CppyyLegacy::TBuffer), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3888,7 +3888,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDatime(void *p = 0);
+   static void *new_CppyyLegacycLcLTDatime(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDatime(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDatime(void *p);
    static void deleteArray_CppyyLegacycLcLTDatime(void *p);
@@ -3898,8 +3898,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDatime*)
    {
-      ::CppyyLegacy::TDatime *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDatime >(0);
+      ::CppyyLegacy::TDatime *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDatime >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDatime", ::CppyyLegacy::TDatime::Class_Version(), "TDatime.h", 38,
                   typeid(::CppyyLegacy::TDatime), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3922,7 +3922,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTList(void *p = 0);
+   static void *new_CppyyLegacycLcLTList(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTList(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTList(void *p);
    static void deleteArray_CppyyLegacycLcLTList(void *p);
@@ -3932,8 +3932,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TList*)
    {
-      ::CppyyLegacy::TList *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TList >(0);
+      ::CppyyLegacy::TList *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TList >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TList", ::CppyyLegacy::TList::Class_Version(), "TList.h", 46,
                   typeid(::CppyyLegacy::TList), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3964,8 +3964,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListIter*)
    {
-      ::CppyyLegacy::TListIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListIter >(0);
+      ::CppyyLegacy::TListIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListIter", ::CppyyLegacy::TListIter::Class_Version(), "TList.h", 199,
                   typeid(::CppyyLegacy::TListIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -3986,7 +3986,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTUUID(void *p = 0);
+   static void *new_CppyyLegacycLcLTUUID(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTUUID(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTUUID(void *p);
    static void deleteArray_CppyyLegacycLcLTUUID(void *p);
@@ -3995,8 +3995,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TUUID*)
    {
-      ::CppyyLegacy::TUUID *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUUID >(0);
+      ::CppyyLegacy::TUUID *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUUID >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TUUID", ::CppyyLegacy::TUUID::Class_Version(), "TUUID.h", 45,
                   typeid(::CppyyLegacy::TUUID), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4018,7 +4018,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDirectory(void *p = 0);
+   static void *new_CppyyLegacycLcLTDirectory(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDirectory(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDirectory(void *p);
    static void deleteArray_CppyyLegacycLcLTDirectory(void *p);
@@ -4028,8 +4028,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDirectory*)
    {
-      ::CppyyLegacy::TDirectory *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDirectory >(0);
+      ::CppyyLegacy::TDirectory *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDirectory >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDirectory", ::CppyyLegacy::TDirectory::Class_Version(), "TDirectory.h", 35,
                   typeid(::CppyyLegacy::TDirectory), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4052,7 +4052,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTEnvRec(void *p = 0);
+   static void *new_CppyyLegacycLcLTEnvRec(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTEnvRec(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTEnvRec(void *p);
    static void deleteArray_CppyyLegacycLcLTEnvRec(void *p);
@@ -4061,8 +4061,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEnvRec*)
    {
-      ::CppyyLegacy::TEnvRec *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnvRec >(0);
+      ::CppyyLegacy::TEnvRec *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnvRec >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEnvRec", ::CppyyLegacy::TEnvRec::Class_Version(), "TEnv.h", 89,
                   typeid(::CppyyLegacy::TEnvRec), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4084,7 +4084,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTEnv(void *p = 0);
+   static void *new_CppyyLegacycLcLTEnv(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTEnv(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTEnv(void *p);
    static void deleteArray_CppyyLegacycLcLTEnv(void *p);
@@ -4093,8 +4093,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEnv*)
    {
-      ::CppyyLegacy::TEnv *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnv >(0);
+      ::CppyyLegacy::TEnv *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnv >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEnv", ::CppyyLegacy::TEnv::Class_Version(), "TEnv.h", 127,
                   typeid(::CppyyLegacy::TEnv), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4116,7 +4116,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTInetAddress(void *p = 0);
+   static void *new_CppyyLegacycLcLTInetAddress(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTInetAddress(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTInetAddress(void *p);
    static void deleteArray_CppyyLegacycLcLTInetAddress(void *p);
@@ -4126,8 +4126,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TInetAddress*)
    {
-      ::CppyyLegacy::TInetAddress *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TInetAddress >(0);
+      ::CppyyLegacy::TInetAddress *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TInetAddress >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TInetAddress", ::CppyyLegacy::TInetAddress::Class_Version(), "TInetAddress.h", 35,
                   typeid(::CppyyLegacy::TInetAddress), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4150,7 +4150,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMD5(void *p = 0);
+   static void *new_CppyyLegacycLcLTMD5(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMD5(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMD5(void *p);
    static void deleteArray_CppyyLegacycLcLTMD5(void *p);
@@ -4159,8 +4159,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMD5*)
    {
-      ::CppyyLegacy::TMD5 *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMD5 >(0);
+      ::CppyyLegacy::TMD5 *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMD5 >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMD5", ::CppyyLegacy::TMD5::Class_Version(), "TMD5.h", 46,
                   typeid(::CppyyLegacy::TMD5), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4182,7 +4182,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMemberInspector(void *p = 0);
+   static void *new_CppyyLegacycLcLTMemberInspector(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMemberInspector(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMemberInspector(void *p);
    static void deleteArray_CppyyLegacycLcLTMemberInspector(void *p);
@@ -4192,8 +4192,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMemberInspector*)
    {
-      ::CppyyLegacy::TMemberInspector *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMemberInspector >(0);
+      ::CppyyLegacy::TMemberInspector *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMemberInspector >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMemberInspector", ::CppyyLegacy::TMemberInspector::Class_Version(), "TMemberInspector.h", 34,
                   typeid(::CppyyLegacy::TMemberInspector), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4216,7 +4216,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTProcessID(void *p = 0);
+   static void *new_CppyyLegacycLcLTProcessID(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTProcessID(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTProcessID(void *p);
    static void deleteArray_CppyyLegacycLcLTProcessID(void *p);
@@ -4225,8 +4225,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TProcessID*)
    {
-      ::CppyyLegacy::TProcessID *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProcessID >(0);
+      ::CppyyLegacy::TProcessID *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProcessID >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TProcessID", ::CppyyLegacy::TProcessID::Class_Version(), "TProcessID.h", 70,
                   typeid(::CppyyLegacy::TProcessID), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4248,7 +4248,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTProcessUUID(void *p = 0);
+   static void *new_CppyyLegacycLcLTProcessUUID(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTProcessUUID(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTProcessUUID(void *p);
    static void deleteArray_CppyyLegacycLcLTProcessUUID(void *p);
@@ -4257,8 +4257,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TProcessUUID*)
    {
-      ::CppyyLegacy::TProcessUUID *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProcessUUID >(0);
+      ::CppyyLegacy::TProcessUUID *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProcessUUID >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TProcessUUID", ::CppyyLegacy::TProcessUUID::Class_Version(), "TProcessUUID.h", 35,
                   typeid(::CppyyLegacy::TProcessUUID), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4288,8 +4288,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TRegexp*)
    {
-      ::CppyyLegacy::TRegexp *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TRegexp >(0);
+      ::CppyyLegacy::TRegexp *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TRegexp >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TRegexp", ::CppyyLegacy::TRegexp::Class_Version(), "TRegexp.h", 32,
                   typeid(::CppyyLegacy::TRegexp), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4318,8 +4318,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TROOT*)
    {
-      ::CppyyLegacy::TROOT *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TROOT >(0);
+      ::CppyyLegacy::TROOT *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TROOT >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TROOT", ::CppyyLegacy::TROOT::Class_Version(), "TROOT.h", 72,
                   typeid(::CppyyLegacy::TROOT), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4348,8 +4348,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TSignalHandler*)
    {
-      ::CppyyLegacy::TSignalHandler *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSignalHandler >(0);
+      ::CppyyLegacy::TSignalHandler *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSignalHandler >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TSignalHandler", ::CppyyLegacy::TSignalHandler::Class_Version(), "TSysEvtHandler.h", 59,
                   typeid(::CppyyLegacy::TSignalHandler), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4378,8 +4378,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStdExceptionHandler*)
    {
-      ::CppyyLegacy::TStdExceptionHandler *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStdExceptionHandler >(0);
+      ::CppyyLegacy::TStdExceptionHandler *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStdExceptionHandler >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStdExceptionHandler", ::CppyyLegacy::TStdExceptionHandler::Class_Version(), "TSysEvtHandler.h", 106,
                   typeid(::CppyyLegacy::TStdExceptionHandler), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4400,7 +4400,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTTime(void *p = 0);
+   static void *new_CppyyLegacycLcLTTime(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTTime(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTTime(void *p);
    static void deleteArray_CppyyLegacycLcLTTime(void *p);
@@ -4410,8 +4410,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TTime*)
    {
-      ::CppyyLegacy::TTime *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TTime >(0);
+      ::CppyyLegacy::TTime *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TTime >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TTime", ::CppyyLegacy::TTime::Class_Version(), "TTime.h", 29,
                   typeid(::CppyyLegacy::TTime), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4436,7 +4436,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLFileStat_t_Dictionary();
    static void CppyyLegacycLcLFileStat_t_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLFileStat_t(void *p = 0);
+   static void *new_CppyyLegacycLcLFileStat_t(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLFileStat_t(Long_t size, void *p);
    static void delete_CppyyLegacycLcLFileStat_t(void *p);
    static void deleteArray_CppyyLegacycLcLFileStat_t(void *p);
@@ -4445,7 +4445,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::FileStat_t*)
    {
-      ::CppyyLegacy::FileStat_t *ptr = 0;
+      ::CppyyLegacy::FileStat_t *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::FileStat_t));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::FileStat_t", "TSystem.h", 129,
@@ -4481,7 +4481,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLUserGroup_t_Dictionary();
    static void CppyyLegacycLcLUserGroup_t_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLUserGroup_t(void *p = 0);
+   static void *new_CppyyLegacycLcLUserGroup_t(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLUserGroup_t(Long_t size, void *p);
    static void delete_CppyyLegacycLcLUserGroup_t(void *p);
    static void deleteArray_CppyyLegacycLcLUserGroup_t(void *p);
@@ -4490,7 +4490,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::UserGroup_t*)
    {
-      ::CppyyLegacy::UserGroup_t *ptr = 0;
+      ::CppyyLegacy::UserGroup_t *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::UserGroup_t));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::UserGroup_t", "TSystem.h", 143,
@@ -4526,7 +4526,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLRedirectHandle_t_Dictionary();
    static void CppyyLegacycLcLRedirectHandle_t_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLRedirectHandle_t(void *p = 0);
+   static void *new_CppyyLegacycLcLRedirectHandle_t(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLRedirectHandle_t(Long_t size, void *p);
    static void delete_CppyyLegacycLcLRedirectHandle_t(void *p);
    static void deleteArray_CppyyLegacycLcLRedirectHandle_t(void *p);
@@ -4535,7 +4535,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::RedirectHandle_t*)
    {
-      ::CppyyLegacy::RedirectHandle_t *ptr = 0;
+      ::CppyyLegacy::RedirectHandle_t *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::RedirectHandle_t));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::RedirectHandle_t", "TSystem.h", 155,
@@ -4569,7 +4569,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTSystem(void *p = 0);
+   static void *new_CppyyLegacycLcLTSystem(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTSystem(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTSystem(void *p);
    static void deleteArray_CppyyLegacycLcLTSystem(void *p);
@@ -4578,8 +4578,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TSystem*)
    {
-      ::CppyyLegacy::TSystem *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSystem >(0);
+      ::CppyyLegacy::TSystem *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TSystem >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TSystem", ::CppyyLegacy::TSystem::Class_Version(), "TSystem.h", 186,
                   typeid(::CppyyLegacy::TSystem), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4601,7 +4601,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTTimeStamp(void *p = 0);
+   static void *new_CppyyLegacycLcLTTimeStamp(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTTimeStamp(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTTimeStamp(void *p);
    static void deleteArray_CppyyLegacycLcLTTimeStamp(void *p);
@@ -4610,8 +4610,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TTimeStamp*)
    {
-      ::CppyyLegacy::TTimeStamp *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TTimeStamp >(0);
+      ::CppyyLegacy::TTimeStamp *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TTimeStamp >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TTimeStamp", ::CppyyLegacy::TTimeStamp::Class_Version(), "TTimeStamp.h", 80,
                   typeid(::CppyyLegacy::TTimeStamp), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4633,7 +4633,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTHashTable(void *p = 0);
+   static void *new_CppyyLegacycLcLTHashTable(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTHashTable(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTHashTable(void *p);
    static void deleteArray_CppyyLegacycLcLTHashTable(void *p);
@@ -4643,8 +4643,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::THashTable*)
    {
-      ::CppyyLegacy::THashTable *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashTable >(0);
+      ::CppyyLegacy::THashTable *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashTable >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::THashTable", ::CppyyLegacy::THashTable::Class_Version(), "THashTable.h", 36,
                   typeid(::CppyyLegacy::THashTable), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4675,8 +4675,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::THashTableIter*)
    {
-      ::CppyyLegacy::THashTableIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashTableIter >(0);
+      ::CppyyLegacy::THashTableIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashTableIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::THashTableIter", ::CppyyLegacy::THashTableIter::Class_Version(), "THashTable.h", 112,
                   typeid(::CppyyLegacy::THashTableIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4697,7 +4697,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMap(void *p = 0);
+   static void *new_CppyyLegacycLcLTMap(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMap(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMap(void *p);
    static void deleteArray_CppyyLegacycLcLTMap(void *p);
@@ -4707,8 +4707,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMap*)
    {
-      ::CppyyLegacy::TMap *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMap >(0);
+      ::CppyyLegacy::TMap *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMap >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMap", ::CppyyLegacy::TMap::Class_Version(), "TMap.h", 39,
                   typeid(::CppyyLegacy::TMap), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4739,8 +4739,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TPair*)
    {
-      ::CppyyLegacy::TPair *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPair >(0);
+      ::CppyyLegacy::TPair *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPair >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TPair", ::CppyyLegacy::TPair::Class_Version(), "TMap.h", 99,
                   typeid(::CppyyLegacy::TPair), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4769,8 +4769,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMapIter*)
    {
-      ::CppyyLegacy::TMapIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMapIter >(0);
+      ::CppyyLegacy::TMapIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMapIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMapIter", ::CppyyLegacy::TMapIter::Class_Version(), "TMap.h", 140,
                   typeid(::CppyyLegacy::TMapIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4791,7 +4791,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTUrl(void *p = 0);
+   static void *new_CppyyLegacycLcLTUrl(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTUrl(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTUrl(void *p);
    static void deleteArray_CppyyLegacycLcLTUrl(void *p);
@@ -4801,8 +4801,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TUrl*)
    {
-      ::CppyyLegacy::TUrl *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUrl >(0);
+      ::CppyyLegacy::TUrl *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUrl >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TUrl", ::CppyyLegacy::TUrl::Class_Version(), "TUrl.h", 37,
                   typeid(::CppyyLegacy::TUrl), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4833,8 +4833,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TArray*)
    {
-      ::CppyyLegacy::TArray *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TArray >(0);
+      ::CppyyLegacy::TArray *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TArray >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TArray", ::CppyyLegacy::TArray::Class_Version(), "TArray.h", 32,
                   typeid(::CppyyLegacy::TArray), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4855,7 +4855,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTArrayC(void *p = 0);
+   static void *new_CppyyLegacycLcLTArrayC(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTArrayC(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTArrayC(void *p);
    static void deleteArray_CppyyLegacycLcLTArrayC(void *p);
@@ -4865,8 +4865,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TArrayC*)
    {
-      ::CppyyLegacy::TArrayC *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TArrayC >(0);
+      ::CppyyLegacy::TArrayC *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TArrayC >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TArrayC", ::CppyyLegacy::TArrayC::Class_Version(), "TArrayC.h", 29,
                   typeid(::CppyyLegacy::TArrayC), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4889,7 +4889,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTBits(void *p = 0);
+   static void *new_CppyyLegacycLcLTBits(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTBits(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTBits(void *p);
    static void deleteArray_CppyyLegacycLcLTBits(void *p);
@@ -4898,8 +4898,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBits*)
    {
-      ::CppyyLegacy::TBits *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBits >(0);
+      ::CppyyLegacy::TBits *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBits >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBits", ::CppyyLegacy::TBits::Class_Version(), "TBits.h", 30,
                   typeid(::CppyyLegacy::TBits), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4930,7 +4930,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBits::TReference*)
    {
-      ::CppyyLegacy::TBits::TReference *ptr = 0;
+      ::CppyyLegacy::TBits::TReference *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TBits::TReference));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBits::TReference", "TBits.h", 53,
@@ -4970,8 +4970,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TClassTable*)
    {
-      ::CppyyLegacy::TClassTable *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClassTable >(0);
+      ::CppyyLegacy::TClassTable *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClassTable >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TClassTable", ::CppyyLegacy::TClassTable::Class_Version(), "TClassTable.h", 36,
                   typeid(::CppyyLegacy::TClassTable), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -4992,7 +4992,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTExMap(void *p = 0);
+   static void *new_CppyyLegacycLcLTExMap(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTExMap(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTExMap(void *p);
    static void deleteArray_CppyyLegacycLcLTExMap(void *p);
@@ -5002,8 +5002,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TExMap*)
    {
-      ::CppyyLegacy::TExMap *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TExMap >(0);
+      ::CppyyLegacy::TExMap *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TExMap >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TExMap", ::CppyyLegacy::TExMap::Class_Version(), "TExMap.h", 33,
                   typeid(::CppyyLegacy::TExMap), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5034,8 +5034,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TExMapIter*)
    {
-      ::CppyyLegacy::TExMapIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TExMapIter >(0);
+      ::CppyyLegacy::TExMapIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TExMapIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TExMapIter", ::CppyyLegacy::TExMapIter::Class_Version(), "TExMap.h", 85,
                   typeid(::CppyyLegacy::TExMapIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5056,7 +5056,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTHashList(void *p = 0);
+   static void *new_CppyyLegacycLcLTHashList(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTHashList(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTHashList(void *p);
    static void deleteArray_CppyyLegacycLcLTHashList(void *p);
@@ -5066,8 +5066,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::THashList*)
    {
-      ::CppyyLegacy::THashList *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashList >(0);
+      ::CppyyLegacy::THashList *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::THashList >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::THashList", ::CppyyLegacy::THashList::Class_Version(), "THashList.h", 36,
                   typeid(::CppyyLegacy::THashList), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5090,7 +5090,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTObjectTable(void *p = 0);
+   static void *new_CppyyLegacycLcLTObjectTable(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTObjectTable(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTObjectTable(void *p);
    static void deleteArray_CppyyLegacycLcLTObjectTable(void *p);
@@ -5100,8 +5100,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TObjectTable*)
    {
-      ::CppyyLegacy::TObjectTable *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjectTable >(0);
+      ::CppyyLegacy::TObjectTable *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TObjectTable >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TObjectTable", ::CppyyLegacy::TObjectTable::Class_Version(), "TObjectTable.h", 33,
                   typeid(::CppyyLegacy::TObjectTable), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5124,7 +5124,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTOrdCollection(void *p = 0);
+   static void *new_CppyyLegacycLcLTOrdCollection(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTOrdCollection(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTOrdCollection(void *p);
    static void deleteArray_CppyyLegacycLcLTOrdCollection(void *p);
@@ -5134,8 +5134,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TOrdCollection*)
    {
-      ::CppyyLegacy::TOrdCollection *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOrdCollection >(0);
+      ::CppyyLegacy::TOrdCollection *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOrdCollection >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TOrdCollection", ::CppyyLegacy::TOrdCollection::Class_Version(), "TOrdCollection.h", 31,
                   typeid(::CppyyLegacy::TOrdCollection), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5166,8 +5166,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TOrdCollectionIter*)
    {
-      ::CppyyLegacy::TOrdCollectionIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOrdCollectionIter >(0);
+      ::CppyyLegacy::TOrdCollectionIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOrdCollectionIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TOrdCollectionIter", ::CppyyLegacy::TOrdCollectionIter::Class_Version(), "TOrdCollection.h", 94,
                   typeid(::CppyyLegacy::TOrdCollectionIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5190,7 +5190,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTClassRef_Dictionary();
    static void CppyyLegacycLcLTClassRef_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTClassRef(void *p = 0);
+   static void *new_CppyyLegacycLcLTClassRef(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTClassRef(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTClassRef(void *p);
    static void deleteArray_CppyyLegacycLcLTClassRef(void *p);
@@ -5199,7 +5199,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TClassRef*)
    {
-      ::CppyyLegacy::TClassRef *ptr = 0;
+      ::CppyyLegacy::TClassRef *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TClassRef));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TClassRef", "TClassRef.h", 30,
@@ -5242,7 +5242,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualCollectionProxy*)
    {
-      ::CppyyLegacy::TVirtualCollectionProxy *ptr = 0;
+      ::CppyyLegacy::TVirtualCollectionProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TVirtualCollectionProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualCollectionProxy", "TVirtualCollectionProxy.h", 42,
@@ -5274,7 +5274,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTUnixSystem(void *p = 0);
+   static void *new_CppyyLegacycLcLTUnixSystem(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTUnixSystem(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTUnixSystem(void *p);
    static void deleteArray_CppyyLegacycLcLTUnixSystem(void *p);
@@ -5284,8 +5284,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TUnixSystem*)
    {
-      ::CppyyLegacy::TUnixSystem *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUnixSystem >(0);
+      ::CppyyLegacy::TUnixSystem *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TUnixSystem >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TUnixSystem", ::CppyyLegacy::TUnixSystem::Class_Version(), "TUnixSystem.h", 30,
                   typeid(::CppyyLegacy::TUnixSystem), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5308,7 +5308,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTBaseClass(void *p = 0);
+   static void *new_CppyyLegacycLcLTBaseClass(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTBaseClass(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTBaseClass(void *p);
    static void deleteArray_CppyyLegacycLcLTBaseClass(void *p);
@@ -5318,8 +5318,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBaseClass*)
    {
-      ::CppyyLegacy::TBaseClass *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBaseClass >(0);
+      ::CppyyLegacy::TBaseClass *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBaseClass >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBaseClass", ::CppyyLegacy::TBaseClass::Class_Version(), "TBaseClass.h", 34,
                   typeid(::CppyyLegacy::TBaseClass), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5346,8 +5346,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TClassGenerator*)
    {
-      ::CppyyLegacy::TClassGenerator *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClassGenerator >(0);
+      ::CppyyLegacy::TClassGenerator *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TClassGenerator >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TClassGenerator", ::CppyyLegacy::TClassGenerator::Class_Version(), "TClassGenerator.h", 31,
                   typeid(::CppyyLegacy::TClassGenerator), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5373,7 +5373,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TClassStreamer*)
    {
-      ::CppyyLegacy::TClassStreamer *ptr = 0;
+      ::CppyyLegacy::TClassStreamer *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TClassStreamer));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TClassStreamer", "TClassStreamer.h", 30,
@@ -5405,7 +5405,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDataMember(void *p = 0);
+   static void *new_CppyyLegacycLcLTDataMember(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDataMember(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDataMember(void *p);
    static void deleteArray_CppyyLegacycLcLTDataMember(void *p);
@@ -5415,8 +5415,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDataMember*)
    {
-      ::CppyyLegacy::TDataMember *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDataMember >(0);
+      ::CppyyLegacy::TDataMember *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDataMember >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDataMember", ::CppyyLegacy::TDataMember::Class_Version(), "TDataMember.h", 32,
                   typeid(::CppyyLegacy::TDataMember), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5439,7 +5439,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTOptionListItem(void *p = 0);
+   static void *new_CppyyLegacycLcLTOptionListItem(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTOptionListItem(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTOptionListItem(void *p);
    static void deleteArray_CppyyLegacycLcLTOptionListItem(void *p);
@@ -5448,10 +5448,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TOptionListItem*)
    {
-      ::CppyyLegacy::TOptionListItem *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOptionListItem >(0);
+      ::CppyyLegacy::TOptionListItem *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TOptionListItem >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("CppyyLegacy::TOptionListItem", ::CppyyLegacy::TOptionListItem::Class_Version(), "TDataMember.h", 97,
+         instance("CppyyLegacy::TOptionListItem", ::CppyyLegacy::TOptionListItem::Class_Version(), "TDataMember.h", 98,
                   typeid(::CppyyLegacy::TOptionListItem), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &::CppyyLegacy::TOptionListItem::Dictionary, isa_proxy, 4,
                   sizeof(::CppyyLegacy::TOptionListItem) );
@@ -5471,7 +5471,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDictAttributeMap(void *p = 0);
+   static void *new_CppyyLegacycLcLTDictAttributeMap(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDictAttributeMap(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDictAttributeMap(void *p);
    static void deleteArray_CppyyLegacycLcLTDictAttributeMap(void *p);
@@ -5480,8 +5480,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDictAttributeMap*)
    {
-      ::CppyyLegacy::TDictAttributeMap *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDictAttributeMap >(0);
+      ::CppyyLegacy::TDictAttributeMap *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDictAttributeMap >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDictAttributeMap", ::CppyyLegacy::TDictAttributeMap::Class_Version(), "TDictAttributeMap.h", 29,
                   typeid(::CppyyLegacy::TDictAttributeMap), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5503,7 +5503,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTGlobal(void *p = 0);
+   static void *new_CppyyLegacycLcLTGlobal(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTGlobal(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTGlobal(void *p);
    static void deleteArray_CppyyLegacycLcLTGlobal(void *p);
@@ -5513,8 +5513,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TGlobal*)
    {
-      ::CppyyLegacy::TGlobal *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TGlobal >(0);
+      ::CppyyLegacy::TGlobal *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TGlobal >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TGlobal", ::CppyyLegacy::TGlobal::Class_Version(), "TGlobal.h", 29,
                   typeid(::CppyyLegacy::TGlobal), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5537,7 +5537,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTEnum(void *p = 0);
+   static void *new_CppyyLegacycLcLTEnum(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTEnum(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTEnum(void *p);
    static void deleteArray_CppyyLegacycLcLTEnum(void *p);
@@ -5546,8 +5546,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEnum*)
    {
-      ::CppyyLegacy::TEnum *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnum >(0);
+      ::CppyyLegacy::TEnum *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnum >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEnum", ::CppyyLegacy::TEnum::Class_Version(), "TEnum.h", 36,
                   typeid(::CppyyLegacy::TEnum), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5569,7 +5569,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTEnumConstant(void *p = 0);
+   static void *new_CppyyLegacycLcLTEnumConstant(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTEnumConstant(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTEnumConstant(void *p);
    static void deleteArray_CppyyLegacycLcLTEnumConstant(void *p);
@@ -5578,8 +5578,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEnumConstant*)
    {
-      ::CppyyLegacy::TEnumConstant *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnumConstant >(0);
+      ::CppyyLegacy::TEnumConstant *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TEnumConstant >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEnumConstant", ::CppyyLegacy::TEnumConstant::Class_Version(), "TEnumConstant.h", 31,
                   typeid(::CppyyLegacy::TEnumConstant), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5601,7 +5601,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTFunction(void *p = 0);
+   static void *new_CppyyLegacycLcLTFunction(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTFunction(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTFunction(void *p);
    static void deleteArray_CppyyLegacycLcLTFunction(void *p);
@@ -5611,8 +5611,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TFunction*)
    {
-      ::CppyyLegacy::TFunction *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFunction >(0);
+      ::CppyyLegacy::TFunction *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFunction >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TFunction", ::CppyyLegacy::TFunction::Class_Version(), "TFunction.h", 28,
                   typeid(::CppyyLegacy::TFunction), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5642,8 +5642,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TFunctionTemplate*)
    {
-      ::CppyyLegacy::TFunctionTemplate *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFunctionTemplate >(0);
+      ::CppyyLegacy::TFunctionTemplate *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFunctionTemplate >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TFunctionTemplate", ::CppyyLegacy::TFunctionTemplate::Class_Version(), "TFunctionTemplate.h", 28,
                   typeid(::CppyyLegacy::TFunctionTemplate), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5671,8 +5671,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TInterpreter*)
    {
-      ::CppyyLegacy::TInterpreter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TInterpreter >(0);
+      ::CppyyLegacy::TInterpreter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TInterpreter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TInterpreter", ::CppyyLegacy::TInterpreter::Class_Version(), "TInterpreter.h", 61,
                   typeid(::CppyyLegacy::TInterpreter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5693,7 +5693,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTListOfDataMembers(void *p = 0);
+   static void *new_CppyyLegacycLcLTListOfDataMembers(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTListOfDataMembers(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTListOfDataMembers(void *p);
    static void deleteArray_CppyyLegacycLcLTListOfDataMembers(void *p);
@@ -5703,8 +5703,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfDataMembers*)
    {
-      ::CppyyLegacy::TListOfDataMembers *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfDataMembers >(0);
+      ::CppyyLegacy::TListOfDataMembers *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfDataMembers >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfDataMembers", ::CppyyLegacy::TListOfDataMembers::Class_Version(), "TListOfDataMembers.h", 34,
                   typeid(::CppyyLegacy::TListOfDataMembers), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5727,7 +5727,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTListOfEnums(void *p = 0);
+   static void *new_CppyyLegacycLcLTListOfEnums(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTListOfEnums(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTListOfEnums(void *p);
    static void deleteArray_CppyyLegacycLcLTListOfEnums(void *p);
@@ -5736,8 +5736,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfEnums*)
    {
-      ::CppyyLegacy::TListOfEnums *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnums >(0);
+      ::CppyyLegacy::TListOfEnums *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnums >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfEnums", ::CppyyLegacy::TListOfEnums::Class_Version(), "TListOfEnums.h", 34,
                   typeid(::CppyyLegacy::TListOfEnums), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5759,7 +5759,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTListOfEnumsWithLock(void *p = 0);
+   static void *new_CppyyLegacycLcLTListOfEnumsWithLock(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTListOfEnumsWithLock(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTListOfEnumsWithLock(void *p);
    static void deleteArray_CppyyLegacycLcLTListOfEnumsWithLock(void *p);
@@ -5768,8 +5768,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfEnumsWithLock*)
    {
-      ::CppyyLegacy::TListOfEnumsWithLock *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnumsWithLock >(0);
+      ::CppyyLegacy::TListOfEnumsWithLock *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnumsWithLock >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfEnumsWithLock", ::CppyyLegacy::TListOfEnumsWithLock::Class_Version(), "TListOfEnumsWithLock.h", 33,
                   typeid(::CppyyLegacy::TListOfEnumsWithLock), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5799,8 +5799,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfEnumsWithLockIter*)
    {
-      ::CppyyLegacy::TListOfEnumsWithLockIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnumsWithLockIter >(0);
+      ::CppyyLegacy::TListOfEnumsWithLockIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfEnumsWithLockIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfEnumsWithLockIter", ::CppyyLegacy::TListOfEnumsWithLockIter::Class_Version(), "TListOfEnumsWithLock.h", 94,
                   typeid(::CppyyLegacy::TListOfEnumsWithLockIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5828,8 +5828,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfFunctions*)
    {
-      ::CppyyLegacy::TListOfFunctions *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctions >(0);
+      ::CppyyLegacy::TListOfFunctions *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctions >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfFunctions", ::CppyyLegacy::TListOfFunctions::Class_Version(), "TListOfFunctions.h", 35,
                   typeid(::CppyyLegacy::TListOfFunctions), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5857,8 +5857,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfFunctionsIter*)
    {
-      ::CppyyLegacy::TListOfFunctionsIter *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctionsIter >(0);
+      ::CppyyLegacy::TListOfFunctionsIter *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctionsIter >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfFunctionsIter", ::CppyyLegacy::TListOfFunctionsIter::Class_Version(), "TListOfFunctions.h", 114,
                   typeid(::CppyyLegacy::TListOfFunctionsIter), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5886,8 +5886,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TListOfFunctionTemplates*)
    {
-      ::CppyyLegacy::TListOfFunctionTemplates *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctionTemplates >(0);
+      ::CppyyLegacy::TListOfFunctionTemplates *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TListOfFunctionTemplates >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TListOfFunctionTemplates", ::CppyyLegacy::TListOfFunctionTemplates::Class_Version(), "TListOfFunctionTemplates.h", 35,
                   typeid(::CppyyLegacy::TListOfFunctionTemplates), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5916,7 +5916,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMemberStreamer*)
    {
-      ::CppyyLegacy::TMemberStreamer *ptr = 0;
+      ::CppyyLegacy::TMemberStreamer *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TMemberStreamer));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMemberStreamer", "TMemberStreamer.h", 30,
@@ -5948,7 +5948,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMethodArg(void *p = 0);
+   static void *new_CppyyLegacycLcLTMethodArg(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMethodArg(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMethodArg(void *p);
    static void deleteArray_CppyyLegacycLcLTMethodArg(void *p);
@@ -5958,8 +5958,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMethodArg*)
    {
-      ::CppyyLegacy::TMethodArg *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMethodArg >(0);
+      ::CppyyLegacy::TMethodArg *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMethodArg >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMethodArg", ::CppyyLegacy::TMethodArg::Class_Version(), "TMethodArg.h", 32,
                   typeid(::CppyyLegacy::TMethodArg), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -5982,7 +5982,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMethod(void *p = 0);
+   static void *new_CppyyLegacycLcLTMethod(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMethod(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMethod(void *p);
    static void deleteArray_CppyyLegacycLcLTMethod(void *p);
@@ -5992,8 +5992,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMethod*)
    {
-      ::CppyyLegacy::TMethod *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMethod >(0);
+      ::CppyyLegacy::TMethod *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMethod >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMethod", ::CppyyLegacy::TMethod::Class_Version(), "TMethod.h", 32,
                   typeid(::CppyyLegacy::TMethod), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6016,7 +6016,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTProtoClass(void *p = 0);
+   static void *new_CppyyLegacycLcLTProtoClass(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTProtoClass(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTProtoClass(void *p);
    static void deleteArray_CppyyLegacycLcLTProtoClass(void *p);
@@ -6025,8 +6025,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TProtoClass*)
    {
-      ::CppyyLegacy::TProtoClass *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProtoClass >(0);
+      ::CppyyLegacy::TProtoClass *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProtoClass >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TProtoClass", ::CppyyLegacy::TProtoClass::Class_Version(), "TProtoClass.h", 39,
                   typeid(::CppyyLegacy::TProtoClass), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6048,7 +6048,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTProtoClasscLcLTProtoRealData(void *p = 0);
+   static void *new_CppyyLegacycLcLTProtoClasscLcLTProtoRealData(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTProtoClasscLcLTProtoRealData(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTProtoClasscLcLTProtoRealData(void *p);
    static void deleteArray_CppyyLegacycLcLTProtoClasscLcLTProtoRealData(void *p);
@@ -6057,8 +6057,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TProtoClass::TProtoRealData*)
    {
-      ::CppyyLegacy::TProtoClass::TProtoRealData *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProtoClass::TProtoRealData >(0);
+      ::CppyyLegacy::TProtoClass::TProtoRealData *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TProtoClass::TProtoRealData >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TProtoClass::TProtoRealData", ::CppyyLegacy::TProtoClass::TProtoRealData::Class_Version(), "TProtoClass.h", 41,
                   typeid(::CppyyLegacy::TProtoClass::TProtoRealData), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6080,7 +6080,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTRealData(void *p = 0);
+   static void *new_CppyyLegacycLcLTRealData(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTRealData(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTRealData(void *p);
    static void deleteArray_CppyyLegacycLcLTRealData(void *p);
@@ -6090,8 +6090,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TRealData*)
    {
-      ::CppyyLegacy::TRealData *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TRealData >(0);
+      ::CppyyLegacy::TRealData *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TRealData >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TRealData", ::CppyyLegacy::TRealData::Class_Version(), "TRealData.h", 31,
                   typeid(::CppyyLegacy::TRealData), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6114,7 +6114,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerElement(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerElement(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerElement(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerElement(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerElement(void *p);
@@ -6124,8 +6124,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerElement*)
    {
-      ::CppyyLegacy::TStreamerElement *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerElement >(0);
+      ::CppyyLegacy::TStreamerElement *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerElement >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerElement", ::CppyyLegacy::TStreamerElement::Class_Version(), "TStreamerElement.h", 33,
                   typeid(::CppyyLegacy::TStreamerElement), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6148,7 +6148,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerBase(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerBase(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerBase(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerBase(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerBase(void *p);
@@ -6158,8 +6158,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerBase*)
    {
-      ::CppyyLegacy::TStreamerBase *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBase >(0);
+      ::CppyyLegacy::TStreamerBase *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBase >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerBase", ::CppyyLegacy::TStreamerBase::Class_Version(), "TStreamerElement.h", 149,
                   typeid(::CppyyLegacy::TStreamerBase), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6182,7 +6182,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerBasicPointer(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerBasicPointer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerBasicPointer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerBasicPointer(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerBasicPointer(void *p);
@@ -6192,8 +6192,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerBasicPointer*)
    {
-      ::CppyyLegacy::TStreamerBasicPointer *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBasicPointer >(0);
+      ::CppyyLegacy::TStreamerBasicPointer *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBasicPointer >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerBasicPointer", ::CppyyLegacy::TStreamerBasicPointer::Class_Version(), "TStreamerElement.h", 195,
                   typeid(::CppyyLegacy::TStreamerBasicPointer), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6216,7 +6216,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerLoop(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerLoop(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerLoop(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerLoop(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerLoop(void *p);
@@ -6226,8 +6226,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerLoop*)
    {
-      ::CppyyLegacy::TStreamerLoop *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerLoop >(0);
+      ::CppyyLegacy::TStreamerLoop *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerLoop >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerLoop", ::CppyyLegacy::TStreamerLoop::Class_Version(), "TStreamerElement.h", 232,
                   typeid(::CppyyLegacy::TStreamerLoop), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6250,7 +6250,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerBasicType(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerBasicType(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerBasicType(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerBasicType(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerBasicType(void *p);
@@ -6260,8 +6260,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerBasicType*)
    {
-      ::CppyyLegacy::TStreamerBasicType *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBasicType >(0);
+      ::CppyyLegacy::TStreamerBasicType *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerBasicType >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerBasicType", ::CppyyLegacy::TStreamerBasicType::Class_Version(), "TStreamerElement.h", 266,
                   typeid(::CppyyLegacy::TStreamerBasicType), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6284,7 +6284,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerObject(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerObject(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerObject(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerObject(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerObject(void *p);
@@ -6294,8 +6294,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerObject*)
    {
-      ::CppyyLegacy::TStreamerObject *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObject >(0);
+      ::CppyyLegacy::TStreamerObject *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObject >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerObject", ::CppyyLegacy::TStreamerObject::Class_Version(), "TStreamerElement.h", 290,
                   typeid(::CppyyLegacy::TStreamerObject), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6318,7 +6318,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerObjectAny(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerObjectAny(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerObjectAny(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerObjectAny(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerObjectAny(void *p);
@@ -6328,8 +6328,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerObjectAny*)
    {
-      ::CppyyLegacy::TStreamerObjectAny *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectAny >(0);
+      ::CppyyLegacy::TStreamerObjectAny *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectAny >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerObjectAny", ::CppyyLegacy::TStreamerObjectAny::Class_Version(), "TStreamerElement.h", 309,
                   typeid(::CppyyLegacy::TStreamerObjectAny), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6352,7 +6352,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerObjectPointer(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerObjectPointer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerObjectPointer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerObjectPointer(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerObjectPointer(void *p);
@@ -6362,8 +6362,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerObjectPointer*)
    {
-      ::CppyyLegacy::TStreamerObjectPointer *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectPointer >(0);
+      ::CppyyLegacy::TStreamerObjectPointer *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectPointer >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerObjectPointer", ::CppyyLegacy::TStreamerObjectPointer::Class_Version(), "TStreamerElement.h", 328,
                   typeid(::CppyyLegacy::TStreamerObjectPointer), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6386,7 +6386,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerObjectAnyPointer(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerObjectAnyPointer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerObjectAnyPointer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerObjectAnyPointer(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerObjectAnyPointer(void *p);
@@ -6396,8 +6396,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerObjectAnyPointer*)
    {
-      ::CppyyLegacy::TStreamerObjectAnyPointer *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectAnyPointer >(0);
+      ::CppyyLegacy::TStreamerObjectAnyPointer *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerObjectAnyPointer >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerObjectAnyPointer", ::CppyyLegacy::TStreamerObjectAnyPointer::Class_Version(), "TStreamerElement.h", 349,
                   typeid(::CppyyLegacy::TStreamerObjectAnyPointer), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6420,7 +6420,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerString(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerString(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerString(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerString(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerString(void *p);
@@ -6430,8 +6430,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerString*)
    {
-      ::CppyyLegacy::TStreamerString *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerString >(0);
+      ::CppyyLegacy::TStreamerString *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerString >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerString", ::CppyyLegacy::TStreamerString::Class_Version(), "TStreamerElement.h", 370,
                   typeid(::CppyyLegacy::TStreamerString), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6454,7 +6454,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerSTL(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerSTL(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerSTL(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerSTL(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerSTL(void *p);
@@ -6464,8 +6464,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerSTL*)
    {
-      ::CppyyLegacy::TStreamerSTL *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerSTL >(0);
+      ::CppyyLegacy::TStreamerSTL *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerSTL >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerSTL", ::CppyyLegacy::TStreamerSTL::Class_Version(), "TStreamerElement.h", 388,
                   typeid(::CppyyLegacy::TStreamerSTL), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6488,7 +6488,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerSTLstring(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerSTLstring(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerSTLstring(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerSTLstring(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerSTLstring(void *p);
@@ -6498,8 +6498,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerSTLstring*)
    {
-      ::CppyyLegacy::TStreamerSTLstring *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerSTLstring >(0);
+      ::CppyyLegacy::TStreamerSTLstring *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerSTLstring >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerSTLstring", ::CppyyLegacy::TStreamerSTLstring::Class_Version(), "TStreamerElement.h", 421,
                   typeid(::CppyyLegacy::TStreamerSTLstring), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -6530,8 +6530,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualStreamerInfo*)
    {
-      ::CppyyLegacy::TVirtualStreamerInfo *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualStreamerInfo >(0);
+      ::CppyyLegacy::TVirtualStreamerInfo *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TVirtualStreamerInfo >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualStreamerInfo", ::CppyyLegacy::TVirtualStreamerInfo::Class_Version(), "TVirtualStreamerInfo.h", 39,
                   typeid(::CppyyLegacy::TVirtualStreamerInfo), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -9995,7 +9995,7 @@ TClass *TVirtualStreamerInfo::Class()
 namespace CppyyLegacy {
    static TClass *stdcLcLstring_Dictionary();
    static void stdcLcLstring_TClassManip(TClass*);
-   static void *new_stdcLcLstring(void *p = 0);
+   static void *new_stdcLcLstring(void *p = nullptr);
    static void *newArray_stdcLcLstring(Long_t size, void *p);
    static void delete_stdcLcLstring(void *p);
    static void deleteArray_stdcLcLstring(void *p);
@@ -10004,10 +10004,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const std::string*)
    {
-      std::string *ptr = 0;
+      std::string *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::string));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::string", "string", 1608,
+         instance("std::string", "string", 657,
                   typeid(std::string), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &stdcLcLstring_Dictionary, isa_proxy, 0,
                   sizeof(std::string) );
@@ -10039,45 +10039,24 @@ namespace CppyyLegacy {
 
 namespace CppyyLegacy {
    // Wrappers around operator new
-   static void *new_timespec(void *p) {
-      return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) ::timespec : new ::timespec;
+   static void *new_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
+      return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const char*,char*> : new std::pair<const char*,char*>;
    }
-   static void *newArray_timespec(Long_t nElements, void *p) {
-      return p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) ::timespec[nElements] : new ::timespec[nElements];
-   }
-   // Wrapper around operator delete
-   static void delete_timespec(void *p) {
-      delete ((::timespec*)p);
-   }
-   static void deleteArray_timespec(void *p) {
-      delete [] ((::timespec*)p);
-   }
-   static void destruct_timespec(void *p) {
-      typedef ::timespec current_t;
-      ((current_t*)p)->~current_t();
-   }
-} // end of namespace CppyyLegacy for class ::timespec
-
-namespace CppyyLegacy {
-   // Wrappers around operator new
-   static void *new_stdcLcLpairlEconstsPintcOintgR(void *p) {
-      return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const int,int> : new std::pair<const int,int>;
-   }
-   static void *newArray_stdcLcLpairlEconstsPintcOintgR(Long_t nElements, void *p) {
-      return p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const int,int>[nElements] : new std::pair<const int,int>[nElements];
+   static void *newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(Long_t nElements, void *p) {
+      return p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const char*,char*>[nElements] : new std::pair<const char*,char*>[nElements];
    }
    // Wrapper around operator delete
-   static void delete_stdcLcLpairlEconstsPintcOintgR(void *p) {
-      delete ((std::pair<const int,int>*)p);
+   static void delete_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
+      delete ((std::pair<const char*,char*>*)p);
    }
-   static void deleteArray_stdcLcLpairlEconstsPintcOintgR(void *p) {
-      delete [] ((std::pair<const int,int>*)p);
+   static void deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
+      delete [] ((std::pair<const char*,char*>*)p);
    }
-   static void destruct_stdcLcLpairlEconstsPintcOintgR(void *p) {
-      typedef std::pair<const int,int> current_t;
+   static void destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
+      typedef std::pair<const char*,char*> current_t;
       ((current_t*)p)->~current_t();
    }
-} // end of namespace CppyyLegacy for class std::pair<const int,int>
+} // end of namespace CppyyLegacy for class std::pair<const char*,char*>
 
 namespace CppyyLegacy {
    // Wrappers around operator new
@@ -10585,6 +10564,27 @@ namespace CppyyLegacy {
 
 namespace CppyyLegacy {
    // Wrappers around operator new
+   static void *new_stdcLcLpairlEconstsPintcOintgR(void *p) {
+      return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const int,int> : new std::pair<const int,int>;
+   }
+   static void *newArray_stdcLcLpairlEconstsPintcOintgR(Long_t nElements, void *p) {
+      return p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const int,int>[nElements] : new std::pair<const int,int>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_stdcLcLpairlEconstsPintcOintgR(void *p) {
+      delete ((std::pair<const int,int>*)p);
+   }
+   static void deleteArray_stdcLcLpairlEconstsPintcOintgR(void *p) {
+      delete [] ((std::pair<const int,int>*)p);
+   }
+   static void destruct_stdcLcLpairlEconstsPintcOintgR(void *p) {
+      typedef std::pair<const int,int> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace CppyyLegacy for class std::pair<const int,int>
+
+namespace CppyyLegacy {
+   // Wrappers around operator new
    static void *new_stdcLcLpairlEconstsPstdcLcLstringcOvoidmUgR(void *p) {
       return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const std::string,void*> : new std::pair<const std::string,void*>;
    }
@@ -10687,27 +10687,6 @@ namespace CppyyLegacy {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace CppyyLegacy for class std::pair<const std::string,int>
-
-namespace CppyyLegacy {
-   // Wrappers around operator new
-   static void *new_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
-      return  p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const char*,char*> : new std::pair<const char*,char*>;
-   }
-   static void *newArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(Long_t nElements, void *p) {
-      return p ? ::new((::CppyyLegacy::Internal::TOperatorNewHelper*)p) std::pair<const char*,char*>[nElements] : new std::pair<const char*,char*>[nElements];
-   }
-   // Wrapper around operator delete
-   static void delete_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
-      delete ((std::pair<const char*,char*>*)p);
-   }
-   static void deleteArray_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
-      delete [] ((std::pair<const char*,char*>*)p);
-   }
-   static void destruct_stdcLcLpairlEconstsPcharmUcOcharmUgR(void *p) {
-      typedef std::pair<const char*,char*> current_t;
-      ((current_t*)p)->~current_t();
-   }
-} // end of namespace CppyyLegacy for class std::pair<const char*,char*>
 
 namespace CppyyLegacy {
    // Wrappers around operator new
@@ -11527,6 +11506,27 @@ namespace CppyyLegacy {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace CppyyLegacy for class std::pair<char*,int>
+
+namespace CppyyLegacy {
+   // Wrappers around operator new
+   static void *new_timespec(void *p) {
+      return  p ? new(p) ::timespec : new ::timespec;
+   }
+   static void *newArray_timespec(Long_t nElements, void *p) {
+      return p ? new(p) ::timespec[nElements] : new ::timespec[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_timespec(void *p) {
+      delete ((::timespec*)p);
+   }
+   static void deleteArray_timespec(void *p) {
+      delete [] ((::timespec*)p);
+   }
+   static void destruct_timespec(void *p) {
+      typedef ::timespec current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace CppyyLegacy for class ::timespec
 
 namespace CppyyLegacy {
    // Wrappers around operator new
@@ -14629,7 +14629,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *stdcLcLvectorlEunsignedsPintgR_Dictionary();
    static void stdcLcLvectorlEunsignedsPintgR_TClassManip(TClass*);
-   static void *new_stdcLcLvectorlEunsignedsPintgR(void *p = 0);
+   static void *new_stdcLcLvectorlEunsignedsPintgR(void *p = nullptr);
    static void *newArray_stdcLcLvectorlEunsignedsPintgR(Long_t size, void *p);
    static void delete_stdcLcLvectorlEunsignedsPintgR(void *p);
    static void deleteArray_stdcLcLvectorlEunsignedsPintgR(void *p);
@@ -14638,10 +14638,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const std::vector<unsigned int>*)
    {
-      std::vector<unsigned int> *ptr = 0;
+      std::vector<unsigned int> *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::vector<unsigned int>));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::vector<unsigned int>", -2, "vector", 386,
+         instance("std::vector<unsigned int>", -2, "vector", 348,
                   typeid(std::vector<unsigned int>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &stdcLcLvectorlEunsignedsPintgR_Dictionary, isa_proxy, 0,
                   sizeof(std::vector<unsigned int>) );
@@ -14692,7 +14692,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *stdcLcLvectorlECppyyLegacycLcLTStringgR_Dictionary();
    static void stdcLcLvectorlECppyyLegacycLcLTStringgR_TClassManip(TClass*);
-   static void *new_stdcLcLvectorlECppyyLegacycLcLTStringgR(void *p = 0);
+   static void *new_stdcLcLvectorlECppyyLegacycLcLTStringgR(void *p = nullptr);
    static void *newArray_stdcLcLvectorlECppyyLegacycLcLTStringgR(Long_t size, void *p);
    static void delete_stdcLcLvectorlECppyyLegacycLcLTStringgR(void *p);
    static void deleteArray_stdcLcLvectorlECppyyLegacycLcLTStringgR(void *p);
@@ -14701,10 +14701,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const std::vector<CppyyLegacy::TString>*)
    {
-      std::vector<CppyyLegacy::TString> *ptr = 0;
+      std::vector<CppyyLegacy::TString> *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::vector<CppyyLegacy::TString>));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::vector<CppyyLegacy::TString>", -2, "vector", 386,
+         instance("std::vector<CppyyLegacy::TString>", -2, "vector", 348,
                   typeid(std::vector<CppyyLegacy::TString>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &stdcLcLvectorlECppyyLegacycLcLTStringgR_Dictionary, isa_proxy, 0,
                   sizeof(std::vector<CppyyLegacy::TString>) );
@@ -14755,7 +14755,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR_Dictionary();
    static void stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR_TClassManip(TClass*);
-   static void *new_stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR(void *p = 0);
+   static void *new_stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR(void *p = nullptr);
    static void *newArray_stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR(Long_t size, void *p);
    static void delete_stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR(void *p);
    static void deleteArray_stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR(void *p);
@@ -14764,10 +14764,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const std::vector<CppyyLegacy::TProtoClass::TProtoRealData>*)
    {
-      std::vector<CppyyLegacy::TProtoClass::TProtoRealData> *ptr = 0;
+      std::vector<CppyyLegacy::TProtoClass::TProtoRealData> *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::vector<CppyyLegacy::TProtoClass::TProtoRealData>));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::vector<CppyyLegacy::TProtoClass::TProtoRealData>", -2, "vector", 386,
+         instance("std::vector<CppyyLegacy::TProtoClass::TProtoRealData>", -2, "vector", 348,
                   typeid(std::vector<CppyyLegacy::TProtoClass::TProtoRealData>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &stdcLcLvectorlECppyyLegacycLcLTProtoClasscLcLTProtoRealDatagR_Dictionary, isa_proxy, 0,
                   sizeof(std::vector<CppyyLegacy::TProtoClass::TProtoRealData>) );
@@ -14818,7 +14818,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR_Dictionary();
    static void stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR_TClassManip(TClass*);
-   static void *new_stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR(void *p = 0);
+   static void *new_stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR(void *p = nullptr);
    static void *newArray_stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR(Long_t size, void *p);
    static void delete_stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR(void *p);
    static void deleteArray_stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR(void *p);
@@ -14827,10 +14827,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const std::vector<CppyyLegacy::TDataMember*>*)
    {
-      std::vector<CppyyLegacy::TDataMember*> *ptr = 0;
+      std::vector<CppyyLegacy::TDataMember*> *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(std::vector<CppyyLegacy::TDataMember*>));
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("std::vector<CppyyLegacy::TDataMember*>", -2, "vector", 386,
+         instance("std::vector<CppyyLegacy::TDataMember*>", -2, "vector", 348,
                   typeid(std::vector<CppyyLegacy::TDataMember*>), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &stdcLcLvectorlECppyyLegacycLcLTDataMembermUgR_Dictionary, isa_proxy, 0,
                   sizeof(std::vector<CppyyLegacy::TDataMember*>) );
@@ -14977,13 +14977,13 @@ namespace {
 "TVirtualIsAProxy.h",
 "TVirtualStreamerInfo.h",
 "Getline.h",
-0
+nullptr
     };
     static const char* includePaths[] = {
-"$PREFIX/include",
-"$PREFIX/include",
-"$PREFIX/include",
-0
+"/Users/runner/work/debugger/debugger/cppyy-dev/.pixi/envs/cppyy-cling-dev-conda-forge-llvm/include",
+"/Users/runner/work/debugger/debugger/cppyy-dev/.pixi/envs/cppyy-cling-dev-conda-forge-llvm/include",
+"/Users/runner/work/debugger/debugger/cppyy-dev/.pixi/envs/cppyy-cling-dev-conda-forge-llvm/include",
+nullptr
     };
     static const char* fwdDeclCode = "";
     static const char* payloadCode = R"DICTPAYLOAD(
@@ -15261,7 +15261,6 @@ namespace {
 "CppyyLegacy::kTRUE", payloadCode, "@",
 "CppyyLegacy::kWarning", payloadCode, "@",
 "gSystem", payloadCode, "@",
-"std::string", payloadCode, "@",
 "timespec", payloadCode, "@",
 "timespec_t", payloadCode, "@",
 nullptr

@@ -61,8 +61,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TConditionImp*)
    {
-      ::CppyyLegacy::TConditionImp *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TConditionImp >(0);
+      ::CppyyLegacy::TConditionImp *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TConditionImp >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TConditionImp", ::CppyyLegacy::TConditionImp::Class_Version(), "TConditionImp.h", 31,
                   typeid(::CppyyLegacy::TConditionImp), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -91,8 +91,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TPosixCondition*)
    {
-      ::CppyyLegacy::TPosixCondition *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixCondition >(0);
+      ::CppyyLegacy::TPosixCondition *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixCondition >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TPosixCondition", ::CppyyLegacy::TPosixCondition::Class_Version(), "TPosixCondition.h", 39,
                   typeid(::CppyyLegacy::TPosixCondition), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -121,8 +121,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMutexImp*)
    {
-      ::CppyyLegacy::TMutexImp *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMutexImp >(0);
+      ::CppyyLegacy::TMutexImp *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMutexImp >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMutexImp", ::CppyyLegacy::TMutexImp::Class_Version(), "TMutexImp.h", 31,
                   typeid(::CppyyLegacy::TMutexImp), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -143,7 +143,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTPosixMutex(void *p = 0);
+   static void *new_CppyyLegacycLcLTPosixMutex(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTPosixMutex(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTPosixMutex(void *p);
    static void deleteArray_CppyyLegacycLcLTPosixMutex(void *p);
@@ -153,8 +153,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TPosixMutex*)
    {
-      ::CppyyLegacy::TPosixMutex *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixMutex >(0);
+      ::CppyyLegacy::TPosixMutex *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixMutex >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TPosixMutex", ::CppyyLegacy::TPosixMutex::Class_Version(), "TPosixMutex.h", 35,
                   typeid(::CppyyLegacy::TPosixMutex), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -177,7 +177,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTCondition(void *p = 0);
+   static void *new_CppyyLegacycLcLTCondition(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTCondition(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTCondition(void *p);
    static void deleteArray_CppyyLegacycLcLTCondition(void *p);
@@ -187,8 +187,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCondition*)
    {
-      ::CppyyLegacy::TCondition *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TCondition >(0);
+      ::CppyyLegacy::TCondition *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TCondition >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCondition", ::CppyyLegacy::TCondition::Class_Version(), "TCondition.h", 34,
                   typeid(::CppyyLegacy::TCondition), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -211,7 +211,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTThread(void *p = 0);
+   static void *new_CppyyLegacycLcLTThread(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTThread(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTThread(void *p);
    static void deleteArray_CppyyLegacycLcLTThread(void *p);
@@ -221,8 +221,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TThread*)
    {
-      ::CppyyLegacy::TThread *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThread >(0);
+      ::CppyyLegacy::TThread *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThread >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TThread", ::CppyyLegacy::TThread::Class_Version(), "TThread.h", 37,
                   typeid(::CppyyLegacy::TThread), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -253,8 +253,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TThreadImp*)
    {
-      ::CppyyLegacy::TThreadImp *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThreadImp >(0);
+      ::CppyyLegacy::TThreadImp *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThreadImp >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TThreadImp", ::CppyyLegacy::TThreadImp::Class_Version(), "TThreadImp.h", 32,
                   typeid(::CppyyLegacy::TThreadImp), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -275,7 +275,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTPosixThread(void *p = 0);
+   static void *new_CppyyLegacycLcLTPosixThread(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTPosixThread(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTPosixThread(void *p);
    static void deleteArray_CppyyLegacycLcLTPosixThread(void *p);
@@ -285,8 +285,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TPosixThread*)
    {
-      ::CppyyLegacy::TPosixThread *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixThread >(0);
+      ::CppyyLegacy::TPosixThread *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixThread >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TPosixThread", ::CppyyLegacy::TPosixThread::Class_Version(), "TPosixThread.h", 36,
                   typeid(::CppyyLegacy::TPosixThread), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -317,8 +317,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TThreadFactory*)
    {
-      ::CppyyLegacy::TThreadFactory *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThreadFactory >(0);
+      ::CppyyLegacy::TThreadFactory *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TThreadFactory >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TThreadFactory", ::CppyyLegacy::TThreadFactory::Class_Version(), "TThreadFactory.h", 34,
                   typeid(::CppyyLegacy::TThreadFactory), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -339,7 +339,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTPosixThreadFactory(void *p = 0);
+   static void *new_CppyyLegacycLcLTPosixThreadFactory(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTPosixThreadFactory(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTPosixThreadFactory(void *p);
    static void deleteArray_CppyyLegacycLcLTPosixThreadFactory(void *p);
@@ -349,8 +349,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TPosixThreadFactory*)
    {
-      ::CppyyLegacy::TPosixThreadFactory *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixThreadFactory >(0);
+      ::CppyyLegacy::TPosixThreadFactory *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TPosixThreadFactory >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TPosixThreadFactory", ::CppyyLegacy::TPosixThreadFactory::Class_Version(), "TPosixThreadFactory.h", 32,
                   typeid(::CppyyLegacy::TPosixThreadFactory), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -373,7 +373,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTMutex(void *p = 0);
+   static void *new_CppyyLegacycLcLTMutex(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTMutex(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTMutex(void *p);
    static void deleteArray_CppyyLegacycLcLTMutex(void *p);
@@ -383,8 +383,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMutex*)
    {
-      ::CppyyLegacy::TMutex *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMutex >(0);
+      ::CppyyLegacy::TMutex *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMutex >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMutex", ::CppyyLegacy::TMutex::Class_Version(), "TMutex.h", 32,
                   typeid(::CppyyLegacy::TMutex), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -409,7 +409,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTSpinMutex_Dictionary();
    static void CppyyLegacycLcLTSpinMutex_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTSpinMutex(void *p = 0);
+   static void *new_CppyyLegacycLcLTSpinMutex(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTSpinMutex(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTSpinMutex(void *p);
    static void deleteArray_CppyyLegacycLcLTSpinMutex(void *p);
@@ -418,7 +418,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TSpinMutex*)
    {
-      ::CppyyLegacy::TSpinMutex *ptr = 0;
+      ::CppyyLegacy::TSpinMutex *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TSpinMutex));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TSpinMutex", "ROOT/TSpinMutex.hxx", 43,
@@ -1269,10 +1269,10 @@ namespace {
 "TThreadImp.h",
 "ROOT/TReentrantRWLock.hxx",
 "ROOT/TSpinMutex.hxx",
-0
+nullptr
     };
     static const char* includePaths[] = {
-0
+nullptr
     };
     static const char* fwdDeclCode = nullptr;
     static const char* payloadCode = nullptr;
@@ -1296,4 +1296,3 @@ nullptr
 void TriggerDictionaryInitialization_libThreadLegacy() {
   TriggerDictionaryInitialization_libThreadLegacy_Impl();
 }
-
