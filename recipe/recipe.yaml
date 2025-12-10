@@ -64,10 +64,10 @@ requirements:
     # but just any functional C++ compiler.
     - cxx-compiler
     - python
-    # cppyy-cling invokes clang 13 at runtime which is not compatible with recent libcxx headers,
-    # so we need to force older headers since otherwise we get "Libc++ only supports Clang 17 and later" and compile errors
+    # cppyy-cling invokes clang 16 at runtime which is not compatible with recent libcxx headers,
+    # so we need to force older headers since otherwise we get "Libc++ only supports Clang 18 and later" and compile errors
     - if: osx
-      then: libcxx-devel <18
+      then: libcxx-devel <20
 
 tests:
   - files:
