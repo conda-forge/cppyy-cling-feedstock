@@ -67,7 +67,7 @@ requirements:
     # cppyy-cling invokes clang 16 at runtime which is not compatible with recent libcxx headers,
     # so we need to force older headers since otherwise we get "Libc++ only supports Clang 18 and later" and compile errors
     - if: osx
-      then: libcxx-devel <20
+      then: libcxx-devel <19
 
 tests:
   - files:
