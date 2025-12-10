@@ -119,8 +119,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBufferIO*)
    {
-      ::CppyyLegacy::TBufferIO *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBufferIO >(0);
+      ::CppyyLegacy::TBufferIO *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBufferIO >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBufferIO", ::CppyyLegacy::TBufferIO::Class_Version(), "TBufferIO.h", 31,
                   typeid(::CppyyLegacy::TBufferIO), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -149,8 +149,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TBufferFile*)
    {
-      ::CppyyLegacy::TBufferFile *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBufferFile >(0);
+      ::CppyyLegacy::TBufferFile *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TBufferFile >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TBufferFile", ::CppyyLegacy::TBufferFile::Class_Version(), "TBufferFile.h", 48,
                   typeid(::CppyyLegacy::TBufferFile), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -181,7 +181,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TGenCollectionProxy*)
    {
-      ::CppyyLegacy::TGenCollectionProxy *ptr = 0;
+      ::CppyyLegacy::TGenCollectionProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TGenCollectionProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TGenCollectionProxy", "TGenCollectionProxy.h", 30,
@@ -223,7 +223,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TGenCollectionProxy::Value*)
    {
-      ::CppyyLegacy::TGenCollectionProxy::Value *ptr = 0;
+      ::CppyyLegacy::TGenCollectionProxy::Value *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TGenCollectionProxy::Value));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TGenCollectionProxy::Value", "TGenCollectionProxy.h", 61,
@@ -257,7 +257,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTGenCollectionProxycLcLMethod_Dictionary();
    static void CppyyLegacycLcLTGenCollectionProxycLcLMethod_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTGenCollectionProxycLcLMethod(void *p = 0);
+   static void *new_CppyyLegacycLcLTGenCollectionProxycLcLMethod(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTGenCollectionProxycLcLMethod(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTGenCollectionProxycLcLMethod(void *p);
    static void deleteArray_CppyyLegacycLcLTGenCollectionProxycLcLMethod(void *p);
@@ -266,7 +266,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TGenCollectionProxy::Method*)
    {
-      ::CppyyLegacy::TGenCollectionProxy::Method *ptr = 0;
+      ::CppyyLegacy::TGenCollectionProxy::Method *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TGenCollectionProxy::Method));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TGenCollectionProxy::Method", "TGenCollectionProxy.h", 194,
@@ -302,7 +302,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTCollectionProxyFactory_Dictionary();
    static void CppyyLegacycLcLTCollectionProxyFactory_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTCollectionProxyFactory(void *p = 0);
+   static void *new_CppyyLegacycLcLTCollectionProxyFactory(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTCollectionProxyFactory(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTCollectionProxyFactory(void *p);
    static void deleteArray_CppyyLegacycLcLTCollectionProxyFactory(void *p);
@@ -311,7 +311,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCollectionProxyFactory*)
    {
-      ::CppyyLegacy::TCollectionProxyFactory *ptr = 0;
+      ::CppyyLegacy::TCollectionProxyFactory *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TCollectionProxyFactory));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCollectionProxyFactory", "TCollectionProxyFactory.h", 65,
@@ -347,7 +347,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTCollectionStreamer_Dictionary();
    static void CppyyLegacycLcLTCollectionStreamer_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTCollectionStreamer(void *p = 0);
+   static void *new_CppyyLegacycLcLTCollectionStreamer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTCollectionStreamer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTCollectionStreamer(void *p);
    static void deleteArray_CppyyLegacycLcLTCollectionStreamer(void *p);
@@ -356,7 +356,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCollectionStreamer*)
    {
-      ::CppyyLegacy::TCollectionStreamer *ptr = 0;
+      ::CppyyLegacy::TCollectionStreamer *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TCollectionStreamer));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCollectionStreamer", "TCollectionProxyFactory.h", 125,
@@ -392,7 +392,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTCollectionClassStreamer_Dictionary();
    static void CppyyLegacycLcLTCollectionClassStreamer_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTCollectionClassStreamer(void *p = 0);
+   static void *new_CppyyLegacycLcLTCollectionClassStreamer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTCollectionClassStreamer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTCollectionClassStreamer(void *p);
    static void deleteArray_CppyyLegacycLcLTCollectionClassStreamer(void *p);
@@ -401,7 +401,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCollectionClassStreamer*)
    {
-      ::CppyyLegacy::TCollectionClassStreamer *ptr = 0;
+      ::CppyyLegacy::TCollectionClassStreamer *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TCollectionClassStreamer));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCollectionClassStreamer", "TCollectionProxyFactory.h", 157,
@@ -437,7 +437,7 @@ namespace CppyyLegacy {
 namespace CppyyLegacy {
    static TClass *CppyyLegacycLcLTCollectionMemberStreamer_Dictionary();
    static void CppyyLegacycLcLTCollectionMemberStreamer_TClassManip(TClass*);
-   static void *new_CppyyLegacycLcLTCollectionMemberStreamer(void *p = 0);
+   static void *new_CppyyLegacycLcLTCollectionMemberStreamer(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTCollectionMemberStreamer(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTCollectionMemberStreamer(void *p);
    static void deleteArray_CppyyLegacycLcLTCollectionMemberStreamer(void *p);
@@ -446,7 +446,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TCollectionMemberStreamer*)
    {
-      ::CppyyLegacy::TCollectionMemberStreamer *ptr = 0;
+      ::CppyyLegacy::TCollectionMemberStreamer *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TCollectionMemberStreamer));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TCollectionMemberStreamer", "TCollectionProxyFactory.h", 205,
@@ -490,7 +490,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEmulatedCollectionProxy*)
    {
-      ::CppyyLegacy::TEmulatedCollectionProxy *ptr = 0;
+      ::CppyyLegacy::TEmulatedCollectionProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TEmulatedCollectionProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEmulatedCollectionProxy", "TEmulatedCollectionProxy.h", 20,
@@ -533,7 +533,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TEmulatedMapProxy*)
    {
-      ::CppyyLegacy::TEmulatedMapProxy *ptr = 0;
+      ::CppyyLegacy::TEmulatedMapProxy *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TEmulatedMapProxy));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TEmulatedMapProxy", "TEmulatedMapProxy.h", 20,
@@ -566,7 +566,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTDirectoryFile(void *p = 0);
+   static void *new_CppyyLegacycLcLTDirectoryFile(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTDirectoryFile(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTDirectoryFile(void *p);
    static void deleteArray_CppyyLegacycLcLTDirectoryFile(void *p);
@@ -576,8 +576,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TDirectoryFile*)
    {
-      ::CppyyLegacy::TDirectoryFile *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDirectoryFile >(0);
+      ::CppyyLegacy::TDirectoryFile *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TDirectoryFile >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TDirectoryFile", ::CppyyLegacy::TDirectoryFile::Class_Version(), "TDirectoryFile.h", 33,
                   typeid(::CppyyLegacy::TDirectoryFile), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -600,7 +600,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTFree(void *p = 0);
+   static void *new_CppyyLegacycLcLTFree(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTFree(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTFree(void *p);
    static void deleteArray_CppyyLegacycLcLTFree(void *p);
@@ -610,8 +610,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TFree*)
    {
-      ::CppyyLegacy::TFree *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFree >(0);
+      ::CppyyLegacy::TFree *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFree >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TFree", ::CppyyLegacy::TFree::Class_Version(), "TFree.h", 28,
                   typeid(::CppyyLegacy::TFree), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -634,7 +634,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTFile(void *p = 0);
+   static void *new_CppyyLegacycLcLTFile(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTFile(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTFile(void *p);
    static void deleteArray_CppyyLegacycLcLTFile(void *p);
@@ -644,8 +644,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TFile*)
    {
-      ::CppyyLegacy::TFile *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFile >(0);
+      ::CppyyLegacy::TFile *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TFile >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TFile", ::CppyyLegacy::TFile::Class_Version(), "TFile.h", 50,
                   typeid(::CppyyLegacy::TFile), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -668,7 +668,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTKey(void *p = 0);
+   static void *new_CppyyLegacycLcLTKey(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTKey(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTKey(void *p);
    static void deleteArray_CppyyLegacycLcLTKey(void *p);
@@ -678,8 +678,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TKey*)
    {
-      ::CppyyLegacy::TKey *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TKey >(0);
+      ::CppyyLegacy::TKey *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TKey >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TKey", ::CppyyLegacy::TKey::Class_Version(), "TKey.h", 26,
                   typeid(::CppyyLegacy::TKey), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -710,8 +710,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TMemFile*)
    {
-      ::CppyyLegacy::TMemFile *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMemFile >(0);
+      ::CppyyLegacy::TMemFile *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TMemFile >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TMemFile", ::CppyyLegacy::TMemFile::Class_Version(), "TMemFile.h", 22,
                   typeid(::CppyyLegacy::TMemFile), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -732,7 +732,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerInfo(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerInfo(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerInfo(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerInfo(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerInfo(void *p);
@@ -742,8 +742,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerInfo*)
    {
-      ::CppyyLegacy::TStreamerInfo *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfo >(0);
+      ::CppyyLegacy::TStreamerInfo *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfo >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerInfo", ::CppyyLegacy::TStreamerInfo::Class_Version(), "TStreamerInfo.h", 41,
                   typeid(::CppyyLegacy::TStreamerInfo), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -775,7 +775,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TVirtualArray*)
    {
-      ::CppyyLegacy::TVirtualArray *ptr = 0;
+      ::CppyyLegacy::TVirtualArray *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TVirtualArray));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TVirtualArray", 0, "TVirtualArray.h", 27,
@@ -816,7 +816,7 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerInfoActions::TConfiguration*)
    {
-      ::CppyyLegacy::TStreamerInfoActions::TConfiguration *ptr = 0;
+      ::CppyyLegacy::TStreamerInfoActions::TConfiguration *ptr = nullptr;
       static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TIsAProxy(typeid(::CppyyLegacy::TStreamerInfoActions::TConfiguration));
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerInfoActions::TConfiguration", "TStreamerInfoActions.h", 33,
@@ -848,7 +848,7 @@ namespace CppyyLegacy {
 } // end of namespace CppyyLegacy
 
 namespace CppyyLegacy {
-   static void *new_CppyyLegacycLcLTStreamerInfoActionscLcLTConfiguredAction(void *p = 0);
+   static void *new_CppyyLegacycLcLTStreamerInfoActionscLcLTConfiguredAction(void *p = nullptr);
    static void *newArray_CppyyLegacycLcLTStreamerInfoActionscLcLTConfiguredAction(Long_t size, void *p);
    static void delete_CppyyLegacycLcLTStreamerInfoActionscLcLTConfiguredAction(void *p);
    static void deleteArray_CppyyLegacycLcLTStreamerInfoActionscLcLTConfiguredAction(void *p);
@@ -857,8 +857,8 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction*)
    {
-      ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction >(0);
+      ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
          instance("CppyyLegacy::TStreamerInfoActions::TConfiguredAction", ::CppyyLegacy::TStreamerInfoActions::TConfiguredAction::Class_Version(), "TStreamerInfoActions.h", 73,
                   typeid(::CppyyLegacy::TStreamerInfoActions::TConfiguredAction), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
@@ -887,10 +887,10 @@ namespace CppyyLegacy {
    // Function generating the singleton type initializer
    static TGenericClassInfo *GenerateInitInstanceLocal(const ::CppyyLegacy::TStreamerInfoActions::TActionSequence*)
    {
-      ::CppyyLegacy::TStreamerInfoActions::TActionSequence *ptr = 0;
-      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfoActions::TActionSequence >(0);
+      ::CppyyLegacy::TStreamerInfoActions::TActionSequence *ptr = nullptr;
+      static ::CppyyLegacy::TVirtualIsAProxy* isa_proxy = new ::CppyyLegacy::TInstrumentedIsAProxy< ::CppyyLegacy::TStreamerInfoActions::TActionSequence >(nullptr);
       static ::CppyyLegacy::TGenericClassInfo 
-         instance("CppyyLegacy::TStreamerInfoActions::TActionSequence", ::CppyyLegacy::TStreamerInfoActions::TActionSequence::Class_Version(), "TStreamerInfoActions.h", 170,
+         instance("CppyyLegacy::TStreamerInfoActions::TActionSequence", ::CppyyLegacy::TStreamerInfoActions::TActionSequence::Class_Version(), "TStreamerInfoActions.h", 173,
                   typeid(::CppyyLegacy::TStreamerInfoActions::TActionSequence), ::CppyyLegacy::Internal::DefineBehavior(ptr, ptr),
                   &::CppyyLegacy::TStreamerInfoActions::TActionSequence::Dictionary, isa_proxy, 4,
                   sizeof(::CppyyLegacy::TStreamerInfoActions::TActionSequence) );
@@ -1813,11 +1813,11 @@ namespace {
 "TVirtualCollectionIterators.h",
 "TStreamerInfo.h",
 "TVirtualArray.h",
-0
+nullptr
     };
     static const char* includePaths[] = {
-"$PREFIX/include",
-0
+"/Users/runner/work/debugger/debugger/cppyy-dev/.pixi/envs/cppyy-cling-dev-conda-forge-llvm/include",
+nullptr
     };
     static const char* fwdDeclCode = nullptr;
     static const char* payloadCode = nullptr;

@@ -1,7 +1,6 @@
 { decls }
 namespace CppyyLegacy {  }
-namespace std {  }
-namespace std { inline namespace __cxx11 {  } }
+namespace std { inline namespace __1 {  } }
 
 [ libCoreLegacy.so ]
 # List of selected classes
@@ -109,12 +108,77 @@ class CppyyLegacy::TVirtualRWMutex
 class CppyyLegacy::TVirtualStreamerInfo
 class CppyyLegacy::TWriteLockGuard
 class CppyyLegacy::UserGroup_t
-class std::pair<char const*,char*>
-class std::pair<char const*,double>
-class std::pair<char const*,float>
-class std::pair<char const*,int>
-class std::pair<char const*,long>
-class std::pair<char const*,void*>
+class std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>
+class std::__1::pair<char const*,char*>
+class std::__1::pair<char const*,double>
+class std::__1::pair<char const*,float>
+class std::__1::pair<char const*,int>
+class std::__1::pair<char const*,long>
+class std::__1::pair<char const*,void*>
+class std::__1::pair<char*,char*>
+class std::__1::pair<char*,double>
+class std::__1::pair<char*,float>
+class std::__1::pair<char*,int>
+class std::__1::pair<char*,long>
+class std::__1::pair<char*,void*>
+class std::__1::pair<const std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,double>
+class std::__1::pair<const std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,float>
+class std::__1::pair<const std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,int>
+class std::__1::pair<const std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,long>
+class std::__1::pair<const std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,void*>
+class std::__1::pair<double const,char*>
+class std::__1::pair<double const,double>
+class std::__1::pair<double const,float>
+class std::__1::pair<double const,int>
+class std::__1::pair<double const,long>
+class std::__1::pair<double const,void*>
+class std::__1::pair<double,char*>
+class std::__1::pair<double,double>
+class std::__1::pair<double,float>
+class std::__1::pair<double,int>
+class std::__1::pair<double,long>
+class std::__1::pair<double,void*>
+class std::__1::pair<float const,char*>
+class std::__1::pair<float const,double>
+class std::__1::pair<float const,float>
+class std::__1::pair<float const,int>
+class std::__1::pair<float const,long>
+class std::__1::pair<float const,void*>
+class std::__1::pair<float,char*>
+class std::__1::pair<float,double>
+class std::__1::pair<float,float>
+class std::__1::pair<float,int>
+class std::__1::pair<float,long>
+class std::__1::pair<float,void*>
+class std::__1::pair<int const,char*>
+class std::__1::pair<int const,double>
+class std::__1::pair<int const,float>
+class std::__1::pair<int const,int>
+class std::__1::pair<int const,long>
+class std::__1::pair<int const,void*>
+class std::__1::pair<int,char*>
+class std::__1::pair<int,double>
+class std::__1::pair<int,float>
+class std::__1::pair<int,int>
+class std::__1::pair<int,long>
+class std::__1::pair<int,void*>
+class std::__1::pair<long const,char*>
+class std::__1::pair<long const,double>
+class std::__1::pair<long const,float>
+class std::__1::pair<long const,int>
+class std::__1::pair<long const,long>
+class std::__1::pair<long const,void*>
+class std::__1::pair<long,char*>
+class std::__1::pair<long,double>
+class std::__1::pair<long,float>
+class std::__1::pair<long,int>
+class std::__1::pair<long,long>
+class std::__1::pair<long,void*>
+class std::__1::pair<std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,double>
+class std::__1::pair<std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,float>
+class std::__1::pair<std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,int>
+class std::__1::pair<std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,long>
+class std::__1::pair<std::__1::basic_string<char,std::__1::char_traits<char>,std::__1::allocator<char>>,void*>
 class std::pair<char*,char*>
 class std::pair<char*,double>
 class std::pair<char*,float>
@@ -156,48 +220,24 @@ class std::pair<const std::string,float>
 class std::pair<const std::string,int>
 class std::pair<const std::string,long>
 class std::pair<const std::string,void*>
-class std::pair<double const,char*>
-class std::pair<double const,double>
-class std::pair<double const,float>
-class std::pair<double const,int>
-class std::pair<double const,long>
-class std::pair<double const,void*>
 class std::pair<double,char*>
 class std::pair<double,double>
 class std::pair<double,float>
 class std::pair<double,int>
 class std::pair<double,long>
 class std::pair<double,void*>
-class std::pair<float const,char*>
-class std::pair<float const,double>
-class std::pair<float const,float>
-class std::pair<float const,int>
-class std::pair<float const,long>
-class std::pair<float const,void*>
 class std::pair<float,char*>
 class std::pair<float,double>
 class std::pair<float,float>
 class std::pair<float,int>
 class std::pair<float,long>
 class std::pair<float,void*>
-class std::pair<int const,char*>
-class std::pair<int const,double>
-class std::pair<int const,float>
-class std::pair<int const,int>
-class std::pair<int const,long>
-class std::pair<int const,void*>
 class std::pair<int,char*>
 class std::pair<int,double>
 class std::pair<int,float>
 class std::pair<int,int>
 class std::pair<int,long>
 class std::pair<int,void*>
-class std::pair<long const,char*>
-class std::pair<long const,double>
-class std::pair<long const,float>
-class std::pair<long const,int>
-class std::pair<long const,long>
-class std::pair<long const,void*>
 class std::pair<long,char*>
 class std::pair<long,double>
 class std::pair<long,float>

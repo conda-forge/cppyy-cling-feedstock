@@ -1,7 +1,7 @@
-From ad8317378c9c124c323e3a5343c1263523a98a6e Mon Sep 17 00:00:00 2001
+From fcef159904b08fa997c28d9b6fd3b2ed9b371539 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 8 Dec 2023 02:03:00 +0200
-Subject: [PATCH 01/12] Do not use llvm-config when cross-compiling
+Subject: [PATCH 01/14] Do not use llvm-config when cross-compiling
 
 we cannot invoke a host binary.
 ---
@@ -9,11 +9,11 @@ we cannot invoke a host binary.
  1 file changed, 46 insertions(+), 30 deletions(-)
 
 diff --git a/src/interpreter/CMakeLists.txt b/src/interpreter/CMakeLists.txt
-index b74cee9a..570ab329 100644
+index 49c71d26..3b94796d 100644
 --- a/src/interpreter/CMakeLists.txt
 +++ b/src/interpreter/CMakeLists.txt
-@@ -245,10 +245,15 @@ if(builtin_llvm)
-   get_directory_property(TARGET_TRIPLE DIRECTORY llvm-project/llvm DEFINITION TARGET_TRIPLE)
+@@ -256,10 +256,15 @@ if(builtin_llvm)
+   endif()
  else()
    # Rely on llvm-config.
 -  set(CONFIG_OUTPUT)
@@ -30,7 +30,7 @@ index b74cee9a..570ab329 100644
      set(CONFIG_COMMAND ${LLVM_CONFIG}
        "--assertion-mode"
        "--bindir"
-@@ -263,43 +268,54 @@ else()
+@@ -274,41 +279,52 @@ else()
        RESULT_VARIABLE HAD_ERROR
        OUTPUT_VARIABLE CONFIG_OUTPUT
      )
@@ -53,10 +53,27 @@ index b74cee9a..570ab329 100644
 -      string(REPLACE ";" " " CONFIG_COMMAND_STR "${CONFIG_COMMAND}")
 -      message(STATUS "${CONFIG_COMMAND_STR}")
 -      message(FATAL_ERROR "llvm-config failed with status ${HAD_ERROR}")
--    endif()
++
++      list(POP_FRONT CONFIG_OUTPUT
++        ENABLE_ASSERTIONS TOOLS_BINARY_DIR LIBRARY_DIR INCLUDE_DIR LLVM_OBJ_ROOT LLVM_CONFIG_CMAKE_PATH LLVM_BUILD_MODE LLVM_VERSION)
++
++      message(STATUS "External llvm built in ${LLVM_BUILD_MODE} mode.")
++
++      if(NOT MSVC_IDE)
++        set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
++          CACHE BOOL "Enable assertions")
++        # Assertions should follow llvm-config's.
++        mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
++      endif()
++
++      set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
++      set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
++      set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
++      set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
+     endif()
 -  else()
 -    message(FATAL_ERROR "llvm-config not found -- ${LLVM_CONFIG}")
--  endif()
+   endif()
  
 -  list(GET CONFIG_OUTPUT 0 ENABLE_ASSERTIONS)
 -  list(GET CONFIG_OUTPUT 1 TOOLS_BINARY_DIR)
@@ -65,42 +82,23 @@ index b74cee9a..570ab329 100644
 -  list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
 -  list(GET CONFIG_OUTPUT 5 LLVM_CONFIG_CMAKE_PATH)
 -  list(GET CONFIG_OUTPUT 6 LLVM_BUILD_MODE)
--  list(GET CONFIG_OUTPUT 7 LLVM_VERSION_S)
-+      list(POP_FRONT CONFIG_OUTPUT
-+        ENABLE_ASSERTIONS TOOLS_BINARY_DIR LIBRARY_DIR INCLUDE_DIR LLVM_OBJ_ROOT LLVM_CONFIG_CMAKE_PATH LLVM_BUILD_MODE LLVM_VERSION_S)
-+
-+      set(LLVM_VERSION_SAVE "${LLVM_VERSION_S}")
- 
--  set(LLVM_VERSION_SAVE "${LLVM_VERSION_S}")
-+      message(STATUS "External llvm built in ${LLVM_BUILD_MODE} mode.")
- 
+-  list(GET CONFIG_OUTPUT 7 LLVM_VERSION)
+-
 -  message(STATUS "External llvm built in ${LLVM_BUILD_MODE} mode.")
-+      if(NOT MSVC_IDE)
-+        set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
-+          CACHE BOOL "Enable assertions")
-+        # Assertions should follow llvm-config's.
-+        mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
-+      endif()
- 
+-
 -  if(NOT MSVC_IDE)
 -    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
 -      CACHE BOOL "Enable assertions")
 -    # Assertions should follow llvm-config's.
 -    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
-+      set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
-+      set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
-+      set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
-+      set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
-+    endif()
-   endif()
+-  endif()
++  if(NOT LLVM_CONFIG_FUNCTIONAL)
++    set(LLVM_PREFIX  ${CMAKE_INSTALL_PREFIX} CACHE PATH "Path to LLVM installation prefix")
  
 -  set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
 -  set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
 -  set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
 -  set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
-+  if(NOT LLVM_CONFIG_FUNCTIONAL)
-+    set(LLVM_PREFIX  ${CMAKE_INSTALL_PREFIX} CACHE PATH "Path to LLVM installation prefix")
-+
 +    message(STATUS "Guessing LLVM paths from LLVM_PREFIX ${LLVM_PREFIX}")
 +
 +    set(LLVM_ENABLE_ASSERTIONS OFF CACHE BOOL "Enable assertions")

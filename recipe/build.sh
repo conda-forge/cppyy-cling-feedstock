@@ -27,6 +27,8 @@ if [[ "${target_platform}" != "${build_platform}" ]]; then
     CMAKE_FLAGS+=("-DSTATIC_LIBTHREADLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libThreadLegacy.rootmap")
     CMAKE_FLAGS+=("-DSTATIC_G_RIOLEGACY_CXX=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/G__RIOLegacy.cxx")
     CMAKE_FLAGS+=("-DSTATIC_LIBRIOLEGACY_ROOTMAP=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/libRIOLegacy.rootmap")
+    # We cannot invoke llvm-tblgen on this platform so we need to provide the required assets statically from previous runs.
+    CMAKE_FLAGS+=("-DSTATIC_CLING_OPTIONS_INC=${RECIPE_DIR}/cross-compilation-assets/${target_platform}/ClingOptions.inc")
   fi
 fi
 
@@ -56,6 +58,9 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
   export CXXFLAGS="${CXXFLAGS} -fplt"
   export CFLAGS="${CFLAGS} -fplt"
 fi
+
+# cling uses std::filesystem::path, see https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
+export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 
 cmake ${CMAKE_FLAGS[@]} ../src
 make

@@ -1,7 +1,7 @@
-From 8c47d3f32595871873234b169238b1796d020258 Mon Sep 17 00:00:00 2001
+From 934c200bf34c7c8c696e27b6fcb68a5bdc37470e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 28 Nov 2025 02:51:47 +0200
-Subject: [PATCH 08/12] Prevent constants from being dropped from archives due
+Subject: [PATCH 08/14] Prevent constants from being dropped from archives due
  to inlining
 
 on macOS with clang 13, these constants are missing when linking
@@ -12,10 +12,10 @@ otherwise.
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/src/interpreter/cling/lib/Utils/AST.cpp b/src/interpreter/cling/lib/Utils/AST.cpp
-index 17e7130b..d683cef1 100644
+index fe257d90..147d3898 100644
 --- a/src/interpreter/cling/lib/Utils/AST.cpp
 +++ b/src/interpreter/cling/lib/Utils/AST.cpp
-@@ -167,7 +167,7 @@ namespace utils {
+@@ -170,7 +170,7 @@ namespace utils {
      return result;
    }
  
@@ -25,7 +25,7 @@ index 17e7130b..d683cef1 100644
    IntegerLiteral* Synthesize::IntegerLiteralExpr(ASTContext& C, uintptr_t Ptr) {
      const llvm::APInt Addr(8 * sizeof(void*), Ptr);
 diff --git a/src/interpreter/cling/lib/Utils/Paths.cpp b/src/interpreter/cling/lib/Utils/Paths.cpp
-index 5327ffc4..cff137ac 100644
+index b92665f5..d96e6aa6 100644
 --- a/src/interpreter/cling/lib/Utils/Paths.cpp
 +++ b/src/interpreter/cling/lib/Utils/Paths.cpp
 @@ -20,9 +20,9 @@ namespace utils {

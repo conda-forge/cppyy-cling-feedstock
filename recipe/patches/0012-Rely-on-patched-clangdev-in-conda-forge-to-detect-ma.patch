@@ -1,0 +1,117 @@
+From 9af9029244eef4f01420b1298252011504dc55fa Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Thu, 4 Dec 2025 22:02:36 +0200
+Subject: [PATCH 12/14] Rely on patched clangdev in conda-forge to detect macOS
+ SDK
+
+These patches try SDKROOT, CONDA_BUILD_SYSROOT, xcrun to find the SDK path.
+Users need to point us to a reasonably old SDK for this to work.
+---
+ .../cling/lib/Interpreter/CIFactory.cpp       | 60 -------------------
+ .../cling/lib/Interpreter/CMakeLists.txt      | 19 ------
+ 2 files changed, 79 deletions(-)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+index 16659c29..21cc6de3 100644
+--- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
++++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+@@ -346,66 +346,6 @@ namespace {
+           sArguments.addArgument("-nostdinc++");
+       }
+ 
+-  #ifdef CLING_OSX_SYSROOT
+-      {
+-        std::string sysroot{CLING_OSX_SYSROOT};
+-        struct stat buf;
+-        if (stat(sysroot.c_str(), &buf) == 0) {
+-          sArguments.addArgument("-isysroot", CLING_OSX_SYSROOT);
+-        } else {
+-        // attempt to find a proper sysroot, or leave it up to Clang and user
+-        // defined variables such as SDKROOT and MACOSX_DEPLOYMENT_TARGET
+-        // first, strip Xcode version number if any and if it does not exist
+-          std::string::size_type xpos1 = sysroot.find("Xcode_");
+-          std::string::size_type xpos2 = xpos1 != std::string::npos ? sysroot.find(".app", xpos1) : xpos1;
+-          if (xpos1 != std::string::npos && xpos2 != std::string::npos) {
+-            if (stat(sysroot.substr(0, xpos2+4).c_str(), &buf) != 0 &&
+-              stat(sysroot.substr(0, xpos1  ).c_str(), &buf) == 0) {
+-              sysroot = sysroot.substr(0, xpos1) + "Xcode.app" + sysroot.substr(xpos2+4, std::string::npos);
+-            }
+-          }
+-        // similarly, strip SDK version number as needed
+-          std::string::size_type pos = sysroot.rfind("SDKs/MacOSX");
+-          if (pos != std::string::npos) {
+-            if (getenv("MACOSX_DEPLOYMENT_TARGET"))
+-              sysroot = sysroot.substr(0, pos+11) + getenv("MACOSX_DEPLOYMENT_TARGET") + ".sdk";
+-            else
+-              sysroot = sysroot.substr(0, pos+11)+".sdk";  // generic location
+-          }
+-          if (stat(sysroot.c_str(), &buf) != 0) {
+-          // final attempt, query xcrun
+-            std::string SdkPathQuery("xcrun --show-sdk-path");
+-            if (Verbose)
+-              cling::log() << "Looking for sysroot:\n  " << SdkPathQuery << "\n";
+-
+-            if (FILE *PF = ::popen(SdkPathQuery.c_str(), "r")) {
+-              llvm::SmallVector<char, PATH_MAX> Buf;
+-              Buf.resize(Buf.capacity_in_bytes());
+-              while (fgets(&Buf[0], Buf.capacity_in_bytes(), PF) && Buf[0]) {
+-                llvm::StringRef Path(&Buf[0]);
+-                Path = Path.trim();
+-                if (!Path.empty()) {
+-                  if (!llvm::sys::fs::is_directory(Path)) {
+-                    if (Verbose)
+-                      cling::utils::LogNonExistantDirectory(Path);
+-                  }
+-                  else {
+-                      sysroot = Path.str();
+-                      break;
+-                  }
+-                }
+-                ::pclose(PF);
+-              }
+-            }
+-          }
+-          if (stat(sysroot.c_str(), &buf) == 0)
+-            sArguments.addArgument("-isysroot", sysroot.c_str());
+-          else
+-            cling::errs() << "Warning: sysroot \"" << sysroot << "\" not found (ignoring for now).";
+-        }
+-      }
+-  #endif
+-
+ #endif // _MSC_VER
+ 
+       if (!opts.ResourceDir && !opts.NoBuiltinInc) {
+diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+index b6cae873..aa03d11b 100644
+--- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+@@ -296,25 +296,6 @@ if (UNIX)
+     #define CLING_CXX_INCL \"${CLING_CXX_HEADERS}\"
+     #define CLING_INCLUDE_PATHS \"${CLING_INCLUDE_PATHS}\"
+   ")
+-  if (CMAKE_OSX_SYSROOT)
+-    # CMAKE_OSX_SYSROOT hardcodes the concrete version of the sdk
+-    # (eg .../MacOSX11.1.sdk) which changes after every update of XCode. We use
+-    # the assumption that in the parent folder there is a symlink MacOSX.sdk
+-    # which points to the current active sdk. This change allows releases
+-    # to work when the users update their sdks.
+-    # FIXME: That is a horrible hack and we should teach CIFactory to pick up
+-    # the SDK directory at runtime, just as we do for the include paths to C++.
+-    set (OSX_SYSROOT_DEFAULT_SDK ${CMAKE_OSX_SYSROOT})
+-    if (${OSX_SYSROOT_DEFAULT_SDK} MATCHES "MacOSX[.0-9]+\.sdk")
+-      get_filename_component(OSX_SYSROOT_DEFAULT_SDK ${OSX_SYSROOT_DEFAULT_SDK} DIRECTORY)
+-      set (OSX_SYSROOT_DEFAULT_SDK ${OSX_SYSROOT_DEFAULT_SDK}/MacOSX.sdk/)
+-    endif()
+-
+-    file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/cling-compiledata.h.in
+-      "
+-      #define CLING_OSX_SYSROOT \"${OSX_SYSROOT_DEFAULT_SDK}\"
+-    ")
+-  endif()
+   if (CLING_CXX_PATH)
+     MESSAGE(STATUS "And if not found, will invoke: '${CLING_CXX_PATH}' for them.")
+     file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/cling-compiledata.h.in
+-- 
+2.52.0
+

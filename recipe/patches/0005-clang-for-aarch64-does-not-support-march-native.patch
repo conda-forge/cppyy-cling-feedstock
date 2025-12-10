@@ -1,14 +1,14 @@
-From 64914a7e48a8d499ceaa3766b8bcf3bba48486b8 Mon Sep 17 00:00:00 2001
+From cd61aef9a59c1ac78bdafc5c3128615cc7ad1476 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
 Date: Fri, 1 Jul 2022 23:07:59 +0300
-Subject: [PATCH 05/12] clang for aarch64 does not support march=native
+Subject: [PATCH 05/14] clang for aarch64 does not support march=native
 
 ---
  python/cppyy_backend/loader.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/python/cppyy_backend/loader.py b/python/cppyy_backend/loader.py
-index b6da3fe4..a3845b8a 100644
+index c58420a0..ba26644b 100644
 --- a/python/cppyy_backend/loader.py
 +++ b/python/cppyy_backend/loader.py
 @@ -117,7 +117,7 @@ def set_cling_compile_options(add_defaults = False):

@@ -1,0 +1,49 @@
+From fafcfd3c3131f3cc485c42518b6e6cc0c7d1c6c6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Thu, 4 Dec 2025 16:44:51 +0200
+Subject: [PATCH 09/14] Add missing link dependencies
+
+* clangCodeGen needs LLVMFrontendHLSL
+* clangAnalysis needs clangASTMatchers
+* clangSema needs clangSupport
+---
+ src/interpreter/cling/lib/Interpreter/CMakeLists.txt | 1 +
+ src/interpreter/cling/lib/Utils/CMakeLists.txt       | 3 +++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+index dfcd9f52..b8ec6b63 100644
+--- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+@@ -43,6 +43,7 @@ set(LLVM_LINK_COMPONENTS
+   transformutils
+   binaryformat
+   ${LLVM_TARGETS_TO_BUILD}
++  frontendhlsl
+ )
+ 
+ # clingInterpreter depends on Options.inc to be tablegen-ed
+diff --git a/src/interpreter/cling/lib/Utils/CMakeLists.txt b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+index 327c9fff..c83029a2 100644
+--- a/src/interpreter/cling/lib/Utils/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Utils/CMakeLists.txt
+@@ -23,6 +23,7 @@ set(LLVM_LINK_COMPONENTS
+   target
+   transformutils
+   binaryformat
++  frontendhlsl
+   ${LLVM_TARGETS_TO_BUILD}
+ )
+ 
+@@ -40,6 +41,8 @@ set(LIBS
+   clangAST
+   clangBasic
+   clangLex
++  clangASTMatchers
++  clangSupport
+ )
+ 
+ find_library(DL_LIBRARY_PATH dl)
+-- 
+2.52.0
+

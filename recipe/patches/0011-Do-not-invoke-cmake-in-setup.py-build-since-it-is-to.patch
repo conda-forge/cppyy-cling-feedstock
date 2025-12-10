@@ -1,0 +1,26 @@
+From 58c0473c049718ab1318356a5d62331a8e143001 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 1 Dec 2025 22:25:23 +0200
+Subject: [PATCH 11/14] Do not invoke cmake in setup.py build since it is too
+ opinionated for a conda-forge based system
+
+but package the Python bits of cppyy-cling
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 920b4fc7..6453b1a7 100755
+--- a/setup.py
++++ b/setup.py
+@@ -322,7 +322,6 @@ class my_install(_install):
+ 
+ 
+ cmdclass = {
+-        'build': my_cmake_build,
+         'clean': my_clean,
+         'install': my_install }
+ 
+-- 
+2.52.0
+

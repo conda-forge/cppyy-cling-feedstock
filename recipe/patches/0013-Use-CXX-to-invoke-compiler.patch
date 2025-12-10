@@ -1,0 +1,84 @@
+From b043cd4b70c6db34db6937f68c450891b9a8aa71 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Mon, 8 Dec 2025 02:33:43 +0200
+Subject: [PATCH 13/14] Use $CXX to invoke compiler
+
+on conda-forge at least we can essentially guarantee that $CXX is set to
+the compiler that we should be using, namely the one that has been
+pulled in by cxx-compiler.
+---
+ .../cling/lib/Interpreter/CIFactory.cpp       | 45 +------------------
+ 1 file changed, 2 insertions(+), 43 deletions(-)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+index 21cc6de3..1f6bbef9 100644
+--- a/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
++++ b/src/interpreter/cling/lib/Interpreter/CIFactory.cpp
+@@ -285,48 +285,14 @@ namespace {
+ 
+         SmallString<2048> buffer;
+ 
+-  #ifdef _LIBCPP_VERSION
+-        // Try to use a version of clang that is located next to cling
+-        // in case cling was built with a new/custom libc++
+-        std::string clang = llvm::sys::path::parent_path(clingBin).str();
+-        buffer.assign(clang);
+-        llvm::sys::path::append(buffer, "clang");
+-        clang.assign(&buffer[0], buffer.size());
+-
+-        if (llvm::sys::fs::is_regular_file(clang)) {
+-          if (!opts.StdLib) {
+-  #if defined(_LIBCPP_VERSION)
+-            clang.append(" -stdlib=libc++");
+-  #elif defined(__GLIBCXX__)
+-            clang.append(" -stdlib=libstdc++");
+-  #endif
+-          }
+-          ReadCompilerIncludePaths(clang.c_str(), buffer, sArguments, Verbose);
+-        }
+-  #endif // _LIBCPP_VERSION
+-
+-  // First try the relative path 'g++'
+-  #ifdef CLING_CXX_RLTV
+-        if (sArguments.empty())
+-          ReadCompilerIncludePaths(CLING_CXX_RLTV, buffer, sArguments, Verbose);
+-  #endif
+-  // Then try the include directory cling was built with
+-  #ifdef CLING_CXX_INCL
+-        if (sArguments.empty())
+-          AddCxxPaths(CLING_CXX_INCL, sArguments, Verbose);
+-  #endif
+-  // Finally try the absolute path i.e.: '/usr/bin/g++'
+-  #ifdef CLING_CXX_PATH
+-        if (sArguments.empty())
+-          ReadCompilerIncludePaths(CLING_CXX_PATH, buffer, sArguments, Verbose);
+-  #endif
++        assert(getenv("CXX") != NULL && "CXX environment variable must be set");
++        ReadCompilerIncludePaths(getenv("CXX"), buffer, sArguments, Verbose);
+ 
+         if (sArguments.empty()) {
+           // buffer is a copy of the query string that failed
+           cling::errs() << "ERROR in cling::CIFactory::createCI(): cannot extract"
+                           " standard library include paths!\n";
+ 
+-  #if defined(CLING_CXX_PATH) || defined(CLING_CXX_RLTV)
+           // Only when ReadCompilerIncludePaths called do we have the command
+           // Verbose has already printed the command
+           if (!Verbose)
+@@ -335,13 +301,6 @@ namespace {
+           cling::errs() << "Results was:\n";
+           const int ExitCode = system(buffer.c_str());
+           cling::errs() << "With exit code " << ExitCode << "\n";
+-  #elif !defined(CLING_CXX_INCL)
+-          // Technically a valid configuration that just wants to use libClangs
+-          // internal header detection, but for now give a hint about why.
+-          cling::errs() << "CLING_CXX_INCL, CLING_CXX_PATH, and CLING_CXX_RLTV"
+-                          " are undefined, there was probably an error during"
+-                          " configuration.\n";
+-  #endif
+         } else
+           sArguments.addArgument("-nostdinc++");
+       }
+-- 
+2.52.0
+

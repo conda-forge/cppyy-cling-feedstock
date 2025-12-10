@@ -1,0 +1,45 @@
+From 9b4dbb5c7dceb527249428c37ed4dd129f8ec2cd Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Tue, 9 Dec 2025 02:18:18 +0200
+Subject: [PATCH 14/14] Do not invoke llvm-tblgen when cross-compiling
+
+instead provide pre-built assets statically.
+---
+ .../include/cling/Interpreter/CMakeLists.txt  | 23 +++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+
+diff --git a/src/interpreter/cling/include/cling/Interpreter/CMakeLists.txt b/src/interpreter/cling/include/cling/Interpreter/CMakeLists.txt
+index 59821499..3efbc836 100644
+--- a/src/interpreter/cling/include/cling/Interpreter/CMakeLists.txt
++++ b/src/interpreter/cling/include/cling/Interpreter/CMakeLists.txt
+@@ -1,5 +1,24 @@
+ include_directories(${LLVM_INCLUDE_DIRS})
+ 
+ set(LLVM_TARGET_DEFINITIONS ClingOptions.td)
+-tablegen(LLVM ClingOptions.inc -gen-opt-parser-defs)
+-add_public_tablegen_target(ClingDriverOptions)
++if (CAN_RUN_BUILT_BINARIES)
++    # Use the native llvm-tblgen to create ClingOptions.inc
++    tablegen(LLVM ClingOptions.inc -gen-opt-parser-defs)
++    add_public_tablegen_target(ClingDriverOptions)
++else()
++    # Use a pre-rendered ClingOptions.inc since we cannot invoke the host's llvm-tblgen
++    set(STATIC_CLING_OPTIONS_INC "" CACHE PATH "Path to llvm-tblgen generated ClingOptions.inc")
++
++    if("${STATIC_CLING_OPTIONS_INC}" STREQUAL "")
++      message(FATAL_ERROR "When cross-compiling, ClingOptions.inc cannot be created and must be provided with -DSTATIC_CLING_OPTIONS_INC to cmake")
++    endif()
++
++    add_custom_command(OUTPUT ClingOptions.inc
++                       COMMAND ${CMAKE_COMMAND} -E copy
++                       ${STATIC_CLING_OPTIONS_INC}
++                       ClingOptions.inc
++                       COMMENT "Copying prebuilt user-provided ${STATIC_CLING_OPTIONS_INC} to ClingOptions.inc"
++    )
++
++    add_custom_target(ClingDriverOptions DEPENDS ClingOptions.inc)
++endif()
+\ No newline at end of file
+-- 
+2.52.0
+

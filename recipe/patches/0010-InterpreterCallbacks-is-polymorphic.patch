@@ -1,0 +1,28 @@
+From 160f638488514b1a24d701f5dd994e580f535b04 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Julian=20R=C3=BCth?= <julian.rueth@fsfe.org>
+Date: Fri, 28 Nov 2025 21:42:35 +0200
+Subject: [PATCH 10/14] InterpreterCallbacks is polymorphic
+
+InterpreterCallbacks is polymorphic with TRootClingCallbacks inheriting
+from it so it must be compiled with RTTI so we override any previous
+-fno-rtti flags that might have been set here.
+---
+ src/interpreter/cling/lib/Interpreter/CMakeLists.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+index b8ec6b63..b6cae873 100644
+--- a/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
++++ b/src/interpreter/cling/lib/Interpreter/CMakeLists.txt
+@@ -381,3 +381,7 @@ endif()
+ if ((NOT builtin_llvm) AND (NOT builtin_clang))
+   target_compile_definitions(clingInterpreter PUBLIC "LLVM_PATH=\"${LLVM_BINARY_DIR}\"")
+ endif()
++
++# InterpreterCallbacks is polymorphic with TRootClingCallbacks inheriting from it so it must be compiled with RTTI so
++# we override any previous -fno-rtti flags that might have been set here.
++set_source_files_properties(InterpreterCallbacks.cpp PROPERTIES COMPILE_FLAGS "-frtti")
+\ No newline at end of file
+-- 
+2.52.0
+
