@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: A repackaging of Cling for Automatic Python-C++ Bindings
 
-Development: https://bitbucket.org/wlav/cppyy-backend/src/master/cling/
+Development: https://github.com/wlav/cppyy-backend/tree/master/cling
 
 Documentation: http://cppyy.readthedocs.io/
 
