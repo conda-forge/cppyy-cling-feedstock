@@ -25,9 +25,7 @@ source:
     - patches/0014-Do-not-invoke-llvm-tblgen-when-cross-compiling.patch
 
 build:
-  number: 0
-  skip:
-    - win
+  number: 1
   python:
     entry_points:
       - cling-config = cppyy_backend._cling_config:main
