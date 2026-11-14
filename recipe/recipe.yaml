@@ -25,7 +25,7 @@ source:
     - patches/0014-Do-not-invoke-llvm-tblgen-when-cross-compiling.patch
 
 build:
-  number: 0
+  number: 1
   skip:
     - win
   python:
@@ -61,8 +61,16 @@ requirements:
     # We need a C++ compiler at runtime to compile cppdef snippets and glue
     # code and also so that all the standard headers are available. We do not
     # need the exact compiler that was used during the build {{ compiler('cxx') }}
-    # but just any functional C++ compiler.
-    - cxx-compiler
+    # but just any functional C++ compiler. However, we cannot use cxx-compiler
+    # since that  doesn't set the CXX environment variable (anymore) which we rely on,
+    # see patches/0013-Use-CXX-to-invoke-compiler.patch.
+    - if: linux
+      then:
+        # GCC 16's libstdc++ headers cannot be parsed by Cling's clang 16
+        # ("member access into incomplete type __normal_iterator").
+        - gxx_${{ target_platform }} <16
+    - if: osx
+      then: clangxx_${{ target_platform }}
     - python
     # cppyy-cling invokes clang 16 at runtime which is not compatible with recent libcxx headers,
     # so we need to force older headers since otherwise we get "Libc++ only supports Clang 18 and later" and compile errors
