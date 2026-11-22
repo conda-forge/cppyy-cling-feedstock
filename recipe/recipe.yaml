@@ -26,7 +26,7 @@ source:
     - patches/0015-Quote-list-valued-cache-variable-in-root-config-gene.patch
 
 build:
-  number: 3
+  number: 4
   skip:
     - win
   python:
